@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHoop-ABDO</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <section class="section-1">
+        
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #f2f1f1;">
+            <div class="left-header">
+                <a href="index.html" class="logo" style="font-size: 1.4rem; font-weight: 600;">Shop To Buy </a>    
+            <img src="images/logo-shop.webp" class="alaa-img" alt="">    </div>
+       
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-secondary" style="font-size: 1.5rem;"></i> 
+    </button>
+      
+    
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                    <div class="userName" style="margin-left: 50%; transform: translate(-150%);">
+                        <p style="margin-bottom: 0;">Welcome : <span id="user-name"></span></p>
+                     </div>
+           
+              <div class="right-header ml-auto">
+                <div class="login">
+                    <ul>
+                        <li> <a class="ss" href="login.html">Login</a> </li>
+                        <li> <a href="register.html" style="text-decoration: none; color: black;">Register</a> </li>
+                    </ul>
+                </div>
+                    <div class="user d-flex">
+                        <div class="cart-box">
+                            <div class="cart-btn" onclick="cartBtn()">
+                                <i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;<span> Cart </span>
+                                <span id="number"></span> <i class="fas fa-caret-down arrow" id="arrow"></i>
+                            </div>
+                                <div class="cart">
+                                    <ul id="favouriteItems">
+                                    </ul>
+                                    <a href="products.html" id="view" onclick="viewProduct()">View all product</a>
+                                </div>
+                        </div> 
+                    </div>
+                    <div class="logout-box">
+                        <a href="#" class="logout">logout</a>
+                    </div>
+            </div> 
+            </div>
+          </nav>
+    
+        <div class="search-box">
+            <select class="custom-select m-2" style="width: 100%;">
+                <option selected>Search by Name</option>
+                <option value="1">Search by Category</option>
+              </select>
+            <input type="text" placeholder="Search" class="form-control m-2 search">
+        </div>
+
+        
+    
+        <div class="container">
+            <div class="row">
+    
+                
+            </div> 
+     
+        </div> 
+
+    </section>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>
