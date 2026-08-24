@@ -319,7 +319,7 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
-* التعديلات دي هتشتغل على الموبايل وفقط، وهتسيب اللاب توب زي ما هو */
+
 @media screen and (max-width: 768px) {
   /* تحويل الكارت نفسه لـ Flex لضبط المحتويات من فوق لتحت */
   .row .card {
