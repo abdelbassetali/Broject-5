@@ -342,4 +342,89 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
+@media screen and (max-width: 768px) {
+  /* 1. ضبط صفحة التسجيل (Register Form) على الموبايل لتكون في نص الشاشة وبشكل مرتب */
+  .zz {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 92% !important;
+    max-width: 400px !important;
+    margin: 20px auto !important;
+    padding: 15px !important;
+    background-color: #f8f9fa; /* أو خلفية فاتحة تناسب التصميم */
+    border-radius: 8px;
+  }
+
+  /* جعل حقول الإدخال تاخد عرض الفورم بالكامل بدلاً من المقاس الثابت القديم */
+  .form-control {
+    width: 100% !important;
+    margin: 8px 0 !important;
+    height: 40px !important;
+  }
+
+  /* زرار الإرسال (Submit) يأخذ عرض الفورم بالكامل وسهل الضغط عليه */
+  .gg {
+    width: 100% !important;
+    height: 40px !important;
+    margin-top: 15px !important;
+    margin-left: 0 !important;
+  }
+
+  /* 2. ضبط كروت المنتجات على الموبايل: كارتين جنب بعض وزرايرهم في البوتوم */
+  .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .row .card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 48% !important;
+    flex: 0 0 48% !important;
+    height: 100% !important;
+    margin-bottom: 15px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .row .card img, 
+  .row .card .card-img-top {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+
+  .row .card .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+    padding: 10px !important;
+  }
+
+  .row .card .card-body .btn, 
+  .row .card .btn-primary,
+  .row .card .fa-heart,
+  .row .card .d-flex.justify-content-between {
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+  }
+
+  .row .card .card-body .d-flex {
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .row .card h5, 
+  .row .card p {
+    font-size: 0.85rem !important;
+  }
+}
 
