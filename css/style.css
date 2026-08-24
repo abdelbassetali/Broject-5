@@ -281,54 +281,42 @@ display: inline-block;
   display: inline-block;
 
 }
-/* التعديلات دي هتشتغل على الموبايل وفقط، وهتسيب اللاب توب بنفس مقاساته القديمة */
 @media screen and (max-width: 768px) {
-  /* إلغاء الـ Absolute عشان الفورم ماتطلعش بره الشاشة في الموبايل */
-  .zz {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 92% !important;
-    margin: 20px auto !important;
-    padding: 15px !important;
-  }
-
-  /* جعل حقول الإدخال تاخد عرض الشاشة بالكامل بالموبايل */
-  .form-control {
-    width: 100% !important;
-    margin: 8px 0 !important;
-    height: 38px !important;
-  }
-
-  /* زرار الإرسال يكون عريض وسهل الضغط عليه بالموبايل */
-  .gg {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 20px !important;
-  }
-
-  .login ul a {
-    display: block;
-    margin-left: 0;
-    font-weight: 700;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* نخلي الـ Row بتاع المنتجات يعمل Grid أو Flex عشان ياخدوا كارتين جنب بعض */
+  /* تظبيط صف المنتجات ليقبل عنصرين جنب بعض */
   .row {
     display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
+    width: 100% !important;
     margin: 0 !important;
   }
 
-  /* نخلي كل كارت ياخد تقريباً نص الشاشة (حوالي 48%) عشان يبقوا كارتين جنب بعض بالموبايل */
+  /* إجبار كل كارت إنه ياخد 48% بس من العرض عشان يبقوا جنب بعض تماماً */
   .row .card {
     width: 48% !important;
-    margin-bottom: 15px !important;
+    flex: 0 0 48% !important;
+    margin-bottom: 12px !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  /* تصغير صورة المنتج جوه الكارت عشان تناسب المساحة الصغيرة وما تطلعش بره الحواف */
+  .row .card img, 
+  .row .card .card-img-top {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+
+  /* تصغير حجم خط النصوص جوه الكارت على الموبايل عشان مايعملش زحمة */
+  .row .card .card-body {
+    padding: 8px !important;
+  }
+  
+  .row .card h5, 
+  .row .card p {
+    font-size: 0.85rem !important;
   }
 }
 
