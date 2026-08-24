@@ -281,5 +281,37 @@ display: inline-block;
   display: inline-block;
 
 }
+/* التعديلات دي هتشتغل على الموبايل وفقط، وهتسيب اللاب توب بنفس مقاساته القديمة */
+@media screen and (max-width: 768px) {
+  /* إلغاء الـ Absolute عشان الفورم ماتطلعش بره الشاشة في الموبايل */
+  .zz {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 92% !important;
+    margin: 20px auto !important;
+    padding: 15px !important;
+  }
 
+  /* جعل حقول الإدخال تاخد عرض الشاشة بالكامل بالموبايل */
+  .form-control {
+    width: 100% !important;
+    margin: 8px 0 !important;
+    height: 38px !important;
+  }
+
+  /* زرار الإرسال يكون عريض وسهل الضغط عليه بالموبايل */
+  .gg {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  .login ul a {
+    display: block;
+    margin-left: 0;
+    font-weight: 700;
+  }
+}
 
