@@ -319,4 +319,38 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
+* التعديلات دي هتشتغل على الموبايل وفقط، وهتسيب اللاب توب زي ما هو */
+@media screen and (max-width: 768px) {
+  /* تحويل الكارت نفسه لـ Flex لضبط المحتويات من فوق لتحت */
+  .row .card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important; /* ضمان ان كل الكروت بنفس الطول في الصف */
+  }
+
+  /* جعل جسم الكارت ينمو ويترك مساحة للزرار في التحت */
+  .row .card .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    flex-grow: 1 !important;
+    padding-bottom: 10px !important; /* مساحة صغيرة قبل الزرار */
+  }
+
+  /* دفع زرار الإضافة وقلب الإعجاب إلى أسفل الكارت نهائياً بالموبايل */
+  .row .card .card-body .btn, 
+  .row .card .btn-primary,
+  .row .card .fa-heart,
+  .row .card .d-flex.justify-content-between {
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* عشان نضمن انهم يبقوا في نفس السطر حتى لو الزرار اخد مساحة */
+  .row .card .card-body .d-flex {
+      align-items: center !important;
+      width: 100% !important;
+  }
+}
 
