@@ -36,7 +36,7 @@ class products{
     }
 }
 
-const product1=new products('samsung-ultra','808 $','phone','images/product-1.jpg',1);
+const product1=new products('samsung','808 $','phone','images/product-1.jpg',1);
 const product2=new products('watch','150 $','Phone  ','images/product-2.jpg',2);
 const product3=new products('earpods','120 $','Phone  ','images/product-3.jpg',3);
 const product4=new products('handyfree ','50 $','Phone ','images/product-4.jpg',4);
