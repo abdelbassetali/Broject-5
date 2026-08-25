@@ -2,7 +2,7 @@ body {
     position: relative;
     height: 100%;
   }
-  .swiper {
+  /* .swiper {
     width: 100%;
     height: 100%;
   }
@@ -22,7 +22,87 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  } */
+/* تنسيق حاوية الـ Swiper */
+.swiper {
+  width: 100%;
+  height: auto !important;
+  padding: 10px 0 40px 0 !important;
+  display: block !important;
+}
+
+/* ضبط حجم الكارت (العرض والارتفاع) بحيث ميبقاش عريض أو مكعب صغير متبهدل */
+.swiper .swiper-slide {
+  background-color: rgb(230, 230, 230);
+  border-radius: 30px;
+  transition: 0.5s;
+  width: 260px !important;
+  height: 240px !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  font-size: 16px;
+}
+
+.swiper .swiper-slide:hover {
+  border: 1px solid rgb(11, 11, 11);
+  transform: translateY(-5px);
+}
+
+/* حاوية الصورة لتثبيت مساحتها جوه الكارت */
+.swiper .swiper-slide .swiper-img {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تثبيت حجم الصورة الحقيقي من غير ما تصغر أو تنكمش */
+.swiper .swiper-slide .swiper-img img {
+  width: 130px !important;
+  height: 130px !important;
+  object-fit: contain !important;
+  border-radius: 20px;
+}
+
+/* تنسيق النصوص وأيقونة القلب تحت */
+.swiper .swiper-slide .card-body {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-top: auto;
+}
+
+.swiper .swiper-slide .card-body .card-text {
+  text-align: left;
+}
+
+.swiper .swiper-slide .card-body .card-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.swiper .swiper-slide .card-body a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.swiper .swiper-slide .card-body i {
+  color: rgb(242, 2, 2);
+  font-size: 1.8rem;
+}
+
+.swiper .swiper-pagination {
+  bottom: 0px !important;
+}
   .logout-box .logout {
     font-size: 1.4rem;
     text-transform: uppercase;
