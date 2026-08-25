@@ -1235,4 +1235,7 @@ display: inline-block;
   }
     .swiper-slide{
          margin-left: 15px !important;
+} 
+    .card-body{}
+
 }
