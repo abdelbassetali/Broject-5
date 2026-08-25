@@ -18,11 +18,16 @@ function drawUserProduct(){
                     <p style="margin: 0; color: #333;">Price: ${items[i].price}</p>
                 </div>
                 <div class="ele-actions" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
-                    <div class="plus">
-                        <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${items[i].id})"></i></a>
-                        <span style="margin: 0 10px;">${items[i].count}</span>
-                        <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
-                    </div>
+                    // <div class="plus">
+                    //     <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${items[i].id})"></i></a>
+                    //     <span style="margin: 0 10px;">${items[i].count}</span>
+                    //     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
+                    // </div>
+                    <div class="plus" style="display: flex; align-items: center;">
+    <span class="minus" style="cursor: pointer;" onclick="minusBtn(${items[i].id}, event)"><i class="fas fa-minus text-danger"></i></span>
+    <span style="margin: 0 10px;">${items[i].count}</span>
+    <span class="pluss" style="cursor: pointer;" onclick="plusBtn(${items[i].id}, event)"><i class="fas fa-plus text-success"></i></span>
+    </div>
                     <button class="btn btn-danger" onclick="removeItems(${items[i].id})">Remove</button>
                 </div>
             </div>  
@@ -59,6 +64,7 @@ function getTotalPrice(){
  getTotalPrice()
 }
 function plusBtn(id , e){
+    if(e) e.preventDefault();
     ele=items.find((x)=>{
        return x.id==id
     })
@@ -71,6 +77,7 @@ function plusBtn(id , e){
 // \\\\\\\\\\\\\\\\\
 //   بوتن الطرح
 function minusBtn(id){
+    if(e) e.preventDefault();
     ele=items.find((x)=>{
        return x.id==id
     })
