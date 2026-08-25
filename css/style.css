@@ -1075,7 +1075,7 @@ display: inline-block;
 
   .swiper-slide {
     height: auto !important; /* إلغاء الارتفاع الثابت القديم عشان السلايد يتمدد على قد المحتوى براحته */
-    min-height: 210px !important; /* إعطاء مساحة كافية تلم الصورة والنصوص والقلب */
+    min-height: 190px !important; /* إعطاء مساحة كافية تلم الصورة والنصوص والقلب */
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -1113,7 +1113,7 @@ display: inline-block;
   .fa-heart {
     position: static !important;
     display: inline-block !important;
-    margin: 6px auto 2px auto !important;
+    margin: 2px auto 2px auto !important;
     font-size: 1.1rem !important;
   }
 }
