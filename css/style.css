@@ -1178,6 +1178,70 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
+  /* 1. زيادة عرض وارتفاع الكارت للموبايل عشان ياخد براحته */
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-width: 150px !important;            /* ضمان عرض أدنى مناسب للكارت */
+    box-sizing: border-box !important;
+    padding: 12px 8px 15px 8px !important;
+    min-height: 270px !important;
+  }
+
+  /* 2. الـ card-body يظبط العناصر جوه بشكل مرتب */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: row !important;         /* جعل محتويات الكارت أفقية جنب بعض لو حابب، أو عمودية منظمة */
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 5px !important;
+  }
+
+  /* 3. حاوية النصوص تاخد المساحة المتاحة */
+  .swiper-slide .card-body .card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    flex-grow: 1 !important;
+  }
+
+  .swiper-slide .card-body .card-text p {
+    display: block !important;
+    text-align: left !important;
+    font-size: 11px !important;
+    margin: 2px 0 !important;
+    white-space: nowrap !important;        /* منع انقسام كلمة فون لو مش عايزها تنزل سطر جديد */
+  }
+
+  /* 4. ضبط الصورة في الأعلى */
+  .swiper-slide .swiper-img img {
+    width: 100% !important;
+    max-width: 100px !important;
+    height: auto !important;
+    margin: 0 auto 5px auto !important;
+    display: block !important;
+  }
+
+  /* 5. وضع القلب جنب الكلام (جنب الـ Category أو الـ Phone) */
+  .swiper-slide .card-body a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin-left: 5px !important;
+  }
+
+  .swiper-slide .card-body .fa-heart {
+    font-size: 1.3rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
     display: flex !important;
