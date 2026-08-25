@@ -324,3 +324,8 @@ let btnfav=document.querySelectorAll('.fa-heart')
    function viewProduct(){
     location.assign('products.html')
    }
+document.addEventListener('click', function(e) {
+    if (e.target.closest('.pluss') || e.target.closest('.minus')) {
+        e.preventDefault();
+    }
+});
