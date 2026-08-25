@@ -550,59 +550,51 @@ display: inline-block;
   color: black;
 }
 
-/* --- تعديل مقاسات الموبايل الحقيقية --- */
+/* --- تظبيط النافبار والهيدر للموبايل على سطر واحد وبشكل مثالي --- */
 @media (max-width: 768px) {
-  /* إجبار النافبار إنه يترتب كـ Flex بشكل متناسق وسليم */
+  /* إجبار النافبار على الترتيب السليم بجانب بعضه */
   .navbar {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 8px 12px !important;
-    min-height: 60px !important;
+    padding: 6px 10px !important;
+    flex-wrap: nowrap !important;
   }
 
-  /* الجانب الأيسر (اللوجو والصورة جنب بعض وبدون زحمة) */
+  /* اللوجو وصورته في الشمال */
   .left-header {
     display: flex !important;
     align-items: center !important;
-    gap: 6px !important;
-    width: auto !important;
+    gap: 4px !important;
   }
 
   .left-header .logo {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     white-space: nowrap !important;
   }
 
   .alaa-img {
-    width: 35px !important;
+    width: 30px !important;
     height: auto !important;
-    margin-left: 5px !important;
+    margin-left: 4px !important;
   }
 
-  /* اسم المستخدم على الموبايل عشان يظهر بشياكة */
+  /* اسم المستخدم يظهر بخط مناسب من غير ما يكسر الهيدر */
   .userName {
-    display: block !important;
-    font-size: 0.95rem !important;
-    margin: 0 !important;
-    transform: none !important;
+    font-size: 0.85rem !important;
+    margin: 0 5px !important;
+    white-space: nowrap !important;
   }
 
-  /* الجانب الأيمن (السلة والأزرار) */
+  /* الجانب الأيمن (السلة والـ Logout أو الأزرار) متجمعين جنب بعض */
   .right-header {
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
   }
 
-  /* قائمة السلة على الموبايل عشان ما تطلعش بره الشاشة */
-  .cart-box .cart {
-    position: absolute !important;
-    right: 10px !important;
-    left: auto !important;
-    width: 240px !important;
-    max-width: 90vw !important;
+  .logout-box .logout, .right-header .login ul li {
+    font-size: 0.9rem !important;
   }
 }
-
