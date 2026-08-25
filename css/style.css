@@ -1170,3 +1170,40 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
+/* --- تعديل مسافة الأمان من اليمين وتصغير خط كاردات المفضلة --- */
+@media screen and (max-width: 768px) {
+  
+  /* الحاوية الأب لتقليل الزحمة وضبط المسافات على الجانبين */
+  #favouriteItems, .favourite-container, .favorite-box {
+    padding: 0 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* تصغير عرض الكارت حاجة بسيطة لزيادة الفراغ من اليمين والشمال */
+  #favouriteItems li, .favourite-item, .favorite-item {
+    width: 46.5% !important;
+    max-width: 46.5% !important;
+    flex: 0 0 46.5% !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+    padding: 6px !important;
+  }
+
+  /* تصغير النصوص والعناوين جوه كاردات المفضلة عشان تبقى في سطر واحد ومظبوطة */
+  #favouriteItems li span, 
+  #favouriteItems li p, 
+  #favouriteItems li h5,
+  .favourite-item p, 
+  .favourite-item h5 {
+    font-size: 0.7rem !important; /* تصغير حجم الخط */
+    line-height: 1.1 !important;
+    white-space: nowrap !important; /* منع نزول الكلام تحت بعضه بشكل مزعج */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; /* إظهار نقاط لو النص طويل زيادة عن اللزوم */
+  }
+
+  /* تصغير حجم أيقونة القلب عشان تتناسب مع التصميم الجديد */
+  #favouriteItems li .fa-heart, .favourite-item .fa-heart {
+    font-size: 0.9rem !important;
+  }
+}
