@@ -1052,11 +1052,8 @@ display: inline-block;
   .card-body p:nth-of-type(2) {
     order: 3 !important;
   }
-
-
 }
 
- 
 @media screen and (max-width: 768px) {
   /* 1. ضبط الكارت بالكامل ليكون عمودي ويبدأ من الشمال */
   .swiper-slide, 
@@ -1135,8 +1132,7 @@ display: inline-block;
     text-align: left !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    padding: 10px !important;
-  }
+padding: 10px 10px 55px 10px !important;  }
 
   /* 2. ضبط الحاوية الخاصة بالنصوص (Product و Category) عشان تزل تحت بعضها بانتظام */
   .swiper-slide .card-body .card-text {
