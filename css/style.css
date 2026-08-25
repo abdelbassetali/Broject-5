@@ -492,6 +492,8 @@ display: inline-block;
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
+     width: auto !important;
+ min-width: 220px !important;
 }
 
 .left-header .logo {
