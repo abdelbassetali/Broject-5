@@ -1216,3 +1216,22 @@ display: inline-block;
     width: max-content !important; /* يخلي العرض على قد الكلمة بالظبط */
 }
 }
+@media screen and (max-width: 768px) {
+  /* جعل كلمة Product والاسم بجانب بعضهما في نفس السطر */
+  .swiper-slide .card-text, 
+  .card .card-body .card-text {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 5px !important;
+    width: 100% !important;
+  }
+
+  .swiper-slide .card-text p, 
+  .card .card-body .card-text p {
+    font-size: 0.7rem !important; /* تصغير الخط أكتر عشان يكفي براحته */
+    margin: 0 !important;
+    white-space: nowrap !important; /* منع نزول الكلمة للسطر التاني */
+  }
+}
