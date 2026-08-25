@@ -4,28 +4,7 @@ const totalPrice=document.getElementById('totalPrice');
 const favBox=document.querySelector('.swiper-wrapper')
 let favItems=JSON.parse(localStorage.getItem('favourite')) 
 
-// ////////////////////////////
-// المنتجات
-// function drawUserProduct(){
-//     userProductBox.innerHTML=''
-//     for(let i in items){
 
-//         userProductBox.innerHTML+=`
-//         <div class="ele">
-//             <img src="${items[i].img}" alt="product1" height="150px">
-//                 <div class="ele-content">
-//                     <p>Product : ${items[i].name}</p>
-//                     <p>Category: ${items[i].category} </p>
-//                     <p>Price: ${items[i].price}</p>
-//                     <span>${items[i].count}</span>
-//                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
-//                     <a href="#" class="minus"><i class="fas fa-minus  text-danger" onclick="minusBtn(${items[i].id})"></i></a>
-//                     <button class="btn btn-danger" onclick="removeItems(${items[i].id})">Remove</button>
-//                 </div> 
-//         </div> 
-//         `
-//     }
-// }
 function drawUserProduct(){
     userProductBox.innerHTML=''
     for(let i in items){
@@ -39,11 +18,16 @@ function drawUserProduct(){
                     <p style="margin: 0; color: #333;">Price: ${items[i].price}</p>
                 </div>
                 <div class="ele-actions" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
-                    <div class="plus">
-                        <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${items[i].id})"></i></a>
-                        <span style="margin: 0 10px;">${items[i].count}</span>
-                        <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
-                    </div>
+                    // <div class="plus">
+                        // <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${items[i].id})"></i></a>
+                        // <span style="margin: 0 10px;">${items[i].count}</span>
+                        // <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
+                    // </div>
+                    <div class="plus" style="display: flex; align-items: center;">
+    <span class="minus" style="cursor: pointer;" onclick="minusBtn(${items[i].id})"><i class="fas fa-minus text-danger"></i></span>
+    <span style="margin: 0 10px;">${items[i].count}</span>
+    <span class="pluss" style="cursor: pointer;" onclick="plusBtn(${items[i].id})"><i class="fas fa-plus text-success"></i></span>
+</div>
                     <button class="btn btn-danger" onclick="removeItems(${items[i].id})">Remove</button>
                 </div>
             </div>  
