@@ -54,7 +54,7 @@ for(let i =1;i<product.length;i++){
     row.innerHTML+=`
     <div class="card col-lg-4 col-md-6 col-sm-12 mt-1 mb-1" style="width: 18rem;">
         <img src="${product[i].img}" class="card-img-top" alt="product-1" style="height:250px;">
-            <div class="card-body" style="padding-top:40px;"   >
+            <div class="card-body" style="padding-top:50px;"   >
                 <h5 class="card-title" >Product : ${product[i].name}</h5>
                 <h5 class="card-text" >Price :  ${product[i].price}</h5>
                  <h5>Category : ${product[i].category}</h5>
@@ -162,52 +162,40 @@ function cartBtn(){
     }
 }
 
+function addFavourite(id,e){
+    const ele=document.getElementById(id)
+    mainId=id/100000;
+if(localStorage.getItem('first') && localStorage.getItem('log')){
+    if(ele.style.color=='red'){
+        ele.style.color='rgb(185, 184, 184)'
 
-function addFavourite(id, e) {
-    if (e) e.preventDefault();
-    const ele = document.getElementById(id);
-    let mainId = id / 100000;
-
-    if (localStorage.getItem('first') && localStorage.getItem('log')) {
-        // هات المفضلة القديمة من التخزين عشان متمسحش البيانات السابقة
-        let favourite = localStorage.getItem('favourite') ? JSON.parse(localStorage.getItem('favourite')) : [];
-
-        if (ele.style.color === 'red') {
-            ele.style.color = 'rgb(185, 184, 184)';
-
-            // التصحيح: البحث بالشكل السليم جوه المصفوفة عن طريق x.id
-            let index = favourite.findIndex(x => x.id == mainId);
-            if (index !== -1) {
-                favourite.splice(index, 1);
-            }
-            localStorage.setItem('favourite', JSON.stringify(favourite));
-        } else {
-            ele.style.color = 'red';
-            
-            // التأكد من أن المنتج موجود قبل إضافته لتجنب الـ undefined والـ NaN
-            if (product && product[mainId]) {
-                favourite.push(product[mainId]);
-                localStorage.setItem('favourite', JSON.stringify(favourite));
-            }
-        }
-    } else {
-        setTimeout(() => {
-            location.assign('login.html');
-        }, 500);
+        favourite.splice(favourite.findIndex((x)=>{
+            return favourite.id==id;
+        }),1)
+        localStorage.setItem('favourite',JSON.stringify(favourite));
+    }else{
+        ele.style.color='red'
+        favourite.push(product[id/100000]) 
+        localStorage.setItem('favourite',JSON.stringify(favourite));
     }
+}else{
+    setTimeout(()=>{
+        location.assign('login.html')
+    },500)
 }
 
-// استرجاع وتلوين الأيقونات الحمراء للمفضلات المحفوظة عند فتح الصفحة
-if (localStorage.getItem('favourite')) {
-    let fav = JSON.parse(localStorage.getItem('favourite'));
-    for (let i = 0; i < fav.length; i++) {
-        let x = document.getElementById(fav[i].id + '00000');
-        if (x) {
-            x.style.color = 'red';
-        }
-    }
+    addEventListener('click',(e)=> e.preventDefault())
+
 }
 
+if(localStorage.getItem('favourite')){
+    let fav= JSON.parse(localStorage.getItem('favourite')) 
+    
+    for(let i =0;i<fav.length;i++){
+        let x=document.getElementById(fav[i].id+'00000')
+        x.style.color='red'
+    }
+}
 
 function plusBtn(id){
     ele=userProducts.find((x)=>{
