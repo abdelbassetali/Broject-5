@@ -752,4 +752,77 @@ display: inline-block;
   .fa-heart {
     margin-left: 5px !important;
   }
+    /* --- 1. تقليل البوردر رديس لكل الكاردات وتصفير أي تداخل --- */
+  .card, .product-item, .favourite-item, .favorite-item, .cart-item, .cart-card {
+    border-radius: 4px !important; /* بوردر رديس قليل وبسيط */
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* --- 2. كاردات المنتجات والمفضلة: تظهر كارتين جنب بعض بالظبط --- */
+  .row, .favourite-container, .favorite-box {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .row .card, .favourite-item, .favorite-item {
+    width: 48% !important;
+    max-width: 48% !important;
+    flex: 0 0 48% !important;
+    margin-bottom: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 6px !important;
+  }
+
+  /* تصغير صور الكاردات وتوسيطها عشان تاخد مساحة مظبوطة */
+  .row .card img, .favourite img, .favorite-item img {
+    width: 100% !important;
+    height: 110px !important;
+    object-fit: contain !important;
+  }
+
+  /* --- 3. كاردات السلة (Cart): تفضل تحت بعض بشكل طولي مريح --- */
+  .cart-container, .cart-items, #cartProducts {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .cart-item, .cart-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    background: #fff !important;
+    padding: 8px !important;
+  }
+
+  .cart-item img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+  }
+
+  /* --- 4. إبعاد زرار Remove عن أيقونة القلب مسافة مناسبة --- */
+  .card .card-body, .card .d-flex, .product-item .d-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  .card button, .remove-btn {
+    margin-right: 6px !important;
+  }
+
+  .fa-heart {
+    margin-left: 6px !important;
+  }
 }
