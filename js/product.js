@@ -203,16 +203,25 @@ function drawUserProduct(){
 drawUserProduct()
 
 //  السعر 
+// function getTotalPrice(){
+//     let sum=0;
+//     let prices=items.map((ele)=>{
+//         let price=ele.price.split(' ')
+//         return parseInt(price[0]) ;
+//     })
+//     for(let i in items){
+//         sum += prices[i] * parseInt(items[i].count) 
+//     }
+//     totalPrice.innerHTML=sum+'$';
+// }
 function getTotalPrice(){
-    let sum=0;
-    let prices=items.map((ele)=>{
-        let price=ele.price.split(' ')
-        return parseInt(price[0]) ;
-    })
+    let sum = 0;
     for(let i in items){
-        sum += prices[i] * parseInt(items[i].count) 
+        // بنشيل أي حروف أو علامات دولار وناخد الأرقام بس
+        let cleanPrice = parseInt(items[i].price.replace(/[^\d]/g, '')) || 0;
+        sum += cleanPrice * parseInt(items[i].count);
     }
-    totalPrice.innerHTML=sum+'$';
+    totalPrice.innerHTML = sum + '$';
 }
  getTotalPrice()
 
