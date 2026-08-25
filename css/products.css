@@ -96,7 +96,7 @@ body {
     width: 80%;
     grid-gap: 1rem;
   }
-  .container-box .ele {
+  /* .container-box .ele {
     background-color: rgb(255, 255, 255);
     height: 180px;
     width: 100%;
@@ -108,7 +108,26 @@ body {
     font-size: 1.2rem;
     box-sizing: content-box;
     border-radius: 30px;
-  }
+  } */
+.container-box .ele {
+  background-color: rgb(255, 255, 255);
+  height: 180px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; /* تظبيط محاذاة العناصر عمودياً في النص */
+  padding: 20px 15px;
+  font-size: 1.2rem;
+  box-sizing: content-box;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0; /* بوردر خفيف ورايق يحدد كل كارت */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02); /* ظل خفيف جداً يزيد الشياكة */
+  transition: 0.3s;
+}
+.container-box .ele:hover {
+  border-color: #b0b0b0; /* يغمق البوردر سنة عند الوقوف عليه */
+}
   .container-box .ele img {
     border-radius: 22px;
     width: 150px;
@@ -126,9 +145,10 @@ body {
   margin: 0 5px;
 }
  .container-box .btn-danger {
-  float: right;
+  /* float: right; */
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+ margin-left: auto;
 }
 
 /*    responsef  جزء الريسبونسيف */ 
