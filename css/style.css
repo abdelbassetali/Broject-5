@@ -1177,38 +1177,7 @@ display: inline-block;
     font-size: 1.3rem !important;
   }
 }
-@media screen and (max-width: 768px) {
-  .swiper-slide {
-    height: auto !important;
-    min-height: 290px !important;
-    padding-bottom: 25px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-  }
-  
-  .swiper-slide .card-body {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 0 10px !important;
-  }
 
-  .swiper-slide .card-body a {
-    width: 100% !important;
-    text-align: center !important;
-    margin-top: 10px !important;
-  }
-
-  .swiper-slide .card-body .fa-heart {
-    display: inline-block !important;
-    margin: 0 auto !important;
-    font-size: 1.3rem !important;
-  }
-}
-}
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
