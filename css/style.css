@@ -488,28 +488,29 @@ display: inline-block;
   background-color: #f2f1f1 !important;
 }
 
+/* تدمير أي قيود على الجانب الأيسر وجعل الكلمة والصورة على خط واحد دايماً */
 .left-header {
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;             
-  width: auto !important;
-  min-width: 240px !important;   
+  gap: 8px !important;
+  width: max-content !important;    /* دي بتخليه ياخد عرضه الحقيقي بالظبط من غير ما يتزنق */
+  min-width: unset !important;      /* إلغاء أي حدود قديمة كانت معمولة */
+  flex-shrink: 0 !important;        /* منع العنصر إنه ينضغط نهائياً مهما المساحة صغرت */
 }
 
 .left-header .logo {
-  font-size: 1.2rem !important;   
-  white-space: nowrap !important;
+  font-size: 1.15rem !important;    /* تصغير طفيف عشان يستريح في الشاشة */
+  white-space: nowrap !important;   /* منع أي التفاف للنص تحت أي ظرف */
   text-decoration: none !important;
   color: #333 !important;
 }
 
 .alaa-img {
-  width: 45px !important;         
+  width: 40px !important;           /* تصغير الصورة حاجة بسيطة عشان ما تاخدش مساحة الكلمة */
   height: auto !important;
   object-fit: contain !important;
   margin: 0 !important;
 }
-
 .userName {
   margin: 0 auto !important;
   transform: none !important;
