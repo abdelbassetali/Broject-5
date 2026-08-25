@@ -650,4 +650,48 @@ display: inline-block;
     font-size: 0.75rem !important;
     margin-top: 8px !important;
   }
+    /* تحويل حاوية المنتجات/المفضلة إلى شبكة (Grid) بـ عمودين جنب بعض */
+  .cart-container, .favourite-container, .products-container, .favorite-box, .cart-items {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* اتنين جنب بعض بالظبط */
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  /* تصغير الكارد نفسه وتقليل الـ border-radius وجعل المحتوى محبوس داخله */
+  .card, .product-item, .favourite-item, .favorite-item, .cart-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    border-radius: 6px !important;         /* تقليل الانحناء (بوردر رديس) خفيف */
+    overflow: hidden !important;          /* إخفاء أي حاجة تطلع بره حدود الكارد */
+    box-sizing: border-box !important;
+  }
+
+  /* تصغير الصور جوا الكاردات عشان تتناسب مع العمودين */
+  .card img, .product-item img, .favourite img, .favorite-item img, .cart-item img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: contain !important;
+    margin: 0 auto 5px auto !important;
+    display: block !important;
+  }
+
+  /* تصغير الخطوط والنصوص جوا الكاردات */
+  .card h5, .card p, .product-item h5, .product-item p, 
+  .favourite-item p, .cart-item p, .card span {
+    font-size: 0.75rem !important;        /* تصغير النصوص عشان ما تزنقش */
+    line-height: 1.2 !important;
+    margin: 2px 0 !important;
+    text-align: center !important;
+  }
+
+  /* تصغير الأزرار (زي Remove أو Add) جوا الكاردات الصغيرة */
+  .card button, .product-item button, .favourite-item button, .cart-item button {
+    padding: 4px 6px !important;
+    font-size: 0.7rem !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+  }
 }
