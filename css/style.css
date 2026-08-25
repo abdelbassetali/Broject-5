@@ -495,21 +495,21 @@ display: inline-block;
   gap: 8px !important;
   width: max-content !important;    /* دي بتخليه ياخد عرضه الحقيقي بالظبط من غير ما يتزنق */
   min-width: unset !important;      /* إلغاء أي حدود قديمة كانت معمولة */
-  flex-shrink: 0 !important;        /* منع العنصر إنه ينضغط نهائياً مهما المساحة صغرت */
+  flex-shrink: 0 !important;       
 }
 
 .left-header .logo {
-  font-size: 1.15rem !important;    /* تصغير طفيف عشان يستريح في الشاشة */
-  white-space: nowrap !important;   /* منع أي التفاف للنص تحت أي ظرف */
+  font-size: 1.15rem !important;   
+  white-space: nowrap !important;   
   text-decoration: none !important;
   color: #333 !important;
 }
 
 .alaa-img {
-  width: 40px !important;           /* تصغير الصورة حاجة بسيطة عشان ما تاخدش مساحة الكلمة */
+  width: 40px !important;          
   height: auto !important;
   object-fit: contain !important;
-  margin: 0 !important;
+ margin-left: 15px !important;
 }
 .userName {
   margin: 0 auto !important;
