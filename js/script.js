@@ -148,17 +148,32 @@ btns.forEach(ele => {
 }
 cartDraw()
 
-function cartBtn(){
-    const arrow=document.querySelector('#arrow');
-    arrow.style.color='#007bff';
-    if(cart.style.display=='none' && userProducts.length!=0){
-        cart.style.display='block'
-        arrow.classList='fas fa-caret-up arrow'
-    }else{
-        cart.style.display='none'
-        arrow.classList='fas fa-caret-down arrow'
+// function cartBtn(){
+//     const arrow=document.querySelector('#arrow');
+//     arrow.style.color='#007bff';
+//     if(cart.style.display=='none' && userProducts.length!=0){
+//         cart.style.display='block'
+//         arrow.classList='fas fa-caret-up arrow'
+//     }else{
+//         cart.style.display='none'
+//         arrow.classList='fas fa-caret-down arrow'
 
 
+//     }
+// }
+function cartBtn() {
+    const cart = document.querySelector('.cart');
+    const arrow = document.getElementById('arrow');
+    
+    // بنجيب الحالة الحالية بطريقة دقيقة تنفع للموبايل واللاب
+    let displayStatus = window.getComputedStyle(cart).display;
+
+    if (displayStatus === 'none' || displayStatus === '') {
+        cart.style.display = 'block';
+        if (arrow) arrow.className = 'fas fa-caret-up';
+    } else {
+        cart.style.display = 'none';
+        if (arrow) arrow.className = 'fas fa-caret-down';
     }
 }
 
