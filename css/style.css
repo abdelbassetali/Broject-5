@@ -694,4 +694,62 @@ display: inline-block;
     width: 100% !important;
     margin-top: 4px !important;
   }
+    .navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 10px !important;
+  }
+
+  .left-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    order: 1 !important;
+  }
+
+  .navbar-toggler, .navbar-toggler-icon, .menu-btn {
+    order: 2 !important;
+    margin-left: auto !important;
+  }
+
+  .right-header, .navbar-collapse, .nav-menu {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    order: 3 !important;
+    margin-top: 8px !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #eee !important;
+  }
+
+  .userName, .logout, .cart-box {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+    /* إبعاد زرار الـ Remove عن أكونت القلب بمسافة مناسبة على الموبايل */
+  .card .card-body, 
+  .card .d-flex, 
+  .product-item .d-flex, 
+  .favourite-item .d-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important; /* دي بتعمل مسافة محترمة بين الزرار والقلب */
+  }
+
+  /* لو الزرار والقلب محتاجين مسافة إضافية من فوق أو تحت */
+  .card button, 
+  .product-item button, 
+  .remove-btn {
+    margin-right: 5px !important;
+  }
+
+  .fa-heart {
+    margin-left: 5px !important;
+  }
 }
