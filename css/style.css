@@ -1226,31 +1226,17 @@ display: inline-block;
     gap: 3px !important;
     width: 100% !important;
   }
-
-
     .swiper-slide .card-text p, 
   .card .card-body .card-text p {
     font-size: 10px !important; /* خط صغير ورايق يكفي المساحة */
     margin: 0 !important;
     white-space: nowrap !important;
   }
-}
-    .swiper-slide{
+        .swiper-slide{
          margin-left: 25px !important;
 } 
 }
-@media screen and (max-width: 768px) {
-card-body, .swiper-slide .card-body {
-    padding: 10px !important;
-    text-align: center !important;
-}
 
-.card-text p, .swiper-slide .card-text p {
-    font-size: 0.9rem !important;
-    color: #333 !important;
-    margin: 5px 0 !important;
-    display: block !important;
-    width: 100% !important;
-}
-}
+
+
 
