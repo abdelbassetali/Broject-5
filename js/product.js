@@ -53,7 +53,6 @@ function drawUserProduct(){
 }
 drawUserProduct()
 
-// ظظظظظظظظظ
 //  السعر 
 function getTotalPrice(){
     let sum=0;
@@ -146,26 +145,48 @@ function removeFavourite(id){
     drawFav()
 }
 
-function size(){
-        let width;
-    if(window.innerWidth>=993){
-        width =3
-    } else if(window.innerWidth>=560){
-        width =2
-    }else{
-        width=1
-    }
-    var swiper = new Swiper(".mySwiper", {
+// function size(){
+//         let width;
+//     if(window.innerWidth>=993){
+//         width =3
+//     } else if(window.innerWidth>=560){
+//         width =2
+//     }else{
+//         width=1
+//     }
+//     var swiper = new Swiper(".mySwiper", {
         
+//         slidesPerView: width,
+//         spaceBetween: 30,
+//         pagination: {
+//           el: ".swiper-pagination",
+//           clickable: true,
+//         },
+//       });
+// }
+// size()
+function size(){
+    let width;
+    if(window.innerWidth >= 993){
+        width = 3;
+    } else if(window.innerWidth >= 560){
+        width = 2;
+    } else {
+        width = 1;
+    }
+    
+    var swiper = new Swiper(".mySwiper", {
         slidesPerView: width,
         spaceBetween: 30,
+        observer: true,        // السطر ده بيخلي السويبر يراقب لو ضفت أو مسحت منتج
+        observeParents: true,  // السطر ده بيكمل المراقبة عشان يحدث نفسه أوتوماتيك
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-      });
+    });
 }
-size()
+size();
 
 let minus=document.querySelectorAll('.fa-minus')
 let plus=document.querySelectorAll('.plus')
