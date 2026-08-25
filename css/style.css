@@ -1163,8 +1163,8 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 }
-/* @media screen and (max-width: 768px) {
-  /* 1. ضبط الكارت بالكامل ليكون عمودي ويبدأ من الشمال */
+ @media screen and (max-width: 768px) { 
+     /* 1. ضبط الكارت بالكامل ليكون عمودي ويبدأ من الشمال */
   .swiper-slide, 
   .card, 
   .card-body {
@@ -1225,7 +1225,10 @@ display: inline-block;
     font-size: 1.2rem !important;
     flex-shrink: 0 !important;
   }
-} */
+ }
+ 
+
+
 @media screen and (max-width: 768px) {
   /* 1. ضبط الكارت بالكامل ليكون عمودي ويثبت الارتفاع عشان الزراير تنزل تحت */
   .swiper-slide,  
