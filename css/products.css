@@ -2,15 +2,12 @@ body {
     position: relative;
     height: 100%;
   }
-  /* تنسيق حاوية الـ Swiper بالكامل */
 .swiper {
   width: 100% !important;
   height: auto !important;
   padding: 10px 0 40px 0 !important;
   display: block !important;
 }
-
-/* تنسيق كارت المفضلة جوه السلايدر */
 .swiper .swiper-slide {
   background-color: rgb(230, 230, 230) !important;
   border-radius: 30px !important;
@@ -31,7 +28,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* حاوية الصورة */
 .swiper .swiper-slide .swiper-img {
   width: 100% !important;
   height: 140px !important;
@@ -47,7 +43,6 @@ body {
   border-radius: 20px !important;
 }
 
-/* جسم الكارت (النصوص وأيقونة القلب) */
 .swiper .swiper-slide .card-body {
   display: flex !important;
   justify-content: space-between !important;
@@ -78,13 +73,9 @@ body {
   color: rgb(242, 2, 2) !important;
   font-size: 1.8rem !important;
 }
-
 .swiper .swiper-pagination {
   bottom: 0px !important;
 }
-
-
-
   .logout-box .logout {
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -98,19 +89,7 @@ body {
       box-sizing: border-box;
 
   }
-  /* .container-box .ele {
-    background-color: rgb(255, 255, 255);
-    height: 180px;
-    width: 100%;
-    margin: auto;
-   
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px 0;
-    font-size: 1.2rem;
-    box-sizing: content-box;
-    border-radius: 30px;
-  } */
+ 
 .container-box .ele {
   background-color: rgb(255, 255, 255);
   height: 180px;
@@ -118,17 +97,17 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-evenly;
-  align-items: center; /* تظبيط محاذاة العناصر عمودياً في النص */
+  align-items: center;
 padding: 12px 15px;
     font-size: 1.2rem;
   box-sizing: content-box;
   border-radius: 20px;
-  border: 1px solid #e0e0e0; /* بوردر خفيف ورايق يحدد كل كارت */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02); /* ظل خفيف جداً يزيد الشياكة */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02); 
   transition: 0.3s;
 }
 .container-box .ele:hover {
-  border-color: #b0b0b0; /* يغمق البوردر سنة عند الوقوف عليه */
+  border-color: #b0b0b0; 
 }
   .container-box .ele img {
     border-radius: 22px;
