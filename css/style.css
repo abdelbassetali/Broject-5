@@ -9,6 +9,9 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(245, 245, 245);
 }
+.swiper-pagination {
+    display: none !important;
+}
 /* الحاوية العامة للهيدر عشان تضبط العناصر جنب بعضها بانتظام */
 header, .nav-bar, .header-container {
   display: flex !important;
