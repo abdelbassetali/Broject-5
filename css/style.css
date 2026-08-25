@@ -1229,13 +1229,11 @@ display: inline-block;
 
   .swiper-slide .card-text p, 
   .card .card-body .card-text p {
-    font-size: 0.75rem !important;
+    font-size: 0.65rem !important;
     margin: 0 !important;
-    white-space: normal !important; /* السماح بالنزول للسطر التالي عادي */
+    white-space: nowrap !important; /* السماح بالنزول للسطر التالي عادي */
   }
     .swiper-slide{
          margin-left: 15px !important;
 } 
-    .card-body{}
-
 }
