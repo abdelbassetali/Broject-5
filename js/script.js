@@ -54,7 +54,7 @@ for(let i =1;i<product.length;i++){
     row.innerHTML+=`
     <div class="card col-lg-4 col-md-6 col-sm-12 mt-1 mb-1" style="width: 18rem;">
         <img src="${product[i].img}" class="card-img-top" alt="product-1" style="height:250px;">
-            <div class="card-body" style="padding-top:50px;"   >
+            <div class="card-body" style="padding-top:40px;"   >
                 <h5 class="card-title" >Product : ${product[i].name}</h5>
                 <h5 class="card-text" >Price :  ${product[i].price}</h5>
                  <h5>Category : ${product[i].category}</h5>
@@ -161,6 +161,7 @@ function cartBtn(){
 
     }
 }
+
 
 function addFavourite(id,e){
     const ele=document.getElementById(id)
