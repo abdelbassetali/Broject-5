@@ -478,6 +478,125 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
+/* كود نهائي لتنظيم الهيدر وارتفاعه بدون مسح القديم */
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 20px !important;
+  min-height: 65px !important;
+  background-color: #f2f1f1 !important;
+}
+
+/* تدمير أي قيود على الجانب الأيسر وجعل الكلمة والصورة على خط واحد دايماً */
+.left-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: max-content !important;    /* دي بتخليه ياخد عرضه الحقيقي بالظبط من غير ما يتزنق */
+  min-width: unset !important;      /* إلغاء أي حدود قديمة كانت معمولة */
+  flex-shrink: 0 !important;       
+}
+
+.left-header .logo {
+  font-size: 1.15rem !important;   
+  white-space: nowrap !important;   
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+.alaa-img {
+  width: 40px !important;          
+  height: auto !important;
+  object-fit: contain !important;
+ margin-left: 15px !important;
+}
+.userName {
+  margin: 0 auto !important;
+  transform: none !important;
+  font-size: 1.2rem !important;
+  color: #333 !important;
+}
+
+.right-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin: 0 !important;
+}
+
+.right-header .login ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  gap: 10px !important;
+  list-style: none !important;
+}
+
+.right-header .login ul li {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.right-header .user, .logout-box {
+  margin: 0 !important;
+}
+
+.logout-box .logout {
+  font-size: 1.1rem !important;
+  line-height: normal !important;
+  margin: 0 !important;
+  text-decoration: none;
+  color: black;
+}
+
+/* --- تظبيط النافبار والهيدر للموبايل على سطر واحد وبشكل مثالي --- */
+@media (max-width: 768px) {
+  /* إجبار النافبار على الترتيب السليم بجانب بعضه */
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 6px 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* اللوجو وصورته في الشمال */
+  .left-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  .left-header .logo {
+    font-size: 0.95rem !important;
+    white-space: nowrap !important;
+  }
+
+  .alaa-img {
+    width: 30px !important;
+    height: auto !important;
+    margin-left: 4px !important;
+  }
+
+  /* اسم المستخدم يظهر بخط مناسب من غير ما يكسر الهيدر */
+  .userName {
+    font-size: 0.85rem !important;
+    margin: 0 5px !important;
+    white-space: nowrap !important;
+  }
+
+  /* الجانب الأيمن (السلة والـ Logout أو الأزرار) متجمعين جنب بعض */
+  .right-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .logout-box .logout, .right-header .login ul li {
+    font-size: 0.9rem !important;
+  }
     /* استهداف الزرار سواء كان كلاس أو تگ */
   .card button, 
   .product-item button, 
@@ -575,7 +694,43 @@ display: inline-block;
     width: 100% !important;
     margin-top: 4px !important;
   }
- 
+    .navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 10px !important;
+  }
+
+  .left-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    order: 1 !important;
+  }
+
+  .navbar-toggler, .navbar-toggler-icon, .menu-btn {
+    order: 2 !important;
+    margin-left: auto !important;
+  }
+
+  .right-header, .navbar-collapse, .nav-menu {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    order: 3 !important;
+    margin-top: 8px !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #eee !important;
+  }
+
+  .userName, .logout, .cart-box {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
     /* إبعاد زرار الـ Remove عن أكونت القلب بمسافة مناسبة على الموبايل */
   .card .card-body, 
   .card .d-flex, 
@@ -679,6 +834,7 @@ display: inline-block;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
     width: 100% !important;
+    gap: 8px !important;
     padding: 0 !important;
     margin: 0 !important;
   }
@@ -689,8 +845,8 @@ display: inline-block;
     flex-direction: column !important;
     justify-content: space-between !important;
     width: 48% !important;
-    max-width: 46% !important;
-   flex: 0 0 47% !important;
+    max-width: 48% !important;
+    flex: 0 0 48% !important;
     background: #fff !important;
     padding: 8px !important;
     margin-bottom: 10px !important;
@@ -730,8 +886,267 @@ display: inline-block;
   }
 
   #favouriteItems li .fa-heart, .favourite-item .fa-heart {
-    font-size: .8rem !important;
+    font-size: 1rem !important;
     margin: 0 auto !important;
   }
+    /* --- 1. إجبار الهيدر فوق على سطر واحد (اللوجو شمال، وزرار القائمة يمين) --- */
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    flex-wrap: nowrap !important;
+  }
 
+  /* إخفاء سلة التسوق والـ Logout من البرواز الرئيسي على الموبايل عشان يدخلوا جوه القائمة أو يتظبطوا */
+  .right-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  /* لو الـ Logout والسلة برا القائمة، نخليهم جنب زرار القائمة بشكل منسق وخفيف من غير ما يكسروا التصميم */
+  .logout-box .logout {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+    line-height: normal !important;
+  }
+
+  /* --- 2. تصليح قائمة السلة المنسدلة لتكون رفيعة والعناصر تحت بعضها --- */
+  .right-header .user .cart-box {
+    position: relative !important;
+    display: block !important;
+  }
+
+  /* قائمة السلة نفسها تبقى رفيعة ومرتبة */
+  .right-header .user .cart-box .cart,
+  .cart-box .cart {
+    display: block !important; /* أو تظهر حسب الـ JS بتاعك، بس ده لتظبيط شكلها لو ظاهرة */
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 200px !important;         /* خليناها رفيعة وصغيرة */
+    max-width: 85vw !important;
+    background-color: #fff !important;
+    border-radius: 6px !important;
+    padding: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    z-index: 999 !important;
+  }
+
+  /* إجبار العناصر جوه قائمة السلة على الظهور تحت بعضها بشكل طولي ورفيع */
+  .right-header .user .cart-box .cart ul,
+  .cart-box .cart ul {
+    display: flex !important;
+    flex-direction: column !important; /* تحت بعض بالظبط */
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* كارت المنتج الواحد جوه القائمة المنسدلة */
+  .right-header .user .cart-box .cart ul li,
+  .cart-box .cart ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 4px 6px !important;
+    font-size: 0.75rem !important;
+    background: #f9f9f9 !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+  }
+
+  /* تصغير أزرار الكمية والزراير جوه القائمة المنسدلة */
+  .right-header .user .cart-box .cart ul li .plus {
+    gap: 4px !important;
+  }
+
+  .right-header .user .cart-box .cart #view {
+    font-size: 0.8rem !important;
+    margin: 6px auto 2px auto !important;
+    text-align: center !important;
+    display: block !important;
+  }
+}
+/* --- تعديل نهائي وصارم لقائمة السلة المنسدلة على الموبايل --- */
+@media screen and (max-width: 768px) {
+  
+  /* الحاوية الأب اللي فيها القائمة عشان تضمن إن القائمة تقف مكانها صح */
+  .right-header, .user, .cart-box, .navbar {
+    position: relative !important;
+  }
+
+  /* قائمة السلة المنسدلة نفسها: رفيعة، تحت بعض، ومرتبة */
+  .cart-box .cart, .right-header .cart, .user .cart {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 200px !important;           /* عرض صغير ورفيع زي ما طلبت */
+    max-width: 90vw !important;
+    background: #ffffff !important;
+    border-radius: 6px !important;
+    padding: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* العناصر جوه قائمة السلة تظهر تحت بعضها بالمللي */
+  .cart-box .cart ul, .right-header .cart ul, .user .cart ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  /* كارت المنتج الواحد جوه القائمة المنسدلة */
+  .cart-box .cart ul li, .right-header .cart ul li, .user .cart ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    padding: 6px !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* زر عرض كل المنتجات جوه القائمة */
+  .cart-box .cart #view, .right-header .cart #view {
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    margin-top: 6px !important;
+    width: 100% !important;
+  }
+}
+/* --- الحل الجذري والنهائي لتثبيت الهيدر والموبايل بدون عرض زيادة --- */
+@media screen and (max-width: 768px) {
+  
+  /* 1. منع أي عرض زيادة أو سكرول أفقي في الصفحة بالكامل */
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. الهيدر والعناصر فوق: تنظيم وترتيب بدون خروج بره الشاشة */
+  header, .navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* زر اللوج أوت يرجع مكانه الطبيعي جوه الهيدر ومنع خروجه */
+  .logout-box, .logout {
+    display: inline-block !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+  }
+
+  /* 3. قائمة السلة: إرجاعها لحالتها المخفية الطبيعية وعدم إظهارها إلا بالضغط */
+  .cart-box .cart, .right-header .cart, .user .cart {
+    display: none !important; /* تتفتح بس بالـ JS بتاعك لما تضغط عليها */
+  }
+
+  /* لو الكلاس بيفتح بـ active أو show عندك فبنخليه يظهر مظبوط */
+  .cart-box.active .cart, .cart-box.show .cart,
+  .cart-box .cart.active, .cart-box .cart.show {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 40px !important;
+    right: 10px !important;
+    width: 220px !important;
+    max-width: 85vw !important;
+    background: #fff !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    z-index: 9999 !important;
+    padding: 8px !important;
+  }
+}
+/* --- الإصلاح النهائي لعمل القائمة بالضغط من خلال الـ JS بدون ما تفضل مفتوحة --- */
+@media screen and (max-width: 768px) {
+  
+  /* 1. منع أي عرض زيادة أو سكرول أفقي للموبايل */
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. الهيدر يفضل متظبط جوه الشاشة من غير ما Logout تطلع بره */
+  header, .navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logout-box, .logout {
+    display: inline-block !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+  }
+
+  /* 3. تصغير وتنسيق قائمة السلة لما الـ JS يفتحها فقط (بدون إجبارها تظهر دائماً) */
+  .cart-box .cart, .right-header .cart, .user .cart {
+    position: absolute !important;
+    top: 40px !important;
+    right: 10px !important;
+    width: 210px !important;
+    max-width: 85vw !important;
+    background: #fff !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    z-index: 9999 !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* تنسيق المنتجات جوه القائمة المنسدلة لتبقى تحت بعض بشكل شيك */
+  .cart-box .cart ul, .right-header .cart ul, .user .cart ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .cart-box .cart ul li, .right-header .cart ul li, .user .cart ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    padding: 6px !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+  }
 }
