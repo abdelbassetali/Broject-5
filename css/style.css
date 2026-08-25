@@ -9,6 +9,16 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(245, 245, 245);
 }
+/* الحاوية العامة للهيدر عشان تضبط العناصر جنب بعضها بانتظام */
+header, .nav-bar, .header-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 25px !important;
+  width: 100% !important;
+  min-height: 70px !important;
+  box-sizing: border-box !important;
+}
 
 .left-header a{
     width: 70px;
@@ -77,40 +87,6 @@ margin-top: 15px;
 .right-header .user .cart-box .cart.btn i{
     font-size: 1.6rem;
 }
-/* .right-header .user .cart-box .cart{
-    display: none;
-    position: absolute;
-    right: 0%;
-    margin-top: 20px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 0 0 12px 12px;
-    width: 320px;
-    z-index: 2;
-}
-.right-header .user .cart-box .cart ul {
-    margin: 25px 0px;
-  }
-  .right-header .user .cart-box .cart ul li {
-    display: block;
-    margin: 10px;
-    font-size: 1.2rem;
-    background-color: rgb(225, 223, 223);
-    border-radius: 3px;
-  }
-  .right-header .user .cart-box .cart ul li span {
-    border-radius: 5px;
-    padding: 10px;
-  }
-  .right-header .user .cart-box .cart ul li a {
-    text-decoration: none;
-  }
-  .right-header .user .cart-box .cart ul li a i {
-    font-size: 0.9rem;
-    border-radius: 4;
-    padding: 4px;
-    line-height: 18x;
-  } */
-/* حاوية السلة المنسدلة */
 
 /* حاوية السلة المنسدلة (عرض أصغر) */
 .right-header .user .cart-box .cart {
@@ -224,7 +200,15 @@ margin-top: 15px;
             justify-content: center;
             align-items: center;
   }
-  
+  /* تثبيت توازن اليمين واليسار في الهيدر */
+.left-header, .right-header {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.right-header {
+  gap: 20px !important; /* مسافات متساوية ومنظمة بين عناصر اليمين */
+}
   @media screen and (max-width: 960px) {
     .userName {
       display: none;
