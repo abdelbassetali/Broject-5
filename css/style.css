@@ -1043,7 +1043,79 @@ display: inline-block;
          margin-left: 25px !important;
 } 
 }
+@media screen and (max-width: 768px) {
+  /* تصفير الهوامش والمسافات الزيادة من كاردات المنتجات والنصوص */
+  .card, .card-body, .card-text {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
+  /* إزالة أي مسافة فارغة فوق أول سطر أو تحت آخر سطر */
+  .card-body p:first-of-type,
+  .card-body h5:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
 
+  .card-body p:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. ضبط السلايد نفسه عشان يكون حاوية مرنة ومغلقة بإحكام */
+  .swiper.mySwiper {
+    width: 100% !important;
+    padding: 0 10px !important;
+    overflow: hidden !important;
+  }
+
+  .swiper-slide {
+    height: auto !important; /* إلغاء الارتفاع الثابت القديم عشان السلايد يتمدد على قد المحتوى براحته */
+    min-height: 210px !important; /* إعطاء مساحة كافية تلم الصورة والنصوص والقلب */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: #ffffff !important; /* خلفية بيضاء واضحة للكارت */
+    border-radius: 8px !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important; /* حماية تامة ضد أي عنصر يهرب بره السلايد */
+  }
+
+  /* 2. تنسيق النصوص جوه السلايد لتنزيلها تحت بعضها برواقة */
+  .swiper-slide .card-text,
+  .swiper-slide div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 4px !important;
+  }
+
+  .swiper-slide p,
+  .swiper-slide span,
+  .swiper-slide h5 {
+    font-size: 11px !important;
+    color: #333 !important; /* لون غامق وواضح لأن خلفية السلايد بقت بيضاء */
+    margin: 0 !important;
+    white-space: normal !important; /* منع أي تداخل وإجبار النص ينزل لسطر جديد */
+    text-align: center !important;
+  }
+
+  /* 3. تثبيت أيقونة القلب في مكانها الطبيعي جوه السلايد من غير ما تطلع بره */
+  .swiper-slide .fa-heart,
+  .fa-heart {
+    position: static !important;
+    display: inline-block !important;
+    margin: 6px auto 2px auto !important;
+    font-size: 1.1rem !important;
+  }
+}
 
 
