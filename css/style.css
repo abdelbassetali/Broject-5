@@ -1217,21 +1217,22 @@ display: inline-block;
 }
 }
 @media screen and (max-width: 768px) {
-  /* جعل كلمة Product والاسم بجانب بعضهما في نفس السطر */
+  /* رجعناهم تحت بعض عشان ياخدوا راحتهم ومايدخلوش في بعض */
   .swiper-slide .card-text, 
   .card .card-body .card-text {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 5px !important;
+    flex-direction: column !important; /* تحت بعض */
+    align-items: flex-start !important; /* محاذاة للشمال أو اليمين حسب رغبتك */
+    gap: 3px !important;
     width: 100% !important;
   }
 
   .swiper-slide .card-text p, 
   .card .card-body .card-text p {
-    font-size: 0.7rem !important; /* تصغير الخط أكتر عشان يكفي براحته */
+    font-size: 0.75rem !important;
     margin: 0 !important;
-    white-space: nowrap !important; /* منع نزول الكلمة للسطر التاني */
+    white-space: normal !important; /* السماح بالنزول للسطر التالي عادي */
   }
+    .swiper-slide{
+         margin-left: 15px !important;
 }
