@@ -1207,3 +1207,18 @@ display: inline-block;
     font-size: 0.9rem !important;
   }
 }
+/* --- إظهار كلمة Remove كاملة بدون قص وضبط مساحة الزرار --- */
+@media screen and (max-width: 768px) {
+  .card button, 
+  .product-item button, 
+  .remove-btn, 
+  button[class*="remove"],
+  .favourite-item button, 
+  .favorite-item button {
+    padding: 5px 8px !important;    /* تقليل الـ padding الجانبي عشان ياخد مساحة أقل */
+    font-size: 0.75rem !important;   /* تصغير الخط حاجة بسيطة عشان الكلمة تقعد براحتها */
+    min-width: unset !important;     /* إلغاء أي حد أدنى للعرض كان مقيد الزرار */
+    width: auto !important;          /* عرض تلقائي حسب حجم الكلمة */
+    white-space: nowrap !important;  /* منع التفاف الكلام */
+  }
+}
