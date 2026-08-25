@@ -478,4 +478,72 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
+/* كود نهائي لتنظيم الهيدر وارتفاعه بدون مسح القديم */
+.navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 20px !important;
+  min-height: 65px !important;
+  background-color: #f2f1f1 !important;
+}
+
+.left-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.left-header .logo {
+  font-size: 1.3rem !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+.alaa-img {
+  width: 50px !important;
+  height: 38px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+}
+
+.userName {
+  margin: 0 auto !important;
+  transform: none !important;
+  font-size: 1.2rem !important;
+  color: #333 !important;
+}
+
+.right-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  margin: 0 !important;
+}
+
+.right-header .login ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  gap: 10px !important;
+  list-style: none !important;
+}
+
+.right-header .login ul li {
+  margin: 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.right-header .user, .logout-box {
+  margin: 0 !important;
+}
+
+.logout-box .logout {
+  font-size: 1.1rem !important;
+  line-height: normal !important;
+  margin: 0 !important;
+  text-decoration: none;
+  color: black;
+}
 
