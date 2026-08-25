@@ -164,6 +164,7 @@ function cartBtn(){
 
 
 function addFavourite(id, e) {
+    if (e) e.preventDefault();
     const ele = document.getElementById(id);
     let mainId = id / 100000;
 
@@ -206,40 +207,7 @@ if (localStorage.getItem('favourite')) {
         }
     }
 }
-// function addFavourite(id,e){
-//     const ele=document.getElementById(id)
-//     mainId=id/100000;
-// if(localStorage.getItem('first') && localStorage.getItem('log')){
-//     if(ele.style.color=='red'){
-//         ele.style.color='rgb(185, 184, 184)'
 
-//         favourite.splice(favourite.findIndex((x)=>{
-//             return favourite.id==id;
-//         }),1)
-//         localStorage.setItem('favourite',JSON.stringify(favourite));
-//     }else{
-//         ele.style.color='red'
-//         favourite.push(product[id/100000]) 
-//         localStorage.setItem('favourite',JSON.stringify(favourite));
-//     }
-// }else{
-//     setTimeout(()=>{
-//         location.assign('login.html')
-//     },500)
-// }
-
-//     addEventListener('click',(e)=> e.preventDefault())
-
-// }
-
-// if(localStorage.getItem('favourite')){
-//     let fav= JSON.parse(localStorage.getItem('favourite')) 
-    
-//     for(let i =0;i<fav.length;i++){
-//         let x=document.getElementById(fav[i].id+'00000')
-//         x.style.color='red'
-//     }
-// }
 
 function plusBtn(id){
     ele=userProducts.find((x)=>{
