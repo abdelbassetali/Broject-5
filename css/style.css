@@ -1150,3 +1150,23 @@ display: inline-block;
     font-size: 0.75rem !important;
   }
 }
+/* --- تظبيط الهيدر والزراير على الموبايل لتفضل مكانها جوه الشاشة --- */
+@media screen and (max-width: 768px) {
+  header, .navbar, .header-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 5px 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* تصغير مسافات الزراير فوق عشان متبوظش الشكل */
+  .logout-box, .login-box, .register-box, .user-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 0.85rem !important;
+  }
+}
