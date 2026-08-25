@@ -889,4 +889,86 @@ display: inline-block;
     font-size: 1rem !important;
     margin: 0 auto !important;
   }
+    /* --- 1. إجبار الهيدر فوق على سطر واحد (اللوجو شمال، وزرار القائمة يمين) --- */
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* إخفاء سلة التسوق والـ Logout من البرواز الرئيسي على الموبايل عشان يدخلوا جوه القائمة أو يتظبطوا */
+  .right-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  /* لو الـ Logout والسلة برا القائمة، نخليهم جنب زرار القائمة بشكل منسق وخفيف من غير ما يكسروا التصميم */
+  .logout-box .logout {
+    font-size: 0.85rem !important;
+    margin: 0 !important;
+    line-height: normal !important;
+  }
+
+  /* --- 2. تصليح قائمة السلة المنسدلة لتكون رفيعة والعناصر تحت بعضها --- */
+  .right-header .user .cart-box {
+    position: relative !important;
+    display: block !important;
+  }
+
+  /* قائمة السلة نفسها تبقى رفيعة ومرتبة */
+  .right-header .user .cart-box .cart,
+  .cart-box .cart {
+    display: block !important; /* أو تظهر حسب الـ JS بتاعك، بس ده لتظبيط شكلها لو ظاهرة */
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 200px !important;         /* خليناها رفيعة وصغيرة */
+    max-width: 85vw !important;
+    background-color: #fff !important;
+    border-radius: 6px !important;
+    padding: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    z-index: 999 !important;
+  }
+
+  /* إجبار العناصر جوه قائمة السلة على الظهور تحت بعضها بشكل طولي ورفيع */
+  .right-header .user .cart-box .cart ul,
+  .cart-box .cart ul {
+    display: flex !important;
+    flex-direction: column !important; /* تحت بعض بالظبط */
+    gap: 6px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* كارت المنتج الواحد جوه القائمة المنسدلة */
+  .right-header .user .cart-box .cart ul li,
+  .cart-box .cart ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 4px 6px !important;
+    font-size: 0.75rem !important;
+    background: #f9f9f9 !important;
+    border-radius: 4px !important;
+    margin: 0 !important;
+  }
+
+  /* تصغير أزرار الكمية والزراير جوه القائمة المنسدلة */
+  .right-header .user .cart-box .cart ul li .plus {
+    gap: 4px !important;
+  }
+
+  .right-header .user .cart-box .cart #view {
+    font-size: 0.8rem !important;
+    margin: 6px auto 2px auto !important;
+    text-align: center !important;
+    display: block !important;
+  }
 }
