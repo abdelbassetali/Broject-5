@@ -111,6 +111,8 @@ margin-top: 15px;
     line-height: 18x;
   } */
 /* حاوية السلة المنسدلة */
+
+/* حاوية السلة المنسدلة (عرض أصغر) */
 .right-header .user .cart-box .cart {
   display: none;
   position: absolute;
@@ -118,10 +120,10 @@ margin-top: 15px;
   margin-top: 20px;
   background-color: rgb(243, 243, 243) !important;
   border-radius: 0 0 15px 15px !important;
-  width: 330px !important;
+  width: 240px !important; /* صغرنا العرض عشان تبقي مظلمة ولمة على قد المنتجات */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
   z-index: 100 !important;
-  padding: 12px !important;
+  padding: 10px !important;
   box-sizing: border-box !important;
 }
 
@@ -137,9 +139,9 @@ margin-top: 15px;
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  margin: 8px 0 !important;
-  padding: 8px 12px !important;
-  font-size: 1.1rem !important;
+  margin: 6px 0 !important;
+  padding: 6px 10px !important;
+  font-size: 1rem !important;
   background-color: rgb(255, 255, 255) !important;
   border-radius: 8px !important;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
@@ -156,24 +158,25 @@ margin-top: 15px;
 .right-header .user .cart-box .cart ul li .plus {
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 6px !important;
 }
 
-/* زرار عرض الكل (View All Product) */
+/* زرار عرض الكل (View All Product) - لون أسود وبدون خط تحت الـ Hover */
 .right-header .user .cart-box .cart #view {
   display: block !important;
   text-align: center !important;
-  margin: 12px auto 5px auto !important;
-  font-size: 1.1rem !important;
-  color: #007bff !important;
+  margin: 10px auto 4px auto !important;
+  font-size: 1rem !important;
+  color: #000000 !important; /* لون أسود */
   font-weight: 700 !important;
   text-decoration: none !important;
-  margin-left: 0 !important; /* لغد الإزاحة القديمة اللي كانت مخلياه مرحل */
 }
 
 .right-header .user .cart-box .cart #view:hover {
-  text-decoration: underline !important;
+  text-decoration: none !important; /* شلنا الخط اللي بيظهر تحتها عند الـ hover */
+  color: #000000 !important;
 }
+
   .right-header .user .cart-box .cart ul li a i:hover {
     opacity: 0.5;
   }
