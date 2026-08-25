@@ -1024,44 +1024,42 @@ display: inline-block;
 }
 }
 @media screen and (max-width: 768px) {
-  /* رجعناهم تحت بعض عشان ياخدوا راحتهم ومايدخلوش في بعض */
-  .swiper-slide .card-text, 
-  .card .card-body .card-text {
+  /* إجبار الكارت على استخدام Flexbox عمودي يضمن ترتيب العناصر بالتدريج */
+  .swiper-slide, 
+  .card, 
+  .card-body {
     display: flex !important;
-    flex-direction: column !important; /* تحت بعض */
-    align-items: flex-start !important; /* محاذاة للشمال أو اليمين حسب رغبتك */
-    gap: 3px !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
     width: 100% !important;
   }
-    .swiper-slide .card-text p, 
-  .card .card-body .card-text p {
-    font-size: 10px !important; /* خط صغير ورايق يكفي المساحة */
-    margin: 0 !important;
-    white-space: nowrap !important;
-  }
-        .swiper-slide{
-         margin-left: 25px !important;
-} 
-}
-@media screen and (max-width: 768px) {
-  /* تصفير الهوامش والمسافات الزيادة من كاردات المنتجات والنصوص */
-  .card, .card-body, .card-text {
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+
+  /* ترتيب النصوص داخل الكارت: الاسم ثم القسم ثم السعر */
+  .card-body h5, 
+  .card-body .product-title {
+    order: 1 !important;
   }
 
-  /* إزالة أي مسافة فارغة فوق أول سطر أو تحت آخر سطر */
-  .card-body p:first-of-type,
-  .card-body h5:first-child {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  .card-body p.category, 
+  .card-body span:nth-child(2),
+  .card-body p:nth-of-type(1) {
+    order: 2 !important;
   }
 
-  .card-body p:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+  .card-body p.price, 
+  .card-body span.price,
+  .card-body p:nth-of-type(2) {
+    order: 3 !important;
+  }
+
+  /* الزرار وأيقونة القلب في نهاية الكارت تماماً */
+  .card-body .d-flex, 
+  .card-body button, 
+  .card-body .btn-danger,
+  .card-body .btn-primary {
+    order: 4 !important;
+    margin-top: auto !important;
   }
 }
 
