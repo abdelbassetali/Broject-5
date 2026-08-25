@@ -597,4 +597,14 @@ display: inline-block;
   .logout-box .logout, .right-header .login ul li {
     font-size: 0.9rem !important;
   }
+    /* استهداف الزرار سواء كان كلاس أو تگ */
+  .card button, 
+  .product-item button, 
+  .remove-btn, 
+  button[class*="remove"] {
+    padding: 6px 12px !important;    /* تقليل الـ padding عشان يخس ويبقى رفيع */
+    font-size: 0.85rem !important;   /* تصغير حجم خط الكتابة جوا الزرار */
+    white-space: nowrap !important;  /* منع الكلام إنه ينزل تحت بعضه */
+    width: auto !important;
+  }
 }
