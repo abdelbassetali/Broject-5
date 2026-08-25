@@ -37,7 +37,7 @@ function getTotalPrice(){
         return parseInt(price[0]) ;
     })
     for(let i in items){
-        sum += prices[0] * parseInt(items[i].count) 
+        sum += prices[i] * parseInt(items[i].count) 
     }
     totalPrice.innerHTML=sum+'$';
 }
