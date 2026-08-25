@@ -368,3 +368,102 @@ padding: 12px 15px;
       font-size: 1.6rem !important;
     }
   }
+/* ==========================================
+   التعديل الشامل والنهائي لتنسيق الموبايل
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+  
+  /* 1. تقليل البوردر رديس لكل الكاردات والسلايدر عشان تبقى هادئة وصغيرة */
+  .swiper .swiper-slide,
+  .container-box .ele,
+  .swiper .swiper-slide .swiper-img img {
+    border-radius: 6px !important;
+  }
+
+  /* 2. كاردات السلة (Container-box) تظهر كارتين جنب بعض بالظبط */
+  .container-box {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 95% !important;
+    gap: 8px !important;
+    margin: 10px auto !important;
+  }
+
+  .container-box .ele {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 140px !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: center !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* تصغير صور الكاردات داخل السلة لتناسب المساحة الجديدة */
+  .container-box .ele img {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 4px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+  }
+
+  /* تنظيم أزرار الكمية وزر الحذف جوه كاردات السلة */
+  .container-box .ele .plus {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    width: 100% !important;
+    margin: 4px 0 !important;
+    float: none !important;
+  }
+
+  .container-box .ele .plus span {
+    font-size: 0.85rem !important;
+  }
+
+  .container-box .ele .plus a {
+    font-size: 0.75rem !important;
+    margin: 0 2px !important;
+  }
+
+  .container-box .ele .btn-danger {
+    padding: 2px 6px !important;
+    font-size: 0.65rem !important;
+    margin: 4px auto 0 auto !important;
+    float: none !important;
+    display: block !important;
+  }
+
+  /* 3. تظبيط السلايدر (Swiper) على الموبايل */
+  .swiper {
+    width: 100% !important;
+    height: auto !important;
+    padding: 5px 0 30px 0 !important;
+  }
+
+  .swiper .swiper-slide {
+    width: 160px !important;
+    height: 180px !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .swiper .swiper-slide .swiper-img {
+    height: 100px !important;
+  }
+
+  .swiper .swiper-slide .card-body p {
+    font-size: 0.8rem !important;
+  }
+
+  .swiper .swiper-slide .card-body i {
+    font-size: 1.3rem !important;
+  }
+}
