@@ -4,28 +4,7 @@ const totalPrice=document.getElementById('totalPrice');
 const favBox=document.querySelector('.swiper-wrapper')
 let favItems=JSON.parse(localStorage.getItem('favourite')) 
 
-// ////////////////////////////
-// المنتجات
-// function drawUserProduct(){
-//     userProductBox.innerHTML=''
-//     for(let i in items){
 
-//         userProductBox.innerHTML+=`
-//         <div class="ele">
-//             <img src="${items[i].img}" alt="product1" height="150px">
-//                 <div class="ele-content">
-//                     <p>Product : ${items[i].name}</p>
-//                     <p>Category: ${items[i].category} </p>
-//                     <p>Price: ${items[i].price}</p>
-//                     <span>${items[i].count}</span>
-//                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
-//                     <a href="#" class="minus"><i class="fas fa-minus  text-danger" onclick="minusBtn(${items[i].id})"></i></a>
-//                     <button class="btn btn-danger" onclick="removeItems(${items[i].id})">Remove</button>
-//                 </div> 
-//         </div> 
-//         `
-//     }
-// }
 function drawUserProduct(){
     userProductBox.innerHTML=''
     for(let i in items){
@@ -53,7 +32,6 @@ function drawUserProduct(){
 }
 drawUserProduct()
 
-// ظظظظظظظظظ
 //  السعر 
 function getTotalPrice(){
     let sum=0;
@@ -146,26 +124,24 @@ function removeFavourite(id){
     drawFav()
 }
 
-function size(){
-        let width;
-    if(window.innerWidth>=993){
-        width =3
-    } else if(window.innerWidth>=560){
-        width =2
-    }else{
-        width=1
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      560: {
+        slidesPerView: 2,
+      },
+      993: {
+        slidesPerView: 3,
+      }
     }
-    var swiper = new Swiper(".mySwiper", {
-        
-        slidesPerView: width,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-}
-size()
+});
 
 let minus=document.querySelectorAll('.fa-minus')
 let plus=document.querySelectorAll('.plus')
