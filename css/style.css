@@ -1239,3 +1239,21 @@ display: inline-block;
          margin-left: 25px !important;
 } 
 }
+@media screen and (max-width: 768px) {
+  /* جعل كل كارتين جنب بعض بعرض مناسب متساوي */
+  .swiper-slide, .row .card, .col-md-4, .col-lg-3 {
+    width: 48% !important;
+    max-width: 48% !important;
+    display: inline-block !important;
+    margin: 1% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ظبط النصوص جوه الكارت عشان تظهر تحت بعضها من غير ما تتقطع أو تزنق */
+  .card-text p {
+    font-size: 0.8rem !important;
+    text-align: center !important;
+    margin-bottom: 4px !important;
+    white-space: normal !important;
+  }
+}
