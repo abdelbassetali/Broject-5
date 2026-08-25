@@ -1188,86 +1188,76 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
-  /* 1. ضبط الهيدر الرئيسي ليكون في سطر واحد ومرتب */
+  /* 1. ضبط الهيدر الرئيسي في سطر واحد */
   .navbar.navbar-expand-lg {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 4px 8px !important;
+    padding: 6px 8px !important;
     flex-wrap: nowrap !important;
-    width: 100% !important;
   }
 
-  /* 2. تصغير اللوجو والصورة في الشمال */
+  /* 2. إلغاء زرار القائمة (الـ Toggler) نهائياً من الموبايل */
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  /* 3. إلغاء القائمة المنسدلة العائمة أو منعها من فتح زحمة */
+  .navbar-collapse,
+  #navbarToggleExternalContent {
+    display: none !important;
+  }
+
+  /* 4. اللوجو وصورته في الشمال بأحجام مناسبة */
   .left-header {
     display: flex !important;
     align-items: center !important;
-    gap: 3px !important;
-    flex-shrink: 1 !important;
-    min-width: 0 !important;
+    gap: 4px !important;
   }
 
   .left-header .logo {
-    font-size: 0.8rem !important;
+    font-size: 0.85rem !important;
     white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
   }
 
   .alaa-img {
-    width: 20px !important;
+    width: 22px !important;
     height: auto !important;
   }
 
-  /* 3. زرار القائمة (الـ Toggler) بحجم صغير جداً */
-  .navbar-toggler {
-    padding: 2px 5px !important;
-    font-size: 0.9rem !important;
-    margin: 0 3px !important;
-  }
-
-  /* 4. إلغاء الـ transform واسم المستخدم لو زحمة، أو تصغيره */
-  .userName {
-    display: none !important; 
-  }
-
-  /* 5. الجانب الأيمن (السلة واللوجين والـ Logout) مصغرين جنب بعض */
-  .right-header.ml-auto {
+  /* 5. الجانب الأيمن (السلة والـ Logout واللوجين) يظهروا جنب بعض بانتظام */
+  .right-header.ml-auto,
+  .right-header {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 5px !important;
+    gap: 6px !important;
     margin: 0 !important;
-    flex-shrink: 0 !important;
   }
 
-  .right-header .login ul {
-    display: flex !important;
-    gap: 4px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
+  .right-header .login {
+    display: none !important; /* لو حابب تخفي اللوجين والتسجيل مؤقتاً في الهيدر الضيق، أو سيبهم لو عاوزهم */
   }
 
-  .right-header .login ul li a, 
-  .logout-box .logout {
-    font-size: 0.75rem !important;
-    padding: 0 !important;
-    white-space: nowrap !important;
-  }
-
-  /* تصغير زر السلة وأيقونتها لتناسب الشاشة */
+  /* تصغير زر السلة عشان يكفي في السطر */
   .cart-box .cart-btn {
     font-size: 0.75rem !important;
-    padding: 2px 4px !important;
-    gap: 2px !important;
+    padding: 2px 5px !important;
     display: flex !important;
     align-items: center !important;
+    gap: 2px !important;
     white-space: nowrap !important;
   }
 
   .cart-box .cart-btn i {
     font-size: 0.75rem !important;
+  }
+
+  /* تصغير زر الـ Logout */
+  .logout-box .logout {
+    font-size: 0.75rem !important;
+    padding: 2px 5px !important;
+    white-space: nowrap !important;
   }
 }
