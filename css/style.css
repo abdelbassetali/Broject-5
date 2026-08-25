@@ -1114,5 +1114,61 @@ display: inline-block;
     font-size: 1.1rem !important;
   } */
 }
+@media screen and (max-width: 768px) {
+  /* 1. رجوع كل محتوى الكارت والنصوص لتبدأ من الشمال */
+  .swiper-slide, 
+  .card, 
+  .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important; /* كل النصوص تبدأ من الشمال */
+    width: 100% !important;
+  }
+
+  /* 2. ضبط اتجاه النصوص وكلمة السعر لتكون شمال تماماً */
+  .card-body h5, 
+  .card-body .product-title,
+  .card-body p.price, 
+  .card-body span.price,
+  .card-body p.category, 
+  .card-body span:nth-child(2),
+  .card-body p {
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  /* 3. فصل الزرار عن القلب: الزرار ياخد راحته، والقلب يرجع يمين الكارت */
+  .card-body .d-flex,
+  .card-body form,
+  .card-body > div:last-of-type {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    gap: 15px !important;
+  }
+
+  /* زر الإضافة/الحذف ياخد العرض المناسب */
+  .card-body .btn, 
+  .card-body .btn-danger,
+  .card-body .btn-primary {
+    flex-grow: 1 !important;
+    margin: 0 !important;
+  }
+
+  /* إرجاع أيقونة القلب إلى جهة اليمين كما كانت */
+  .card-body .fa-heart,
+  .fa-heart {
+    position: static !important;
+    display: inline-block !important;
+    margin-left: auto !important; /* زقه لأقصى اليمين */
+    margin-right: 0 !important;
+    font-size: 1.2rem !important;
+    flex-shrink: 0 !important;
+  }
+}
 
 
