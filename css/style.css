@@ -1178,71 +1178,36 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
-  /* 1. ضبط الكارت بالكامل ليأخذ مساحة مريحة ومرتبة */
   .swiper-slide {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 12px 10px 15px 10px !important;
-    min-height: 240px !important;
-  }
-
-  /* 2. الصورة في الأعلى وبحجم متناسق */
-  .swiper-slide .swiper-img {
-    text-align: center !important;
-    width: 100% !important;
-    margin-bottom: 8px !important;
-  }
-
-  .swiper-slide .swiper-img img {
-    max-width: 100px !important;
     height: auto !important;
-    display: inline-block !important;
-  }
-
-  /* 3. جسم الكارت يحتوي النصوص ويجعلها مترتبة تحت بعض */
-  .swiper-slide .card-body {
+    min-height: 290px !important;
+    padding-bottom: 25px !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  /* 4. النصوص (اسم المنتج والقسم) تبدأ من الشمال وتحت بعض بانتظام */
-  .swiper-slide .card-body .card-text {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-    margin-bottom: 12px !important;
-  }
-
-  .swiper-slide .card-body .card-text p {
-    display: block !important;
-    width: 100% !important;
-    text-align: left !important;
-    font-size: 11px !important;
-    margin: 2px 0 !important;
-  }
-
-  /* 5. زر القلب يظهر في المنتصف تحت الكلام تماماً بشكل شيك */
-  .swiper-slide .card-body a {
-    display: flex !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: center !important;
+  }
+  
+  .swiper-slide .card-body {
     width: 100% !important;
-    margin-top: 5px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0 10px !important;
+  }
+
+  .swiper-slide .card-body a {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 10px !important;
   }
 
   .swiper-slide .card-body .fa-heart {
-    font-size: 1.4rem !important;
     display: inline-block !important;
-    text-align: center !important;
+    margin: 0 auto !important;
+    font-size: 1.3rem !important;
   }
+}
 }
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
