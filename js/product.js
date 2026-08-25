@@ -64,6 +64,7 @@ function getTotalPrice(){
  getTotalPrice()
 }
 function plusBtn(id , e){
+    let currentScroll = window.scrollY; // 1. احفظ مكان الصفحة الحالي
     if(e) e.preventDefault();
     ele=items.find((x)=>{
        return x.id==id
@@ -72,12 +73,14 @@ function plusBtn(id , e){
     localStorage.setItem('items',JSON.stringify(items))
     drawUserProduct()
     getTotalPrice()
+    window.scrollTo(0, currentScroll); // 2. رجّع الصفحة لمكانها فوراً
 }
 
 // \\\\\\\\\\\\\\\\\
 //   بوتن الطرح
 function minusBtn(id){
     if(e) e.preventDefault();
+    let currentScroll = window.scrollY; // 1. احفظ مكان الصفحة الحالي
     ele=items.find((x)=>{
        return x.id==id
     })
@@ -92,6 +95,7 @@ function minusBtn(id){
                 localStorage.setItem('items',JSON.stringify(items))
                 drawUserProduct()
                 getTotalPrice()
+                window.scrollTo(0, currentScroll); // 2. رجّع الصفحة لمكانها فوراً
             }
     }
 
