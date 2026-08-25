@@ -55,17 +55,16 @@ drawUserProduct()
 
 //  السعر 
 function getTotalPrice(){
-    let sum=0;
-    let prices=items.map((ele)=>{
-        let price=ele.price.split(' ')
-        return parseInt(price[0]) ;
-    })
-    for(let i in items){
-        sum += prices[i] * parseInt(items[i].count) 
+    let sum = 0;
+    for(let i = 0; i < items.length; i++){
+        // بنفصل السعر وناخد الرقم بس بأمان تام
+        let priceNum = parseInt(items[i].price.split(' ')[0]) || 0;
+        let countNum = parseInt(items[i].count) || 1;
+        sum += priceNum * countNum;
     }
-    totalPrice.innerHTML=sum+'$';
+    totalPrice.innerHTML = sum + '$';
 }
- getTotalPrice()
+getTotalPrice();
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // الازالة
