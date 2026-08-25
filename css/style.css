@@ -972,3 +972,62 @@ display: inline-block;
     display: block !important;
   }
 }
+/* --- تعديل نهائي وصارم لقائمة السلة المنسدلة على الموبايل --- */
+@media screen and (max-width: 768px) {
+  
+  /* الحاوية الأب اللي فيها القائمة عشان تضمن إن القائمة تقف مكانها صح */
+  .right-header, .user, .cart-box, .navbar {
+    position: relative !important;
+  }
+
+  /* قائمة السلة المنسدلة نفسها: رفيعة، تحت بعض، ومرتبة */
+  .cart-box .cart, .right-header .cart, .user .cart {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 200px !important;           /* عرض صغير ورفيع زي ما طلبت */
+    max-width: 90vw !important;
+    background: #ffffff !important;
+    border-radius: 6px !important;
+    padding: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* العناصر جوه قائمة السلة تظهر تحت بعضها بالمللي */
+  .cart-box .cart ul, .right-header .cart ul, .user .cart ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  /* كارت المنتج الواحد جوه القائمة المنسدلة */
+  .cart-box .cart ul li, .right-header .cart ul li, .user .cart ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    padding: 6px !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* زر عرض كل المنتجات جوه القائمة */
+  .cart-box .cart #view, .right-header .cart #view {
+    display: block !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    margin-top: 6px !important;
+    width: 100% !important;
+  }
+}
