@@ -92,9 +92,9 @@ body {
   .container-box{
     margin: 5vh auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80%;
-    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr)!important;
+    width: 90%;
+    grid-gap: 1.5rem;
   }
   /* .container-box .ele {
     background-color: rgb(255, 255, 255);
