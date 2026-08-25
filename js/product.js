@@ -6,22 +6,47 @@ let favItems=JSON.parse(localStorage.getItem('favourite'))
 
 // ////////////////////////////
 // المنتجات
+// function drawUserProduct(){
+//     userProductBox.innerHTML=''
+//     for(let i in items){
+
+//         userProductBox.innerHTML+=`
+//         <div class="ele">
+//             <img src="${items[i].img}" alt="product1" height="150px">
+//                 <div class="ele-content">
+//                     <p>Product : ${items[i].name}</p>
+//                     <p>Category: ${items[i].category} </p>
+//                     <p>Price: ${items[i].price}</p>
+//                     <span>${items[i].count}</span>
+//                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
+//                     <a href="#" class="minus"><i class="fas fa-minus  text-danger" onclick="minusBtn(${items[i].id})"></i></a>
+//                     <button class="btn btn-danger" onclick="removeItems(${items[i].id})">Remove</button>
+//                 </div> 
+//         </div> 
+//         `
+//     }
+// }
 function drawUserProduct(){
     userProductBox.innerHTML=''
     for(let i in items){
-
         userProductBox.innerHTML+=`
         <div class="ele">
-            <img src="${items[i].img}" alt="product1" height="150px">
-                <div class="ele-content">
-                    <p>Product : ${items[i].name}</p>
-                    <p>Category: ${items[i].category} </p>
-                    <p>Price: ${items[i].price}</p>
-                    <span>${items[i].count}</span>
-                    <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
-                    <a href="#" class="minus"><i class="fas fa-minus  text-danger" onclick="minusBtn(${items[i].id})"></i></a>
+            <img src="${items[i].img}" alt="product">
+            <div class="ele-content" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; padding-left: 15px;">
+                <div>
+                    <p style="margin: 0; font-weight: bold;">Product: ${items[i].name}</p>
+                    <p style="margin: 0; color: #666;">Category: ${items[i].category}</p>
+                    <p style="margin: 0; color: #333;">Price: ${items[i].price}</p>
+                </div>
+                <div class="ele-actions" style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+                    <div class="plus">
+                        <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${items[i].id})"></i></a>
+                        <span style="margin: 0 10px;">${items[i].count}</span>
+                        <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${items[i].id})"></i></a>
+                    </div>
                     <button class="btn btn-danger" onclick="removeItems(${items[i].id})">Remove</button>
-                </div> 
+                </div>
+            </div>  
         </div> 
         `
     }
