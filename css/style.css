@@ -1083,3 +1083,70 @@ display: inline-block;
     padding: 8px !important;
   }
 }
+/* --- الإصلاح النهائي لعمل القائمة بالضغط من خلال الـ JS بدون ما تفضل مفتوحة --- */
+@media screen and (max-width: 768px) {
+  
+  /* 1. منع أي عرض زيادة أو سكرول أفقي للموبايل */
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. الهيدر يفضل متظبط جوه الشاشة من غير ما Logout تطلع بره */
+  header, .navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .logout-box, .logout {
+    display: inline-block !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+  }
+
+  /* 3. تصغير وتنسيق قائمة السلة لما الـ JS يفتحها فقط (بدون إجبارها تظهر دائماً) */
+  .cart-box .cart, .right-header .cart, .user .cart {
+    position: absolute !important;
+    top: 40px !important;
+    right: 10px !important;
+    width: 210px !important;
+    max-width: 85vw !important;
+    background: #fff !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    z-index: 9999 !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* تنسيق المنتجات جوه القائمة المنسدلة لتبقى تحت بعض بشكل شيك */
+  .cart-box .cart ul, .right-header .cart ul, .user .cart ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .cart-box .cart ul li, .right-header .cart ul li, .user .cart ul li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    background: #f8f9fa !important;
+    padding: 6px !important;
+    border-radius: 4px !important;
+    font-size: 0.75rem !important;
+  }
+}
