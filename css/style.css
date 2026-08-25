@@ -1056,59 +1056,6 @@ display: inline-block;
 
 }
 
-/* 
-@media screen and (max-width: 768px) {
-  /* 1. ضبط السلايد نفسه عشان يكون حاوية مرنة ومغلقة بإحكام */
-  .swiper.mySwiper {
-    width: 100% !important;
-    padding: 0 10px !important;
-    overflow: hidden !important;
-  }
-
-  .swiper-slide {
-    height: auto !important; /* إلغاء الارتفاع الثابت القديم عشان السلايد يتمدد على قد المحتوى براحته */
-    min-height: 190px !important; /* إعطاء مساحة كافية تلم الصورة والنصوص والقلب */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    background-color: #ffffff !important; /* خلفية بيضاء واضحة للكارت */
-    border-radius: 8px !important;
-    padding: 10px !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    overflow: hidden !important; /* حماية تامة ضد أي عنصر يهرب بره السلايد */
-  }
-
-  /* 2. تنسيق النصوص جوه السلايد لتنزيلها تحت بعضها برواقة */
-  .swiper-slide .card-text {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    text-align: left !important;
-    gap: 4px !important;
-  }
-
-  .swiper-slide p,
-  .swiper-slide span,
-  .swiper-slide h5 {
-    font-size: 11px !important;
-    color: #333 !important; /* لون غامق وواضح لأن خلفية السلايد بقت بيضاء */
-    margin: 0 !important;
-    white-space: normal !important; /* منع أي تداخل وإجبار النص ينزل لسطر جديد */
-    text-align: center !important;
-  }
-
-  /* /* 3. تثبيت أيقونة القلب في مكانها الطبيعي جوه السلايد من غير ما تطلع بره */
-  .swiper-slide .fa-heart,
-  .fa-heart {
-    position: static !important;
-    display: inline-block !important;
-    margin: 2px auto 2px auto !important;
-    font-size: 1.1rem !important;
-  } */
-*/
-}
 @media screen and (max-width: 768px) {
   /* 1. رجوع كل محتوى الكارت والنصوص لتبدأ من الشمال */
   .swiper-slide, 
@@ -1142,7 +1089,7 @@ display: inline-block;
     justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
-    margin-top: auto !important;
+    margin-bottom: 0 !important;
     gap: 15px !important;
   }
 
@@ -1228,6 +1175,36 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
  }
+@media screen and (max-width: 768px) {
+  /* 1. الكارت ياخد ارتفاع كامل ويوزع العناصر عمودياً على الموبايل */
+  .card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    min-height: 400px !important; /* مساحة تضمن إن الكارت طويل */
+  }
+
+  /* 2. الـ card-body يملى كل المساحة المتبقية عشان يزق الزراير لتحت */
+  .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+  }
+
+  /* 3. حاوية الزرار والقلب تنزل في قاع الكارت تحت خالص على الموبايل */
+  .card-body .d-flex,
+  .card-body form,
+  .card-body > div:last-of-type {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: auto !important; /* بتدزهم تحت خالص */
+    margin-bottom: 0 !important;
+    gap: 15px !important;
+  }
+}
 
  
 
