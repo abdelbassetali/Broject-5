@@ -1087,12 +1087,11 @@ display: inline-block;
   }
 
   /* 2. تنسيق النصوص جوه السلايد لتنزيلها تحت بعضها برواقة */
-  .swiper-slide .card-text,
-  .swiper-slide div {
+  .swiper-slide .card-text {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
     width: 100% !important;
+    text-align: left !important;
     gap: 4px !important;
   }
 
@@ -1106,14 +1105,14 @@ display: inline-block;
     text-align: center !important;
   }
 
-  /* 3. تثبيت أيقونة القلب في مكانها الطبيعي جوه السلايد من غير ما تطلع بره */
+  /* /* 3. تثبيت أيقونة القلب في مكانها الطبيعي جوه السلايد من غير ما تطلع بره */
   .swiper-slide .fa-heart,
   .fa-heart {
     position: static !important;
     display: inline-block !important;
     margin: 2px auto 2px auto !important;
     font-size: 1.1rem !important;
-  }
+  } */
 }
 
 
