@@ -825,4 +825,68 @@ display: inline-block;
   .fa-heart {
     margin-left: 6px !important;
   }
+    /* --- تظبيط قسم المفضلة (Favourite) على الموبايل بشكل نهائي --- */
+  
+  /* الحاوية العامة للمفضلة تبقى دايماً Flex ومنظمة */
+  #favouriteItems, .favourite-container, .favorite-box, div[id*="favourite"] {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* الكارد الواحد جوه المفضلة ياخد تقريباً نص الشاشة (عشان يبقوا اتنين جنب بعض) */
+  #favouriteItems li, .favourite-item, .favorite-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 48% !important;
+    max-width: 48% !important;
+    flex: 0 0 48% !important;
+    background: #fff !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    border-radius: 4px !important; /* بوردر رديس صغير وهادئ زي ما طلبت */
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important;
+  }
+
+  /* تصغير صور المنتجات جوه المفضلة لتناسب الحجم الجديد */
+  #favouriteItems li img, .favourite-item img, .favorite-item img {
+    width: 100% !important;
+    height: 90px !important;
+    object-fit: contain !important;
+    margin: 0 auto 6px auto !important;
+  }
+
+  /* تصغير النصوص والعناوين جوه كاردات المفضلة عشان متبقاش كبيرة ومأفورة */
+  #favouriteItems li span, 
+  #favouriteItems li p, 
+  #favouriteItems li h5,
+  .favourite-item p, .favourite-item h5 {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+    margin: 2px 0 !important;
+    color: #333 !important;
+    text-align: center !important;
+  }
+
+  /* تنسيق أزرار وأيقونة القلب داخل المفضلة */
+  #favouriteItems li .plus, 
+  .favourite-item .d-flex {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+  }
+
+  #favouriteItems li .fa-heart, .favourite-item .fa-heart {
+    font-size: 1rem !important;
+    margin: 0 auto !important;
+  }
 }
