@@ -1227,12 +1227,14 @@ display: inline-block;
     width: 100% !important;
   }
 
-  
+
+    .swiper-slide .card-text p, 
   .card .card-body .card-text p {
-    font-size: 10px !important;
+    font-size: 10px !important; /* خط صغير ورايق يكفي المساحة */
     margin: 0 !important;
-    white-space: nowrap !important; /* السماح بالنزول للسطر التالي عادي */
+    white-space: nowrap !important;
   }
+}
     .swiper-slide{
          margin-left: 25px !important;
 } 
