@@ -14,9 +14,9 @@ header, .nav-bar, .header-container {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  padding: 0 25px !important;
-  width: 100% !important;
-  min-height: 70px !important;
+padding: 5px 20px !important;
+width: 100% !important;
+  max-height: 70px !important;
   box-sizing: border-box !important;
 }
 
@@ -41,7 +41,7 @@ header, .nav-bar, .header-container {
 
 .userName{
 font-size: 1.7rem;
-line-height: 70px;
+line-height: normal !important;
 text-transform: capitalize;
 }
 .right-header{
