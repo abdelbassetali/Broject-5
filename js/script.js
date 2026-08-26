@@ -111,23 +111,42 @@ function removeItems(id){
 function cartDraw(){
     number.innerHTML=userProducts.length
     if(userProducts.length != 0){
-        if(userProducts.length !=0){
-             cartList.innerHTML=''
-                   for(let i=0;i<userProducts.length;i++){
-                     cartList.innerHTML+=`
-                    <li style="margin-right: 45px;, margin-top:15px;" >
-                     <span style="margin-right: 20px;">${userProducts[i].name}</span>
-                     <div class="plus">
-                     <span style="margin-right: 0px;">${userProducts[i].count}</span>
-                    <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${userProducts[i].id})"></i></a>
-                         <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${userProducts[i].id})"></i></a>
-                          </div>
-                        </li>
-                        `
-                  }
- }else{
-     cart.style.display='none';
-      }
+        cartList.innerHTML=''
+        for(let i=0; i<userProducts.length; i++){
+            cartList.innerHTML+=`
+            <li style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; width: 100%;">
+                 <span style="font-size: 0.85rem; color: #333; margin-right: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${userProducts[i].name}</span>
+                 <div class="plus" style="display: flex; align-items: center; gap: 5px;">
+                     <span style="padding: 0 5px;">${userProducts[i].count}</span>
+                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${userProducts[i].id})"></i></a>
+                     <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${userProducts[i].id})"></i></a>
+                 </div>
+            </li>
+            `
+        }
+    } else {
+        cart.style.display='none';
+    }
+}
+// function cartDraw(){
+//     number.innerHTML=userProducts.length
+//     if(userProducts.length != 0){
+//         if(userProducts.length !=0){
+//              cartList.innerHTML=''
+//                    for(let i=0;i<userProducts.length;i++){
+//                      cartList.innerHTML+=`
+//                     <li style="margin-right: 45px;, margin-top:15px;" >
+//                      <span style="margin-right: 20px;">${userProducts[i].name}</span>
+//                      <div class="plus">
+//                      <span style="margin-right: 0px;">${userProducts[i].count}</span>
+//                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${userProducts[i].id})"></i></a>
+//                          <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${userProducts[i].id})"></i></a>
+//                           </div>
+//                         </li>
+//                         `  }
+//  }else{
+//      cart.style.display='none';
+//       }
     }else if(localStorage.getItem('items')){
         userProducts=JSON.parse(localStorage.getItem('items'))
         if(userProducts.length!=0){
