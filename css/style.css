@@ -1145,6 +1145,7 @@ display: inline-block;
     margin-bottom: 20px !important;
   }
 
+  /* 2. ضبط حاوية السلة العامة وعرضها عشان تكفي الكلمة كاملة */
   .cart-box {
     position: relative !important;
   }
@@ -1166,7 +1167,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 2. إزالة الـ Scroll */
+  /* 2. إزالة الـ Scroll وترك السلة تظهر كلها */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1178,70 +1179,56 @@ display: inline-block;
     overflow-x: hidden !important;
   }
 
-  /* 3. تنسيق عناصر المنتجات (li) */
+  /* 3. تنسيق عناصر المنتجات (منع التكرار وضبط العرض) */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
+    color: #212529 !important;
     font-size: 0.8rem !important;
     padding: 4px 8px !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 6px !important;
     border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
     background-color: #fff !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  /* 4. تنسيق اسم المنتج (span الأساسي) بدون أي تكرار */
-  .cart ul li > span,
-  .cart ul#favouriteItems li > span {
+  /* 4. إظهار اسم المنتج وتنسيقه بوضوح ومعالجة مشكلة العرض صفر (0 width) */
+  .cart ul li span,
+  .cart ul#favouriteItems li span {
     display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
     font-size: 0.8rem !important;
-    color: #0e2b05 !important;
+    color: #49b727 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
     flex-grow: 1 !important;
-    text-align: left !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    text-align: right !important;
+    width: auto !important;         /* أُضيف لمنع اختفاء الحروف */
+    min-width: 70px !important;     /* أُضيف لضمان ألا ينكمش الاسم للصفر */
   }
 
-  /* 5. تنسيق الحاوية الخاصة بالرقم والبلس والماينس وإلصاقها ناحية الاسم */
-  .cart ul li div.plus,
+  /* 5. تطبيق التنسيق على باقي العناصر ما عدا الـ span */
+  .cart ul li *:not(span),
+  .cart ul#favouriteItems li *:not(span) {
+    color: #157ce3 !important;
+    font-size: 0.8rem !important;
+  }
+
   .cart ul#favouriteItems li div {
     display: flex !important;
-    flex-direction: row !important;
     align-items: center !important;
-    gap: 1px !important;
-    flex-shrink: 0 !important;
-  }
-  /* إلغاء الـ margin المكتوب في الـ HTML وجعل المستطيل يملأ عرض السلة بالكامل */
-  .cart ul li,
-  .cart ul#favouriteItems li {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;      /* أُضيف لمنع ضغط الأزرار على الاسم */
   }
 
-  /* 6. تنسيق رقم الكمية الداخلي (الـ span جوا الـ div) */
-  .cart ul li div.plus span,
-  .cart ul#favouriteItems li div span {
-    display: inline-block !important;
-    min-width: 15px !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: #212529 !important;
-    font-size: 0.8rem !important;
-    white-space: nowrap !important;
-  }
-
-  /* 7. تنسيق الأزرار (بلس وماينس) والأيقونات */
   .cart ul#favouriteItems li a,
   .cart ul#favouriteItems li i {
     cursor: pointer !important;
@@ -1257,7 +1244,6 @@ display: inline-block;
     color: #dc3545 !important;
   }
 
-  /* 8. زر عرض الكل */
   .cart #view {
     display: block !important;
     width: 100% !important;
@@ -1269,6 +1255,39 @@ display: inline-block;
     text-decoration: none !important;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
+  }
+    .cart ul li span,
+  .cart ul#favouriteItems li span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #0e2b05 !important;
+    flex-grow: 1 !important;
+    text-align: left !important;          /* تبدأ من أول السطر من جهة اليسار */
+    white-space: nowrap !important;       /* تمنع الكلمة تماماً من النزول للسطر التاني وتخليها تكمل في نفس السطر */
+    overflow: hidden !important;          /* إخفاء أي جزء لو زاد عن مساحة السلة */
+    text-overflow: ellipsis !important;   /* إضافة نقاط (...) في النهاية لو الكلمة طويلة جداً عشان التنسيق مايبوظش */
+  }
+  /* 1. ضبط حاوية البلس والماينس والرقم لتكون متقاربة ومنظمة */
+  .cart ul li div.plus,
+  .cart ul#favouriteItems li div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 2px !important;              /* المسافة بين الرقم وأزرار البلس والماينس */
+    flex-shrink: 0 !important;
+  }
+
+  /* 2. ضبط شكل الرقم الداخلي (الـ span الخاص بالكمية) */
+  .cart ul li div.plus span,
+  .cart ul#favouriteItems li div span {
+    display: inline-block !important;
+    min-width: 15px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   /* تنسيق وضبط كلمة وزر Logout بالكامل */
