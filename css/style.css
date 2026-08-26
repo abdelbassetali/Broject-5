@@ -1155,7 +1155,7 @@ display: inline-block;
     top: 100% !important;
     left: -20px !important;
     right: auto !important;
-    width: 240px !important;
+    width: 260px !important;
     max-width: 90vw !important;
     background-color: #ffffff !important;
     border: 1px solid #dee2e6 !important;
@@ -1207,9 +1207,10 @@ display: inline-block;
     color: #212529 !important;
     flex-grow: 1 !important;
     text-align: left !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
     word-break: break-word !important;
     overflow: visible !important;
+      max-width: 110px !important;
   }
 
   /* 5. حاوية الأزرار والكمية */
