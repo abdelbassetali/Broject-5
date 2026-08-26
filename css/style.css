@@ -1209,8 +1209,13 @@ display: inline-block;
   .swiper {
     width: 100% !important;
     max-width: 100vw !important;
-    overflow: hidden !important; /* بيمنع اختفاء العناصر برة الرؤية */
-    touch-action: pan-y !important; /* بيخلي السحب مريح وميتشالش برة */
+    overflow: hidden !important;          /* بيمنع اختفاء العناصر برة الرؤية */
+    touch-action: pan-y !important;      /* بيخلي السحب مريح وميتشالش برة */
+  }
+    .mySwiper .swiper-wrapper,
+  .swiper .swiper-wrapper {
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
 }
 
