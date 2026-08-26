@@ -1155,7 +1155,7 @@ display: inline-block;
     top: 100% !important;
     left: -20px !important;
     right: auto !important;
-    width: 290px !important;
+    width: 240px !important;
     max-width: 90vw !important;
     background-color: #ffffff !important;
     border: 1px solid #dee2e6 !important;
@@ -1167,7 +1167,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 3. إزالة الـ Scroll وترك السلة تظهر كلها */
+  /* 2. إزالة الـ Scroll وترك السلة تظهر كلها */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1179,7 +1179,7 @@ display: inline-block;
     overflow-x: hidden !important;
   }
 
-  /* 4. تنسيق عناصر المنتجات (منع التكرار وضبط العرض) */
+  /* 3. تنسيق عناصر المنتجات (منع التكرار وضبط العرض) */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1188,7 +1188,7 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 8px 12px !important;
+    padding: 4px 8px !important;
     margin-bottom: 6px !important;
     border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
@@ -1199,7 +1199,7 @@ display: inline-block;
     margin-right: 0 !important;
   }
 
-  /* إظهار اسم المنتج وتنسيقه بوضوح جوه القائمة في الموبايل */
+  /* 4. إظهار اسم المنتج وتنسيقه بوضوح ومعالجة مشكلة العرض صفر (0 width) */
   .cart ul li span,
   .cart ul#favouriteItems li span {
     display: inline-block !important;
@@ -1211,12 +1211,22 @@ display: inline-block;
     word-break: break-word !important;
     flex-grow: 1 !important;
     text-align: right !important;
+    width: auto !important;         /* أُضيف لمنع اختفاء الحروف */
+    min-width: 70px !important;     /* أُضيف لضمان ألا ينكمش الاسم للصفر */
+  }
+
+  /* 5. تطبيق التنسيق على باقي العناصر ما عدا الـ span */
+  .cart ul li *:not(span),
+  .cart ul#favouriteItems li *:not(span) {
+    color: #157ce3 !important;
+    font-size: 0.8rem !important;
   }
 
   .cart ul#favouriteItems li div {
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
+    flex-shrink: 0 !important;      /* أُضيف لمنع ضغط الأزرار على الاسم */
   }
 
   .cart ul#favouriteItems li a,
@@ -1246,6 +1256,39 @@ display: inline-block;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
   }
+    .cart ul li span,
+  .cart ul#favouriteItems li span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #0e2b05 !important;
+    flex-grow: 1 !important;
+    text-align: left !important;          /* تبدأ من أول السطر من جهة اليسار */
+    white-space: nowrap !important;       /* تمنع الكلمة تماماً من النزول للسطر التاني وتخليها تكمل في نفس السطر */
+    overflow: hidden !important;          /* إخفاء أي جزء لو زاد عن مساحة السلة */
+    text-overflow: ellipsis !important;   /* إضافة نقاط (...) في النهاية لو الكلمة طويلة جداً عشان التنسيق مايبوظش */
+  }
+  /* 1. ضبط حاوية البلس والماينس والرقم لتكون متقاربة ومنظمة */
+  .cart ul li div.plus,
+  .cart ul#favouriteItems li div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 2px !important;              /* المسافة بين الرقم وأزرار البلس والماينس */
+    flex-shrink: 0 !important;
+  }
+
+  /* 2. ضبط شكل الرقم الداخلي (الـ span الخاص بالكمية) */
+  .cart ul li div.plus span,
+  .cart ul#favouriteItems li div span {
+    display: inline-block !important;
+    min-width: 15px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
   /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
@@ -1253,30 +1296,17 @@ display: inline-block;
     align-items: center !important;
     justify-content: flex-end !important;
     height: auto !important;
-    margin-top: 10px !important;
+    margin-top: 14px !important;
   }
 
   .logout-box .logout,
   #navbarToggleExternalContent .logout-box .logout,
   .right-header .logout-box a.logout {
-    font-size: 15px !important;
+    font-size: 16px !important;
     color: #0d0101 !important;
     text-decoration: none !important;
     font-weight: bold !important;
     line-height: normal !important;
     display: inline-block !important;
   }
-    /* حل مشكلة العرض صفر (0 width) وإجبار الـ span على الظهور */
-.cart ul li span,
-.cart ul#favouriteItems li span {
-  display: inline-block !important;
-  width: auto !important;
-  min-width: 80px !important;
-  max-width: 60% !important;
-  flex-grow: 1 !important;
-  color: #49b727 !important;
-  font-size: 0.8rem !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
 }
