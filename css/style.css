@@ -978,9 +978,7 @@ display: inline-block;
     box-sizing: border-box !important;
     padding: 10px !important;
   }
-    .card-body{
-        hight:240px
-    }
+
 
   /* 2. ضبط النصوص والأسعار لتكون تحت بعضها ومنسقة */
   .card-body h5, 
