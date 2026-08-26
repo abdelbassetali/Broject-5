@@ -1134,7 +1134,7 @@ display: inline-block;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    max-width: 245px !important; /* زودنا العرض عشان القلب يرتاح */
+    max-width: 255px !important; /* زودنا العرض عشان القلب يرتاح */
     height: 230px !important;
     padding: 12px !important;
     box-sizing: border-box !important;
