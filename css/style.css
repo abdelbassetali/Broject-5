@@ -262,9 +262,9 @@ color: black;
     color: black;
     display: inline-block;
     margin-left: 88px;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 400;
  }
  .arrow{
   cursor: pointer;
@@ -335,12 +335,6 @@ display: inline-block;
   display: inline-block;
 
 }
-
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   /* 1. صف المنتجات: كارتين جنب بعض */
