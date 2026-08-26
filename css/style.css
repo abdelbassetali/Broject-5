@@ -1126,7 +1126,7 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
-  /* 1. ربط الكارت حصرياً بسلايدر المفضلة فقط */
+  /* 1. زيادة العرض سنة وعمل مساحة (Margin) بين الكارتات في المفضلة */
   .mySwiper .swiper-slide,
   .swiper-wrapper .swiper-slide {
     display: flex !important;
@@ -1134,18 +1134,18 @@ display: inline-block;
     align-items: center !important;
     justify-content: space-between !important;
     width: 100% !important;
-    max-width: 220px !important;
+    max-width: 245px !important; /* زودنا العرض عشان القلب يرتاح */
     height: 230px !important;
     padding: 12px !important;
     box-sizing: border-box !important;
     background-color: rgb(230, 230, 230) !important;
     border-radius: 15px !important;
-    margin: 0 auto 15px auto !important;
+    margin: 0 10px 15px 0 !important; /* مساحة ممتازة بين الكارت والثاني */
     position: relative !important;
     overflow: hidden !important;
   }
 
-  /* 2. ضبط صورة المنتج داخل سلايدر المفضلة فقط */
+  /* 2. ضبط صورة المنتج داخل سلايدر المفضلة */
   .mySwiper .swiper-slide .swiper-img,
   .swiper-wrapper .swiper-slide .swiper-img {
     width: 100% !important;
@@ -1175,7 +1175,7 @@ display: inline-block;
     margin-top: auto !important;
   }
 
-  /* 4. النصوص للمفضلة فقط */
+  /* 4. النصوص للمفضلة فقط وبدون تداخل */
   .mySwiper .swiper-slide .card-body .card-text,
   .swiper-wrapper .swiper-slide .card-body .card-text {
     display: flex !important;
@@ -1196,7 +1196,7 @@ display: inline-block;
     white-space: nowrap !important;
   }
 
-  /* 5. زرار وأيقونة القلب للمفضلة فقط من غير ما يلمس الكاردات اللي فوق */
+  /* 5. القلب جوه الكارت وبأمان تام على اليمين */
   .mySwiper .swiper-slide .card-body a,
   .swiper-wrapper .swiper-slide .card-body a {
     display: flex !important;
@@ -1217,7 +1217,6 @@ display: inline-block;
     margin: 0 !important;
   }
 }
-
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
