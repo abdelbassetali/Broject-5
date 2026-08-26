@@ -1125,7 +1125,52 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 }
- 
+
+@media screen and (max-width: 768px) {
+  /* 1. السلايدر نفسه نخليه يحضن كل اللي جواة ويفتح المساحة */
+  .swiper-slide {
+    position: relative !important;
+    height: auto !important;
+    min-height: 260px !important; /* زودنا الارتفاع شوية عشان يكفي القلب والصورة والنصوص */
+    padding-bottom: 25px !important; /* مساحة تحتية عشان القلب يقعد براحته جوا الكارد */
+    background-color: rgb(230, 230, 230) !important;
+    border-radius: 15px !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+  }
+
+  /* 2. تثبيت القلب absolute جوه الـ swiper-slide نفسه في الكورنر التحتاني اليمين */
+  .swiper-slide .card-body a,
+  .swiper-slide a:has(.fa-heart) {
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 15px !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+  }
+
+  /* 3. حجم وشكل أيقونة القلب */
+  .swiper-slide .fa-heart,
+  .card-body .fa-heart {
+    font-size: 1.6rem !important;
+    color: red !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 4. النصوص تاخد راحتها فوق القلب بشياكة */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    padding: 8px 12px !important;
+    background: transparent !important;
+  }
+}
+
+
 /* @media screen and (max-width: 768px) {
   /* 1. ضبط كارت المفضلة و محتوياته ليكون ترتيبها عمودي ومنسق تماماً */
   .swiper-slide,
@@ -1186,7 +1231,7 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 }  */
- @media screen and (max-width: 768px) {
+ /* @media screen and (max-width: 768px) {
   /* 1. السلايدر نفسه نخليه يحضن كل اللي جواة ويفتح المساحة */
   .swiper-slide {
     position: relative !important;
@@ -1228,7 +1273,7 @@ display: inline-block;
     padding: 8px 12px !important;
     background: transparent !important;
   }
-} 
+}  */
 
 
 @media screen and (max-width: 768px) {
