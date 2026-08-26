@@ -1355,13 +1355,13 @@ display: inline-block;
     justify-content: flex-end !important;
     gap: 4px !important;
     flex-shrink: 0 !important;
-    width: 80px;
-  }
+    width: auto !important;  }
 
   /* 6. ضبط شكل الرقم الداخلي والأزرار */
 .cart ul li div.plus span,
   .cart ul#favouriteItems li div span {
     display: inline-block !important;
+    width: auto !important;
     min-width: 15px !important;
     text-align: center !important;
     margin: 0 !important;
