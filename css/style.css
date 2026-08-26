@@ -1087,6 +1087,9 @@ display: inline-block;
 } 
 
 @media screen and (max-width: 768px) {
+ 
+@media screen and (max-width: 768px) {
+
   /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
   .navbar-collapse,
   .navbar-collapse.collapsing,
@@ -1154,7 +1157,7 @@ display: inline-block;
     top: 100% !important;
     left: -20px !important;
     right: auto !important;
-    width: 290px !important;     /* عرض مظبوط يمنع قطع كلمة samsung-ultra */
+    width: 290px !important;
     max-width: 90vw !important;
     background-color: #ffffff !important;
     border: 1px solid #dee2e6 !important;
@@ -1178,7 +1181,7 @@ display: inline-block;
     overflow-x: hidden !important;
   }
 
-  /* 4. تنسيق عناصر المنتجات */
+  /* 4. تنسيق عناصر المنتجات (منع التكرار وضبط العرض) */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1187,27 +1190,36 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 4px 8px !important;
-    margin-bottom: 4px !important;
+    padding: 8px 12px !important;
+    margin-bottom: 6px !important;
     border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
     background-color: #fff !important;
-    width: 90% !important;
+    width: 100% !important;
     box-sizing: border-box !important;
-    margin-left: 15px !important;
-    gap: 2px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  /* منع نزول الكلام لسطر تاني وتثبيته في سطر واحد */
+  /* إظهار اسم المنتج وتنسيقه بوضوح جوه القائمة في الموبايل */
   .cart ul li span,
   .cart ul#favouriteItems li span {
-   white-space: normal !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #113406 !important;
+    white-space: normal !important;
     word-break: break-word !important;
     flex-grow: 1 !important;
-    text-align: left !important;
+    text-align: right !important;
   }
 
-
+  .cart ul li *,
+  .cart ul#favouriteItems li * {
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+  }
 
   .cart ul#favouriteItems li div {
     display: flex !important;
@@ -1241,7 +1253,10 @@ display: inline-block;
     text-decoration: none !important;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
-  }  
+  }
+
+
+}
     /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
     display: flex !important;
@@ -1254,44 +1269,12 @@ display: inline-block;
   .logout-box .logout,
   #navbarToggleExternalContent .logout-box .logout,
   .right-header .logout-box a.logout {
-    font-size: 16px !important; /* صغرها أو كبرها حسب ما تحب، 50px كبيرة جداً على الهيدر وهتكسره */
+    font-size: 15px !important; /* صغرها أو كبرها حسب ما تحب، 50px كبيرة جداً على الهيدر وهتكسره */
     color: #0d0101 !important;
     text-decoration: none !important;
     font-weight: bold !important;
     line-height: normal !important;
     display: inline-block !important;
   }
-    .cart ul li,
-  .cart ul#favouriteItems li {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    color: #212529 !important;
-    font-size: 0.8rem !important;
-    padding: 8px 12px !important;
-    margin-bottom: 6px !important;
-    border: 1px solid #e9ecef !important;
-    border-radius: 4px !important;
-    background-color: #fff !important;
-    width: 100% !important;        /* خليها 100% عشان تملى البوكس بالكامل */
-    box-sizing: border-box !important;
-    margin-left: 0 !important;     /* الغي أي هوامش جانبية كانت مزحلقاها */
-    margin-right: 0 !important;
-  }
-    /* إظهار اسم المنتج وتنسيقه بوضوح جوه القائمة في الموبايل */
-  .cart ul li span,
-  .cart ul#favouriteItems li span {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 0.8rem !important;
-    color: #212529 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    text-align: right !important;
-    flex-grow: 1 !important;
-  }
-
 }
 
