@@ -335,6 +335,13 @@ display: inline-block;
   display: inline-block;
 
 }
+
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
   /* 1. صف المنتجات: كارتين جنب بعض */
   .row {
@@ -481,6 +488,8 @@ display: inline-block;
     font-size: 0.85rem !important;
   }
 }
+
+
 /* كود نهائي لتنظيم الهيدر وارتفاعه بدون مسح القديم */
 .navbar {
   display: flex !important;
@@ -798,15 +807,12 @@ display: inline-block;
     justify-content: space-between !important;
     gap: 8px !important;
   }
-
   .card button, .remove-btn {
     margin-right: 6px !important;
   }
-
   .fa-heart {
     margin-left: 6px !important;
   }
-  
   /* الحاوية العامة للمفضلة تبقى دايماً Flex ومنظمة */
   #favouriteItems, .favourite-container, .favorite-box, div[id*="favourite"] {
     display: flex !important;
@@ -818,7 +824,6 @@ display: inline-block;
     padding: 0 !important;
     margin: 0 !important;
   }
-
   /* الكارد الواحد جوه المفضلة ياخد تقريباً نص الشاشة (عشان يبقوا اتنين جنب بعض) */
   #favouriteItems li, .favourite-item, .favorite-item {
     display: flex !important;
@@ -853,7 +858,6 @@ display: inline-block;
     color: #333 !important;
     text-align: center !important;
   }
-
   /* تنسيق أزرار وأيقونة القلب داخل المفضلة */
   #favouriteItems li .plus, 
   .favourite-item .d-flex {
@@ -863,7 +867,6 @@ display: inline-block;
     width: 100% !important;
     margin-top: 6px !important;
   }
-
   #favouriteItems li .fa-heart, .favourite-item .fa-heart {
     font-size: 1rem !important;
     margin: 0 auto !important;
@@ -871,13 +874,11 @@ display: inline-block;
 }
 /* --- تعديل مسافة الأمان من اليمين وتصغير خط كاردات المفضلة --- */
 @media screen and (max-width: 768px) {
-  
   /* الحاوية الأب لتقليل الزحمة وضبط المسافات على الجانبين */
   #favouriteItems, .favourite-container, .favorite-box {
     padding: 0 8px !important;
     box-sizing: border-box !important;
   }
-
   /* تصغير عرض الكارت حاجة بسيطة لزيادة الفراغ من اليمين والشمال */
   #favouriteItems li, .favourite-item, .favorite-item {
     width: 46.5% !important;
@@ -887,7 +888,6 @@ display: inline-block;
     margin-left: 4px !important;
     padding: 6px !important;
   }
-
   /* تصغير النصوص والعناوين جوه كاردات المفضلة عشان تبقى في سطر واحد ومظبوطة */
   #favouriteItems li span, 
   #favouriteItems li p, 
@@ -900,13 +900,11 @@ display: inline-block;
     overflow: hidden !important;
     text-overflow: ellipsis !important; /* إظهار نقاط لو النص طويل زيادة عن اللزوم */
   }
-
   /* تصغير حجم أيقونة القلب عشان تتناسب مع التصميم الجديد */
   #favouriteItems li .fa-heart, .favourite-item .fa-heart {
     font-size: 0.9rem !important;
   }
 }
-
 /* --- إظهار كلمة Remove كاملة بدون قص وضبط مساحة الزرار --- */
 @media screen and (max-width: 768px) {
     .btn-danger {
@@ -926,26 +924,22 @@ display: inline-block;
     align-items: stretch !important;
     width: 100% !important;
   }
-
   /* ترتيب النصوص داخل الكارت: الاسم ثم القسم ثم السعر */
   .card-body h5, 
   .card-body .product-title {
     order: 1 !important;
   }
-
   .card-body p.category, 
   .card-body span:nth-child(2),
   .card-body p:nth-of-type(1) {
     order: 2 !important;
   }
-
   .card-body p.price, 
   .card-body span.price,
   .card-body p:nth-of-type(2) {
     order: 3 !important;
   }
 }
-
 @media screen and (max-width: 768px) {
   /* 1. ضبط الكارت بالكامل ليكون عمودي ويبدأ من الشمال */
   .swiper-slide, 
@@ -977,7 +971,6 @@ display: inline-block;
     font-size: 12px !important;      /* تكبير الخط حاجة بسيطة عشان يبقى واضح وقابل للقراءة */
     margin: 3px 0 !important;
   }
-
   /* 3. الحاوية الخاصة بالزرار وأيقونة القلب (تخليهم في سطر واحد أفقياً) */
   .card-body .d-flex,
   .card-body form,
@@ -990,7 +983,6 @@ display: inline-block;
     margin-bottom: auto !important;
     gap: 10px !important;
   }
-
   /* 4. الزرار ياخد مساحته على الشمال */
   .card-body .btn, 
   .card-body .btn-danger,
@@ -1001,7 +993,6 @@ display: inline-block;
     padding: 5px 8px !important;
     font-size: 11px !important;
   }
-
   /* 5. أيقونة القلب تروح أقصى اليمين في نفس سطر الزرار بشياكة */
   .card-body .fa-heart,
   .fa-heart {
@@ -1030,7 +1021,6 @@ display: inline-block;
     margin-right: 15px !important;
     position: relative !important;
   }
-
   /* 2. الصورة في مكانها فوق */
   .mySwiper .swiper-slide .swiper-img {
     width: 100% !important;
@@ -1039,13 +1029,11 @@ display: inline-block;
     justify-content: center !important;
     align-items: center !important;
   }
-
   .mySwiper .swiper-slide .swiper-img img {
     max-height: 100% !important;
     max-width: 100% !important;
     object-fit: contain !important;
   }
-
   /* 3. صندوق المحتوى مرتب */
   .mySwiper .swiper-slide .card-body {
     display: flex !important;
@@ -1057,7 +1045,6 @@ display: inline-block;
     margin-top: auto !important;
     position: relative !important;
   }
-
   /* 4. النصوص في مكانها الطبيعي من غير ما تنزل تحت */
   .mySwiper .swiper-slide .card-body .card-text {
     display: flex !important;
@@ -1066,7 +1053,6 @@ display: inline-block;
     text-align: left !important;
     flex-grow: 1 !important;
   }
-
   .mySwiper .swiper-slide .card-body .card-text p {
     font-size: 11px !important;
     margin: 1px 0 !important;
@@ -1074,7 +1060,6 @@ display: inline-block;
     color: #333 !important;
     white-space: nowrap !important;
   }
-
   /* 5. القلب هو لوحده اللي بننزله ونحطه في الزاوية السفلى براحته */
   .mySwiper .swiper-slide .card-body a {
     position: absolute !important;
@@ -1085,7 +1070,6 @@ display: inline-block;
     justify-content: center !important;
     text-decoration: none !important;
   }
-
   .mySwiper .swiper-slide .card-body .fa-heart {
     font-size: 1.4rem !important;
     color: red !important;
@@ -1101,7 +1085,6 @@ display: inline-block;
     touch-action: pan-y !important;      /* بيخلي السحب مريح وميتشالش برة */
   }
 } 
-
 @media screen and (max-width: 768px) {
   /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
   .navbar-collapse,
@@ -1110,7 +1093,6 @@ display: inline-block;
     transition: none !important;
     height: auto !important;
   }
-
   #navbarToggleExternalContent {
     position: absolute !important;
     top: 100% !important;
@@ -1122,7 +1104,6 @@ display: inline-block;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
     z-index: 9999 !important;
   }
-
   #navbarToggleExternalContent .right-header {
     display: flex !important;
     flex-direction: row !important;
@@ -1134,7 +1115,6 @@ display: inline-block;
     height: 40px !important;
     margin-top: -20px !important;
   }
-
   #navbarToggleExternalContent .userName {
     margin-left: 0 !important;
     transform: none !important;
@@ -1142,11 +1122,9 @@ display: inline-block;
     margin-bottom: 5px !important;
     font-size: 0.8rem !important;
   }
-
   #navbarToggleExternalContent .login {
     margin-bottom: 0 !important;
   }
-
   #navbarToggleExternalContent .login ul {
     display: flex !important;
     gap: 12px !important;
@@ -1154,17 +1132,14 @@ display: inline-block;
     margin-bottom: 0 !important;
     list-style: none !important;
   }
-
   #navbarToggleExternalContent .logout-box {
     margin-left: auto !important;
     margin-bottom: 20px !important;
   }
-
   /* 2. ضبط حاوية السلة العامة وعرضها عشان تكفي الكلمة كاملة */
   .cart-box {
     position: relative !important;
   }
-
   .cart {
     position: absolute !important;
     top: 100% !important;
@@ -1181,7 +1156,6 @@ display: inline-block;
     margin-top: 5px !important;
     box-sizing: border-box !important;
   }
-
   /* 3. إزالة الـ Scroll وترك السلة تظهر كلها */
   .cart ul,
   .cart ul#favouriteItems {
@@ -1193,7 +1167,6 @@ display: inline-block;
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
-
   /* 4. تنسيق عناصر المنتجات */
   .cart ul li,
   .cart ul#favouriteItems li {
@@ -1213,40 +1186,33 @@ display: inline-block;
     margin-left: 15px !important;
     gap: 2px !important;
   }
-
   /* منع نزول الكلام لسطر تاني وتثبيته في سطر واحد */
   .cart ul li span,
   .cart ul#favouriteItems li span {
     white-space: nowrap !important;
   }
-
   .cart ul li *,
   .cart ul#favouriteItems li * {
     color: #212529 !important;
     font-size: 0.8rem !important;
   }
-
   .cart ul#favouriteItems li div {
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
   }
-
   .cart ul#favouriteItems li a,
   .cart ul#favouriteItems li i {
     cursor: pointer !important;
     pointer-events: auto !important;
     padding: 2px 4px !important;
   }
-
   .cart ul#favouriteItems li .fa-plus {
     color: #2e8e05 !important;
   }
-
   .cart ul#favouriteItems li .fa-minus {
     color: #dc3545 !important;
   }
-
   .cart #view {
     display: block !important;
     width: 100% !important;
@@ -1279,5 +1245,3 @@ display: inline-block;
     gap: 8px !important;
   }
 }
-
-
