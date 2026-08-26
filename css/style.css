@@ -1272,5 +1272,19 @@ display: inline-block;
     line-height: normal !important;
     display: inline-block !important;
   }
-
+/* إجبار الـ span والـ li داخل السلة على عرض النص بوضوح وتجنب أي هوامش بالخطأ */
+.cart ul#favouriteItems li span,
+.cart ul li span {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #212529 !important;
+  font-size: 0.8rem !important;
+  margin-right: 0 !important; /* إلغاء الـ margin الضخم اللي كان بيزق الاسم برة */
+  margin-left: 5px !important;
+  max-width: 120px !important; /* تحديد عرض مناسب عشان الاسم ما يهربش برة الكارت */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important; /* لو الاسم طويل يحط نقاط (...) بدل ما يختفي */
+}
 }
