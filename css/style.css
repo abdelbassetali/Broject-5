@@ -1263,6 +1263,120 @@ display: inline-block;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
   }
+.cart-box {
+    position: relative !important;
+  }
+
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    left: -20px !important;
+    right: auto !important;
+    width: 240px !important;
+    max-width: 90vw !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 999999 !important;
+    padding: 8px !important;
+    margin-top: 5px !important;
+    box-sizing: border-box !important;
+  }
+
+  .cart ul,
+  .cart ul#favouriteItems {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 4px !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+  }
+
+  .cart ul li,
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+    padding: 4px 8px !important;
+    margin-bottom: 6px !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .cart ul li span,
+  .cart ul#favouriteItems li span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #212529 !important;
+    flex-grow: 1 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .cart ul li div.plus,
+  .cart ul#favouriteItems li div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 2px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cart ul li div.plus span,
+  .cart ul#favouriteItems li div span {
+    display: inline-block !important;
+    min-width: 15px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #212529 !important;
+  }
+
+  .cart ul#favouriteItems li a,
+  .cart ul#favouriteItems li i {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    padding: 2px 4px !important;
+  }
+
+  .cart ul#favouriteItems li .fa-plus {
+    color: #2e8e05 !important;
+  }
+
+  .cart ul#favouriteItems li .fa-minus {
+    color: #dc3545 !important;
+  }
+
+  .cart #view {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 4px auto 0 auto !important;
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #e9ecef !important;
+  }
+
+    
     /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
     display: flex !important;
