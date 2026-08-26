@@ -149,16 +149,17 @@ btns.forEach(ele => {
 cartDraw()
 
 function cartBtn(){
-    const arrow=document.querySelector('#arrow');
-    arrow.style.color='#007bff';
-    if(cart.style.display=='none' && userProducts.length!=0){
-        cart.style.display='block'
-        arrow.classList='fas fa-caret-up arrow'
-    }else{
-        cart.style.display='none'
-        arrow.classList='fas fa-caret-down arrow'
-
-
+    const arrow = document.querySelector('#arrow');
+    arrow.style.color = '#007bff';
+    
+    if (cart.style.display === 'none' || cart.style.display === '') {
+        if (userProducts.length != 0) {
+            cart.style.display = 'block';
+            arrow.className = 'fas fa-caret-up arrow';
+        }
+    } else {
+        cart.style.display = 'none';
+        arrow.className = 'fas fa-caret-down arrow';
     }
 }
 
@@ -185,7 +186,6 @@ if(localStorage.getItem('first') && localStorage.getItem('log')){
     },500)
 }
 
-    addEventListener('click',(e)=> e.preventDefault())
 
 }
 
