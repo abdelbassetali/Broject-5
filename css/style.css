@@ -1347,27 +1347,29 @@ display: inline-block;
   }
 
   /* 5. حاوية الأزرار والكمية متقاربة ومنسقة */
-  .cart ul li div.plus,
+   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 3px !important; /* <--- قللنا المسافة بين الأزرار والرقام جوه الحاوية */
+    gap: 4px !important;
     flex-shrink: 0 !important;
-    margin: 0 !important;
+    width: 80px;
   }
 
   /* 6. ضبط شكل الرقم الداخلي والأزرار */
-  .cart ul li div.plus span,
+.cart ul li div.plus span,
   .cart ul#favouriteItems li div span {
     display: inline-block !important;
-    min-width: 12px !important;
+    min-width: 15px !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
     color: #212529 !important;
+    flex-grow: 0 !important;
   }
+
 
   .cart ul#favouriteItems li a,
   .cart ul#favouriteItems li i {
