@@ -1198,23 +1198,6 @@ display: inline-block;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-
-  /* 4. إظهار اسم المنتج وتنسيقه بوضوح ومعالجة مشكلة العرض صفر (0 width) */
-  .cart ul li span,
-  .cart ul#favouriteItems li span {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 0.8rem !important;
-    color: #49b727 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    flex-grow: 1 !important;
-    text-align: right !important;
-    width: auto !important;         /* أُضيف لمنع اختفاء الحروف */
-    min-width: 70px !important;     /* أُضيف لضمان ألا ينكمش الاسم للصفر */
-  }
-
   /* 5. تطبيق التنسيق على باقي العناصر ما عدا الـ span */
   .cart ul li *:not(span),
   .cart ul#favouriteItems li *:not(span) {
