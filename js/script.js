@@ -118,7 +118,7 @@ function cartDraw(){
              cartList.innerHTML=''
                    for(let i=0;i<userProducts.length;i++){
                      cartList.innerHTML+=`
-                    <li style="margin-right: 40px;, margin-top:15px;" >
+                    <li style="margin-right: 40px; margin-top:15px;" >
                      <span style="margin-right: 15px;">${userProducts[i].name}</span>
                      <div class="plus">
                      <span style="margin-right: 0px;">${userProducts[i].count}</span>
