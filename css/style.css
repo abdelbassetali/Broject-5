@@ -1123,6 +1123,75 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
+  /* 1. السلايدر نفسه عمودي عشان الصورة تبقى فوق والنصوص تحتها */
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+  }
+
+  /* 2. الـ card-body نخليه أفقياً (row) عشان النصوص تكون شمال والقلب يمين في نفس السطر جوه الكارد */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 8px !important;
+  }
+
+  /* 3. الحاوية الخاصة بالنصوص (Product و Category) تاخد مساحتها في الشمال */
+  .swiper-slide .card-body .card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex-grow: 1 !important;
+  }
+
+  /* 4. إجبار النصوص (p) تاخد مظهرها المرتب */
+  .swiper-slide .card-body .card-text p {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 12px !important;
+    margin: 2px 0 !important;
+  }
+
+  /* 5. ضبط صورة السلايدر */
+  .swiper-slide .swiper-img img {
+    width: 100% !important;
+    max-width: 120px !important;
+    height: auto !important;
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+  }
+
+  /* 6. رابط القلب يستقر في أقصى اليمين وجوه الكارد تماماً من غير ما يبوظ */
+  .swiper-slide .card-body a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 7. أيقونة القلب وظهورها المظبوط */
+  .swiper-slide .card-body a .fa-heart,
+  .card-body .fa-heart,
+  .fa-heart {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.6rem !important;
+    color: red !important;
+  }
+}
+/* @media screen and (max-width: 768px) {
   /* 1. ضبط كارت المفضلة و محتوياته ليكون ترتيبها عمودي ومنسق تماماً */
   .swiper-slide,
   .swiper-slide .card-body {
@@ -1169,9 +1238,7 @@ display: inline-block;
     margin-top: 5px !important;
   }
 
-  .swiper-slide .card-body .fa-heart {
-    font-size: 1.3rem !important;
-  }
+
       /* 3. تثبيت أيقونة القلب ومنع إخفائها بأي شكل */
   .swiper-slide .card-body a .fa-heart,
   .card-body .fa-heart,
@@ -1183,7 +1250,7 @@ display: inline-block;
     color: red !important;
     flex-shrink: 0 !important;
   }
-}
+} */
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
