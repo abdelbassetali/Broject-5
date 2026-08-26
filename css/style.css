@@ -1125,7 +1125,7 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 }
-/* 
+ 
 @media screen and (max-width: 768px) {
   /* 1. ضبط كارت المفضلة و محتوياته ليكون ترتيبها عمودي ومنسق تماماً */
   .swiper-slide,
@@ -1185,72 +1185,9 @@ display: inline-block;
     color: red !important;
     flex-shrink: 0 !important;
   }
-} */
-@media screen and (max-width: 768px) {
-  /* نسخة مطابقة لكودك بس متجاوبة لمقاسات الموبايل عشان القلب يرتاح جوه الكارد */
-  .swiper-slide {
-    font-family: var(--bs-body-font-family) !important;
-    font-weight: var(--bs-body-font-weight) !important;
-    line-height: var(--bs-body-line-height) !important;
-    color: var(--bs-body-color) !important;
-    -webkit-text-size-adjust: 100% !important;
-    -webkit-tap-highlight-color: transparent !important;
-    list-style: none !important;
-    margin: 0 auto 15px auto !important;
-    font-size: 10px !important;
-    position: relative !important;
-    background-color: rgb(230, 230, 230) !important;
-    border-radius: 15px !important;
-    transition: 0.5s !important;
-    
-    /* تعديل المقاسات للشاشات الصغيرة */
-    width: 100% !important;
-    max-width: 250px !important;
-    height: auto !important;
-    min-height: 220px !important;
-    
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    padding: 12px 12px 8px 12px !important;
-    box-sizing: border-box !important;
-    border: 1px solid transparent !important;
-    flex-shrink: 0 !important;
-    transform: translateZ(0) !important;
-    backface-visibility: hidden !important;
-    margin-right: 0 !important;
-    overflow: hidden !important; /* دي تضمن إن مفيش أي عنصر يخرج برا حدود الكارد */
-  }
+} 
 
-  /* تنسيق الـ card-body جواه عشان يوزع النصوص والقلب أفقياً بجانب بعض */
-  .swiper-slide .card-body {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    margin-top: auto !important;
-  }
 
-  /* أيقونة القلب تستقر جوه الكارد يمين تماماً */
-  .swiper-slide .card-body a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-decoration: none !important;
-    margin: 0 !important;
-  }
-
-  .swiper-slide .card-body .fa-heart,
-  .card-body .fa-heart,
-  .fa-heart {
-    position: static !important;
-    display: inline-block !important;
-    font-size: 1.6rem !important;
-    color: red !important;
-    margin: 0 !important;
-  }
-}
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
