@@ -1126,8 +1126,9 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
-  /* التعديل هنا هيكون خاص بسلايدر المفضلة وتنسيق القلب جوه الكارت بتاعه */
-  .swiper .swiper-wrapper .swiper-slide {
+  /* 1. ربط الكارت حصرياً بسلايدر المفضلة فقط */
+  .mySwiper .swiper-slide,
+  .swiper-wrapper .swiper-slide {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -1144,7 +1145,9 @@ display: inline-block;
     overflow: hidden !important;
   }
 
-  .swiper .swiper-wrapper .swiper-slide .swiper-img {
+  /* 2. ضبط صورة المنتج داخل سلايدر المفضلة فقط */
+  .mySwiper .swiper-slide .swiper-img,
+  .swiper-wrapper .swiper-slide .swiper-img {
     width: 100% !important;
     height: 110px !important;
     display: flex !important;
@@ -1153,13 +1156,16 @@ display: inline-block;
     margin-bottom: 5px !important;
   }
 
-  .swiper .swiper-wrapper .swiper-slide .swiper-img img {
+  .mySwiper .swiper-slide .swiper-img img,
+  .swiper-wrapper .swiper-slide .swiper-img img {
     max-height: 100% !important;
     max-width: 100% !important;
     object-fit: contain !important;
   }
 
-  .swiper .swiper-wrapper .swiper-slide .card-body {
+  /* 3. صندوق المحتوى للمفضلة فقط */
+  .mySwiper .swiper-slide .card-body,
+  .swiper-wrapper .swiper-slide .card-body {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
@@ -1169,7 +1175,9 @@ display: inline-block;
     margin-top: auto !important;
   }
 
-  .swiper .swiper-wrapper .swiper-slide .card-body .card-text {
+  /* 4. النصوص للمفضلة فقط */
+  .mySwiper .swiper-slide .card-body .card-text,
+  .swiper-wrapper .swiper-slide .card-body .card-text {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -1177,7 +1185,8 @@ display: inline-block;
     flex-grow: 1 !important;
   }
 
-  .swiper .swiper-wrapper .swiper-slide .card-body .card-text p {
+  .mySwiper .swiper-slide .card-body .card-text p,
+  .swiper-wrapper .swiper-slide .card-body .card-text p {
     display: block !important;
     width: 100% !important;
     font-size: 11px !important;
@@ -1187,8 +1196,9 @@ display: inline-block;
     white-space: nowrap !important;
   }
 
-  /* القلب وجوه الكارت للمفضلة بس */
-  .swiper .swiper-wrapper .swiper-slide .card-body a {
+  /* 5. زرار وأيقونة القلب للمفضلة فقط من غير ما يلمس الكاردات اللي فوق */
+  .mySwiper .swiper-slide .card-body a,
+  .swiper-wrapper .swiper-slide .card-body a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1197,19 +1207,16 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 
-  .swiper .swiper-wrapper .swiper-slide .card-body .fa-heart {
+  .mySwiper .swiper-slide .card-body .fa-heart,
+  .swiper-wrapper .swiper-slide .card-body .fa-heart {
     display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
     font-size: 1.4rem !important;
     color: red !important;
     margin: 0 !important;
-  } .card-body{
-            height:auto;
-     }
+  }
 }
-    
-
 
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
