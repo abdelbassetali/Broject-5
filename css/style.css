@@ -1145,8 +1145,8 @@ display: inline-block;
     margin-bottom: 20px !important;
   }
 
- /* 1. حاوية السلة العامة */
- .cart-box {
+/* 1. حاوية السلة العامة */
+  .cart-box {
     position: relative !important;
   }
 
@@ -1167,7 +1167,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 2. إزالة الـ Scroll وترتيب الـ list (تم إضافة flex-wrap لمنع الأعمدة) */
+  /* 2. إزالة الـ Scroll وترتيب الـ list عمودياً */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1176,14 +1176,14 @@ display: inline-block;
     margin-bottom: 4px !important;
     display: flex !important;
     flex-direction: column !important;
-    flex-wrap: nowrap !important; /* <--- الزيادة هنا لمنع التفاف العناصر في أعمدة */
+    flex-wrap: nowrap !important;
     gap: 4px !important;
     max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
 
-  /* 3. تنسيق عناصر المنتجات (تم تأكيد عرض 100% لصف مستقل) */
+  /* 3. تنسيق عناصر المنتجات */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1198,14 +1198,14 @@ display: inline-block;
     border-radius: 4px !important;
     background-color: #fff !important;
     width: 100% !important;
-    flex: 0 0 100% !important; /* <--- ضمان أخذ سطر كامل مستقل */
+    flex: 0 0 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* 4. تنسيق اسم المنتج (لمعنوية الظهور ومنع الاختفاء) */
-  .cart ul li span,
-  .cart ul#favouriteItems li span {
+  /* 4. تنسيق اسم المنتج فقط (بدون التأثير على الرقم) */
+  .cart ul li > span,
+  .cart ul#favouriteItems li > span {
     display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -1214,22 +1214,23 @@ display: inline-block;
     flex-grow: 1 !important;
     text-align: left !important;
     white-space: nowrap !important;
-    word-break: break-word !important;
-    overflow: visible !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin-right: 8px !important;
   }
 
-  /* 5. حاوية الأزرار والكمية */
+  /* 5. حاوية الأزرار والكمية (مثبتة في أقصى اليمين ولا تتغير) */
   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 2px !important;
+    gap: 4px !important;
     flex-shrink: 0 !important;
   }
 
-  /* 6. ضبط شكل الرقم الداخلي */
+  /* 6. ضبط شكل الرقم الداخلي والأزرار */
   .cart ul li div.plus span,
   .cart ul#favouriteItems li div span {
     display: inline-block !important;
@@ -1238,6 +1239,7 @@ display: inline-block;
     margin: 0 !important;
     padding: 0 !important;
     color: #212529 !important;
+    flex-grow: 0 !important;
   }
 
   /* 7. الأيقونات والروابط */
@@ -1246,6 +1248,7 @@ display: inline-block;
     cursor: pointer !important;
     pointer-events: auto !important;
     padding: 2px 4px !important;
+    flex-shrink: 0 !important;
   }
 
   .cart ul#favouriteItems li .fa-plus {
