@@ -1146,10 +1146,11 @@ display: inline-block;
   }
 
   /* 2. ضبط حاوية السلة العامة وعرضها عشان تكفي الكلمة كاملة */
-.cart-box {
+/* 1. حاوية السلة العامة */
+  .cart-box {
     position: relative !important;
   }
-  /* السلة تفتح وتغلق بناءً على الجافاسكريبت من غير ما تثبت مفطوحة على طول */
+
   .cart-box .cart {
     position: absolute !important;
     top: 100% !important;
@@ -1165,22 +1166,18 @@ display: inline-block;
     padding: 8px !important;
     margin-top: 5px !important;
     box-sizing: border-box !important;
-    /* بنشيل الـ display: block المسبتة عشان الجافاسكريبت يعرف يقفلها ويفتحها براحته */
   }
 
-  /* إزالة الـ Scroll وترتيب الـ list داخلياً بشكل معزول */
+  /* 2. القائمة وتفريغ المسافات الزائدة */
   div.cart-box .cart ul,
   div.cart-box .cart ul#favouriteItems {
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
     margin-bottom: 4px !important;
-    max-height: none !important;
-    overflow-y: visible !important;
-    overflow-x: hidden !important;
   }
 
-  /* كل منتج في سطر مستقل تماماً وبشكل مرتب */
+  /* 3. تنسيق عنصر المنتج (li) */
   div.cart-box .cart ul li,
   div.cart-box .cart ul#favouriteItems li {
     display: flex !important;
@@ -1188,10 +1185,8 @@ display: inline-block;
     justify-content: space-between !important;
     align-items: center !important;
     font-size: 0.8rem !important;
-    padding: 4px 8px !important;
+    padding: 5px 8px !important;
     margin-bottom: 6px !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
     border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
     background-color: #fff !important;
@@ -1199,51 +1194,46 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* اسم المنتج معزول ولن يتأثر بأي تنسيق عام */
-  div.cart-box .cart ul li > span,
-  div.cart-box .cart ul#favouriteItems li > span {
+  /* 4. ضمان ظهور أي نص أو span جوه الـ li بشكل واضح */
+  div.cart-box .cart ul li > span:not(.plus span),
+  div.cart-box .cart ul#favouriteItems li > span:not(div span) {
     display: inline-block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    font-size: 0.8rem !important;
-    color: #0e2b05 !important;
+    font-size: 0.85rem !important;
+    color: #212529 !important;
     flex-grow: 1 !important;
     text-align: left !important;
-    white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-    margin: 0 !important;
+    white-space: nowrap !important;
   }
 
-  /* حاوية الأزرار والكمية معزولة */
+  /* 5. حاوية الأزرار والكمية */
   div.cart-box .cart ul li div.plus,
   div.cart-box .cart ul#favouriteItems li div {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 3px !important;
+    gap: 4px !important;
     flex-shrink: 0 !important;
-    margin: 0 !important;
   }
 
-  /* رقم الكمية الداخلي */
+  /* 6. رقم الكمية */
   div.cart-box .cart ul li div.plus span,
   div.cart-box .cart ul#favouriteItems li div span {
     display: inline-block !important;
     min-width: 15px !important;
     text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
   }
 
-  /* الأيقونات والأزرار */
+  /* 7. الأيقونات والزرار */
   div.cart-box .cart ul#favouriteItems li a,
   div.cart-box .cart ul#favouriteItems li i {
     cursor: pointer !important;
-    pointer-events: auto !important;
     padding: 2px 4px !important;
   }
 
@@ -1255,7 +1245,7 @@ display: inline-block;
     color: #dc3545 !important;
   }
 
-  /* زر عرض الكل المعزول */
+  /* 8. زر عرض الكل */
   div.cart-box .cart #view {
     display: block !important;
     width: 100% !important;
@@ -1267,22 +1257,6 @@ display: inline-block;
     text-decoration: none !important;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
-  }
-    /* إظهار اسم المنتج بوضوح تام وبدون أي إخفاء أو تداخل بالألوان */
-  div.cart-box .cart ul li > span,
-  div.cart-box .cart ul#favouriteItems li > span {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 0.85rem !important;
-    color: #212529 !important;        /* لون أسود واضح وداكن عشان يبان صح */
-    background-color: transparent !important;
-    flex-grow: 1 !important;
-    text-align: left !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    margin: 0 !important;
   }
     /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
