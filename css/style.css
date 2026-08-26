@@ -1085,8 +1085,6 @@ display: inline-block;
     touch-action: pan-y !important;      /* بيخلي السحب مريح وميتشالش برة */
   }
 } 
-
-@media screen and (max-width: 768px) {
  
 @media screen and (max-width: 768px) {
 
@@ -1215,12 +1213,6 @@ display: inline-block;
     text-align: right !important;
   }
 
-  .cart ul li *,
-  .cart ul#favouriteItems li * {
-    color: #212529 !important;
-    font-size: 0.8rem !important;
-  }
-
   .cart ul#favouriteItems li div {
     display: flex !important;
     align-items: center !important;
@@ -1254,7 +1246,18 @@ display: inline-block;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
   }
-
+.cart ul li span,
+  .cart ul#favouriteItems li span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #212529 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    flex-grow: 1 !important;
+    text-align: right !important;
+  }
 
 }
     /* تنسيق وضبط كلمة وزر Logout بالكامل */
