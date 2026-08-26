@@ -1249,7 +1249,7 @@ display: inline-block;
     align-items: center !important;
     justify-content: flex-end !important;
     height: auto !important;
-    margin-top: 10px !important;
+    margin-top: 14px !important;
   }
 
   .logout-box .logout,
@@ -1279,6 +1279,19 @@ display: inline-block;
     box-sizing: border-box !important;
     margin-left: 0 !important;     /* الغي أي هوامش جانبية كانت مزحلقاها */
     margin-right: 0 !important;
+  }
+    /* إظهار اسم المنتج وتنسيقه بوضوح جوه القائمة في الموبايل */
+  .cart ul li span,
+  .cart ul#favouriteItems li span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #212529 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: right !important;
+    flex-grow: 1 !important;
   }
 
 }
