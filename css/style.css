@@ -1269,7 +1269,7 @@ display: inline-block;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
   } */
-  .cart-box {
+ .cart-box {
     position: relative !important;
   }
 
@@ -1290,7 +1290,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 2. تقليل المسافات الرأسية بين العناصر لتكون متقاربة قدر الإمكان */
+  /* 2. ترتيب القائمة */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1300,7 +1300,7 @@ display: inline-block;
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: nowrap !important;
-    gap: 3px !important; /* <--- قللنا المسافة بين كل منتج والتاني لأقصى حد */
+    gap: 3px !important;
     max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
@@ -1308,7 +1308,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 3. ضغط الـ padding داخل الـ li عشان ما يبقاش فيه فراغات ملوش لازمة */
+  /* 3. إجبار الـ li الأبيض على أخذ العرض كاملاً ومسح أي هوامش خارجية */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1317,7 +1317,7 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 4px 6px !important; /* <--- قللنا الـ padding جوه المستطيل الأبيض */
+    padding: 4px 6px !important;
     margin: 0 !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -1329,7 +1329,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 4. اسم المنتج ياخد مساحته بدون هوامش مبالغ فيها */
+  /* 4. اسم المنتج مع تصفير الهوامش اللي بيبعتها الجافاسكريبت تماماً */
   .cart ul li > span,
   .cart ul#favouriteItems li > span {
     display: inline-block !important;
@@ -1339,21 +1339,22 @@ display: inline-block;
     color: #212529 !important;
     flex: 1 1 auto !important;
     text-align: left !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-clip: clip !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
     margin: 0 !important;
-    margin-right: 4px !important; /* <--- ضيقنا المسافة بين الاسم والأزرار جداً */
+    margin-right: 0 !important; /* لغويا أي هوامش يمين جاية من الـ JS */
+    margin-left: 0 !important;
   }
 
-  /* 5. حاوية الأزرار والكمية متقاربة ومنسقة */
+  /* 5. حاوية الأزرار والكمية متقاربة لأقصى حد */
   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 3px !important; /* <--- قللنا المسافة بين الأزرار والرقام جوه الحاوية */
+    gap: 2px !important;
     flex-shrink: 0 !important;
     margin: 0 !important;
   }
