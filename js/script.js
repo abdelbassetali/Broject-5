@@ -108,91 +108,48 @@ function removeItems(id){
 
 } 
 
+
+
 function cartDraw(){
-    number.innerHTML = userProducts.length;
-
+    
+    number.innerHTML=userProducts.length
     if(userProducts.length != 0){
-        cartList.innerHTML = '';
-        for(let i = 0; i < userProducts.length; i++){
-            cartList.innerHTML += `
-            <li style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 10px;">
-                <span style="font-size: 0.85rem; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 120px;">${userProducts[i].name}</span>
-                <div class="plus" style="display: flex; align-items: center; gap: 8px;">
-                    <span>${userProducts[i].count}</span>
+        if(userProducts.length !=0){
+             cartList.innerHTML=''
+                   for(let i=0;i<userProducts.length;i++){
+                     cartList.innerHTML+=`
+                    <li style="margin-right: 40px;, margin-top:15px;" >
+                     <span style="margin-right: 15px;">${userProducts[i].name}</span>
+                     <div class="plus">
+                     <span style="margin-right: 0px;">${userProducts[i].count}</span>
                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${userProducts[i].id})"></i></a>
-                    <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${userProducts[i].id})"></i></a>
-                </div>
-            </li>
-            `;
-        }
-        cart.style.display = 'block'; // للتأكيد إن السلة تظهر لو فيها منتجات
-    } else {
-        cart.style.display = 'none';
-        cartList.innerHTML = '';
-    }
+                         <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${userProducts[i].id})"></i></a>
+                          </div>
+                        </li>
+                        `  }
+ }else{
+     cart.style.display='none';
+      }
+        
+    }else if(localStorage.getItem('items')){
+        userProducts=JSON.parse(localStorage.getItem('items'))
+        if(userProducts.length!=0){
+        cartDraw()
 
-    // لو المنتجات موجودة في الـ LocalStorage ومش متحمّلة في الميموري
-    if(localStorage.getItem('items') && userProducts.length == 0){
-        userProducts = JSON.parse(localStorage.getItem('items'));
-        if(userProducts.length != 0){
-            cartDraw();
-        }
-    }
-
-    // تحديث حالة الأزرار (Add / Remove)
-    if(userProducts.length > 0){
-        let btns = userProducts.map((arr) => arr.id);
-        btns.forEach(ele => {
-            let addBtn = document.getElementById(ele);
-            let removeBtn = document.getElementById(ele + '0000');
-            if(addBtn) addBtn.style.display = 'none';
-            if(removeBtn) removeBtn.style.display = 'block';
+}
+        
+let btns=userProducts.map((arr)=>{
+            return arr.id;
+ })
+btns.forEach(ele => {
+    document.getElementById(ele).style.display='none'
+    document.getElementById(ele+'0000').style.display='block'
         });
+    }else{
+
     }
 }
-
-cartDraw();
-
-// function cartDraw(){
-    
-//     number.innerHTML=userProducts.length
-//     if(userProducts.length != 0){
-//         if(userProducts.length !=0){
-//              cartList.innerHTML=''
-//                    for(let i=0;i<userProducts.length;i++){
-//                      cartList.innerHTML+=`
-//                     <li style="margin-right: 45px;, margin-top:15px;" >
-//                      <span style="margin-right: 20px;">${userProducts[i].name}</span>
-//                      <div class="plus">
-//                      <span style="margin-right: 0px;">${userProducts[i].count}</span>
-//                     <a href="#" class="pluss"><i class="fas fa-plus text-success" onclick="plusBtn(${userProducts[i].id})"></i></a>
-//                          <a href="#" class="minus"><i class="fas fa-minus text-danger" onclick="minusBtn(${userProducts[i].id})"></i></a>
-//                           </div>
-//                         </li>
-//                         `  }
-//  }else{
-//      cart.style.display='none';
-//       }
-        
-//     }else if(localStorage.getItem('items')){
-//         userProducts=JSON.parse(localStorage.getItem('items'))
-//         if(userProducts.length!=0){
-//         cartDraw()
-
-// }
-        
-// let btns=userProducts.map((arr)=>{
-//             return arr.id;
-//  })
-// btns.forEach(ele => {
-//     document.getElementById(ele).style.display='none'
-//     document.getElementById(ele+'0000').style.display='block'
-//         });
-//     }else{
-
-//     }
-// }
-// cartDraw()
+cartDraw()
 
 function cartBtn(){
     const arrow = document.querySelector('#arrow');
