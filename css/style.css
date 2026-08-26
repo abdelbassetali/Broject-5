@@ -1123,6 +1123,64 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
+  /* 1. تظبيط الكارد بالكامل ليصبح بلوك واحد متسق */
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    overflow: hidden !important; /* دي بتمنع أي عنصر يخرج برا حدود الكارد */
+    margin-bottom: 15px !important;
+  }
+
+  /* 2. الـ card-body يجمع النصوص شمال والقلب يمين في سطر واحد جوه الكارد */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    background-color: #f8f9fa !important;
+  }
+
+  /* 3. النصوص تاخد راحتها في الشمال */
+  .swiper-slide .card-body .card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .swiper-slide .card-body .card-text p {
+    font-size: 13px !important;
+    margin: 2px 0 !important;
+    color: #333 !important;
+  }
+
+  /* 4. رابط وأيقونة القلب تستقر جوه الـ card-body يمين تماماً */
+  .swiper-slide .card-body a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+  }
+
+  .swiper-slide .card-body .fa-heart,
+  .card-body .fa-heart,
+  .fa-heart {
+    position: static !important;
+    display: inline-block !important;
+    font-size: 1.5rem !important;
+    color: red !important;
+    margin: 0 !important;
+  }
+}
+/* @media screen and (max-width: 768px) {
   /* 1. السلايدر نفسه عمودي عشان الصورة تبقى فوق والنصوص تحتها */
   .swiper-slide {
     display: flex !important;
@@ -1190,7 +1248,7 @@ display: inline-block;
     font-size: 1.6rem !important;
     color: red !important;
   }
-}
+} */
 /* @media screen and (max-width: 768px) {
   /* 1. ضبط كارت المفضلة و محتوياته ليكون ترتيبها عمودي ومنسق تماماً */
   .swiper-slide,
