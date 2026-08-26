@@ -1146,65 +1146,38 @@ display: inline-block;
   }
 
   /* 2. ضبط حاوية السلة العامة وعرضها عشان تكفي الكلمة كاملة */
- /* 1. ضبط القائمة المنسدلة للسلة نفسها */
-.cart {
-  position: absolute !important;
-  top: 100% !important;
-  right: 0 !important;
-  left: auto !important;
-  width: 280px !important;
-  max-width: 90vw !important;
-  background-color: #ffffff !important;
-  border: 1px solid #dee2e6 !important;
-  border-radius: 6px !important;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15) !important;
-  z-index: 999999 !important;
-  padding: 10px !important;
-  box-sizing: border-box !important;
-}
+  .cart-box {
+    position: relative !important;
+  }
 
-/* 2. حاوية المنتجات جوه السلة لتكون عمودية وبدون تداخل مع المفضلة */
-.cart ul {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  max-height: 350px !important;
-  overflow-y: auto !important;
-}
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    left: -20px !important;
+    right: auto !important;
+    width: 290px !important;
+    max-width: 90vw !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 999999 !important;
+    padding: 8px !important;
+    margin-top: 5px !important;
+    box-sizing: border-box !important;
+  }
 
-/* 3. شكل كارت المنتج الفردي جوه القائمة (صورة + اسم + أزرار) */
-.cart ul li {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  background: #f8f9fa !important;
-  padding: 6px !important;
-  border-radius: 4px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* 4. ضمان ظهور الصورة بوضوح داخل السلة */
-.cart ul li img {
-  width: 40px !important;
-  height: 40px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-/* 5. ضبط النصوص والكميات (البلس والماينس) عشان تظهر مظبوطة جنب بعض */
-.cart ul li span, 
-.cart ul li p, 
-.cart ul li button {
-  font-size: 0.8rem !important;
-  margin: 0 2px !important;
-  display: inline-block !important;
-  color: #333 !important;
-}
+  /* 3. إزالة الـ Scroll وترك السلة تظهر كلها */
+  .cart ul,
+  .cart ul#favouriteItems {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 4px !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+  }
 
   /* 4. تنسيق عناصر المنتجات (منع التكرار وضبط العرض) */
   .cart ul li,
@@ -1307,4 +1280,3 @@ display: inline-block;
     display: inline-block !important;
   }
 }
-
