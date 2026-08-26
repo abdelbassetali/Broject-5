@@ -1126,7 +1126,86 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
-  /* 1. زيادة العرض سنة وعمل مساحة (Margin) بين الكارتات في المفضلة */
+  /* 1. تثبيت مقاس كارت المفضلة ومنع أي تداخل */
+  .mySwiper .swiper-slide,
+  .swiper-wrapper .swiper-slide {
+    width: 220px !important;
+    height: 230px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background-color: rgb(230, 230, 230) !important;
+    border-radius: 15px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    margin-right: 15px !important;
+    position: relative !important;
+  }
+
+  /* 2. الصورة في مكانها فوق */
+  .mySwiper .swiper-slide .swiper-img {
+    width: 100% !important;
+    height: 110px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .mySwiper .swiper-slide .swiper-img img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* 3. صندوق المحتوى مرتب */
+  .mySwiper .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: auto !important;
+    position: relative !important;
+  }
+
+  /* 4. النصوص في مكانها الطبيعي من غير ما تنزل تحت */
+  .mySwiper .swiper-slide .card-body .card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex-grow: 1 !important;
+  }
+
+  .mySwiper .swiper-slide .card-body .card-text p {
+    font-size: 11px !important;
+    margin: 1px 0 !important;
+    color: #333 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 5. القلب هو لوحده اللي بننزله ونحطه في الزاوية السفلى براحته */
+  .mySwiper .swiper-slide .card-body a {
+    position: absolute !important;
+    bottom: -2px !important;
+    right: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+  }
+
+  .mySwiper .swiper-slide .card-body .fa-heart {
+    font-size: 1.4rem !important;
+    color: red !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* /* 1. زيادة العرض سنة وعمل مساحة (Margin) بين الكارتات في المفضلة */
   .mySwiper .swiper-slide,
   .swiper-wrapper .swiper-slide {
     display: flex !important;
@@ -1216,7 +1295,7 @@ display: inline-block;
     color: red !important;
     margin: 0 !important;
   }
-}
+} */
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
