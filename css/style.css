@@ -1149,6 +1149,7 @@ display: inline-block;
   .cart-box {
     position: relative !important;
   }
+
   .cart {
     position: absolute !important;
     top: 100% !important;
@@ -1205,11 +1206,17 @@ display: inline-block;
     visibility: visible !important;
     opacity: 1 !important;
     font-size: 0.8rem !important;
-    color: #113406 !important;
+    color: #49b727 !important;
     white-space: normal !important;
     word-break: break-word !important;
     flex-grow: 1 !important;
     text-align: right !important;
+  }
+
+  .cart ul li *,
+  .cart ul#favouriteItems li * {
+    color: #212529 !important;
+    font-size: 0.8rem !important;
   }
 
   .cart ul#favouriteItems li div {
@@ -1245,52 +1252,25 @@ display: inline-block;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
   }
-.cart ul li span,
-  .cart ul#favouriteItems li span {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    font-size: 0.8rem !important;
-    color: #212529 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    flex-grow: 1 !important;
-    text-align: right !important;
-  }
-    /* إجبار ظهور محتوى السلة بالكامل جوه الـ Dropdown ومنع اختفاء النصوص */
-.cart .ele, 
-.cart .ele-content,
-.cart p, 
-.cart span {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  color: #212529 !important;
-}
 
-.cart p, .cart span {
-  font-size: 0.8rem !important;
-  margin: 0 4px !important;
-}
-    /* تنسيق وضبط كلمة وزر Logout بالكامل */
+  /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-end !important;
     height: auto !important;
-    margin-top: 14px !important;
+    margin-top: 10px !important;
   }
 
   .logout-box .logout,
   #navbarToggleExternalContent .logout-box .logout,
   .right-header .logout-box a.logout {
-    font-size: 15px !important; /* صغرها أو كبرها حسب ما تحب، 50px كبيرة جداً على الهيدر وهتكسره */
+    font-size: 15px !important;
     color: #0d0101 !important;
     text-decoration: none !important;
     font-weight: bold !important;
     line-height: normal !important;
     display: inline-block !important;
   }
+
 }
-
-
