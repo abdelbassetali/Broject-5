@@ -1182,7 +1182,7 @@ display: inline-block;
     overflow-x: hidden !important;
   }
 
-  /* 3. الـ li الأبيض الحاضن لكل عنصر */
+  /* 3. عناصر المنتجات في صفوف مستقلة */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1191,16 +1191,16 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 6px 10px !important;
+    padding: 6px 8px !important;
     margin: 0 !important;
-    border: 1px solid #dee2e6 !important;
+    border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
-    background-color: #ffffff !important;
+    background-color: #fff !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* 4. اسم المنتج (تم ضبطه ليظهر بوضوح بجوار الأزرار داخل الـ li) */
+  /* 4. اسم المنتج (محدد بوضوح وله مساحة ثابتة لتجنب الاختفاء) */
   .cart ul li > span,
   .cart ul#favouriteItems li > span {
     display: inline-block !important;
@@ -1208,21 +1208,23 @@ display: inline-block;
     opacity: 1 !important;
     font-size: 0.8rem !important;
     color: #212529 !important;
-    flex: 1 1 auto !important; /* السماح له بأخذ المساحة المتبقية بمرونة */
+    width: 120px !important; /* تحديد عرض واضح لاسم المنتج */
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
     text-align: left !important;
     white-space: nowrap !important;
-    overflow: visible !important; /* إظهار النص كاملاً بدون إخفاء */
-    margin-right: 8px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; /* لو الاسم طويل جداً يحط نقاط وفي نفس الوقت ما يختفيش */
   }
 
-  /* 5. حاوية الأزرار والكمية */
+  /* 5. حاوية الأزرار والكمية (مثبتة في أقصى اليمين بجوار الاسم) */
   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 6px !important;
+    gap: 4px !important;
     flex-shrink: 0 !important;
   }
 
