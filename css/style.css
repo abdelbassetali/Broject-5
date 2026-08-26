@@ -1125,8 +1125,94 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 }
+@media screen and (max-width: 768px) {
+  /* 1. ضبط الكارت بالكامل ليكون عمودي ومنسق زي اللاب */
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    max-width: 220px !important;
+    height: 230px !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    background-color: rgb(230, 230, 230) !important;
+    border-radius: 15px !important;
+    margin: 0 auto 15px auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
 
- @media screen and (max-width: 768px) {
+  /* 2. ضبط صورة المنتج لتكون في الأعلى وبحجم مناسب */
+  .swiper-slide .swiper-img {
+    width: 100% !important;
+    height: 110px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 5px !important;
+  }
+
+  .swiper-slide .swiper-img img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* 3. صندوق المحتوى (Card Body) عشان يلم النصوص والقلب بدقة */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: auto !important;
+  }
+
+  /* 4. النصوص تزل تحت بعضها بانتظام من غير تداخل */
+  .swiper-slide .card-body .card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex-grow: 1 !important;
+  }
+
+  .swiper-slide .card-body .card-text p {
+    display: block !important;
+    width: 100% !important;
+    font-size: 11px !important;
+    margin: 1px 0 !important;
+    line-height: 1.2 !important;
+    color: #333 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 5. زرار وأيقونة القلب في مكانه المظبوط على اليمين جوه الكارت */
+  .swiper-slide .card-body a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .swiper-slide .card-body .fa-heart,
+  .card-body .fa-heart,
+  .fa-heart {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.4rem !important;
+    color: red !important;
+    margin: 0 !important;
+  }
+}
+
+ /* @media screen and (max-width: 768px) {
   /* 1. ضبط كارت المفضلة و محتوياته ليكون ترتيبها عمودي ومنسق تماماً */
   .swiper-slide,
   .swiper-slide .card-body {
@@ -1190,7 +1276,7 @@ display: inline-block;
     color: red !important;
     flex-shrink: 0 !important;
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
