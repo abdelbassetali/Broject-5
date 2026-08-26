@@ -1174,6 +1174,9 @@ display: inline-block;
     padding-left: 0 !important;
     margin: 0 !important;
     margin-bottom: 4px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 4px !important;
     max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
@@ -1210,7 +1213,6 @@ display: inline-block;
     white-space: nowrap !important;
     word-break: break-word !important;
     overflow: visible !important;
-      max-width: 110px !important;
   }
 
   /* 5. حاوية الأزرار والكمية */
