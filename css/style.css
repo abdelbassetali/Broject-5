@@ -1266,4 +1266,17 @@ display: inline-block;
     line-height: normal !important;
     display: inline-block !important;
   }
+    /* حل مشكلة العرض صفر (0 width) وإجبار الـ span على الظهور */
+.cart ul li span,
+.cart ul#favouriteItems li span {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 80px !important;
+  max-width: 60% !important;
+  flex-grow: 1 !important;
+  color: #49b727 !important;
+  font-size: 0.8rem !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 }
