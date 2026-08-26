@@ -1085,8 +1085,9 @@ display: inline-block;
     touch-action: pan-y !important;      /* بيخلي السحب مريح وميتشالش برة */
   }
 } 
+
 @media screen and (max-width: 768px) {
-  /* 1. ضبط قائمة التوجل (Navbar Collapse) لتفتح من اليمين */
+  /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
   .navbar-collapse,
   .navbar-collapse.collapsing,
   .navbar-collapse.collapse.show {
@@ -1104,8 +1105,6 @@ display: inline-block;
     padding: 10px 15px !important;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
     z-index: 9999 !important;
-    direction: rtl !important;
-    text-align: right !important;
   }
 
   #navbarToggleExternalContent .right-header {
@@ -1126,7 +1125,6 @@ display: inline-block;
     width: 100% !important;
     margin-bottom: 5px !important;
     font-size: 0.8rem !important;
-    text-align: right !important;
   }
 
   #navbarToggleExternalContent .login {
@@ -1136,18 +1134,17 @@ display: inline-block;
   #navbarToggleExternalContent .login ul {
     display: flex !important;
     gap: 12px !important;
-    padding-right: 0 !important;
+    padding-left: 0 !important;
     margin-bottom: 0 !important;
     list-style: none !important;
   }
 
   #navbarToggleExternalContent .logout-box {
-    margin-right: auto !important;
-    margin-left: 0 !important;
+    margin-left: auto !important;
     margin-bottom: 20px !important;
   }
 
-  /* 2. ضبط حاوية السلة وتثبيتها تحت زرار السلة مباشرة بوضوح */
+  /* 2. ضبط حاوية السلة العامة وعرضها عشان تكفي الكلمة كاملة */
   .cart-box {
     position: relative !important;
   }
@@ -1155,9 +1152,9 @@ display: inline-block;
   .cart {
     position: absolute !important;
     top: 100% !important;
-    left: 0 !important;
+    left: -20px !important;
     right: auto !important;
-    width: 270px !important;
+    width: 290px !important;     /* عرض مظبوط يمنع قطع كلمة samsung-ultra */
     max-width: 90vw !important;
     background-color: #ffffff !important;
     border: 1px solid #dee2e6 !important;
@@ -1169,12 +1166,11 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 3. إزالة الـ Scroll وعرض المنتجات كامضة وفي منتصف الكارد */
+  /* 3. إزالة الـ Scroll وترك السلة تظهر كلها */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
     padding-left: 0 !important;
-    padding-right: 0 !important;
     margin: 0 !important;
     margin-bottom: 4px !important;
     max-height: none !important;
@@ -1182,7 +1178,7 @@ display: inline-block;
     overflow-x: hidden !important;
   }
 
-  /* 4. تنسيق عناصر المنتجات جوه السلة */
+  /* 4. تنسيق عناصر المنتجات */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1191,24 +1187,21 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 8px 12px !important;
-    margin-bottom: 6px !important;
+    padding: 4px 8px !important;
+    margin-bottom: 4px !important;
     border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
     background-color: #fff !important;
-    width: 100% !important;
+    width: 90% !important;
     box-sizing: border-box !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    gap: 10px !important;
+    margin-left: 15px !important;
+    gap: 2px !important;
   }
 
+  /* منع نزول الكلام لسطر تاني وتثبيته في سطر واحد */
   .cart ul li span,
   .cart ul#favouriteItems li span {
-    white-space: normal !important;
-    word-break: break-word !important;
-    text-align: left !important;
-    flex-grow: 1 !important;
+    white-space: nowrap !important;
   }
 
   .cart ul li *,
@@ -1220,7 +1213,7 @@ display: inline-block;
   .cart ul#favouriteItems li div {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 6px !important;
   }
 
   .cart ul#favouriteItems li a,
@@ -1242,7 +1235,7 @@ display: inline-block;
     display: block !important;
     width: 100% !important;
     text-align: center !important;
-    margin: 6px auto 0 auto !important;
+    margin: 4px auto 0 auto !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
     font-weight: 600 !important;
@@ -1251,3 +1244,37 @@ display: inline-block;
     border-top: 1px solid #e9ecef !important;
   }
 }
+/* 4. تنسيق عناصر المنتجات وعرض الاسم كاملاً */
+  .cart ul li,
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+    margin-bottom: 5px !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    width: 100% !important; /* خليه ياخد عرض القائمة كله عشان يكفي الكلام */
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    gap: 8px !important;
+  }
+
+  /* السماح للنص بالظهور كاملاً وعدم قصه */
+  .cart ul li span,
+  .cart ul#favouriteItems li span {
+    white-space: normal !important; /* يسمح للكلمة تظهر كاملة بوضوح */
+    word-break: break-word !important;
+    text-align: right !important;
+    flex-grow: 1 !important;
+  }
+
+  .cart ul li *,
+  .cart ul#favouriteItems li * {
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+  }
