@@ -1318,13 +1318,14 @@ display: inline-block;
     color: #212529 !important;
     font-size: 0.8rem !important;
     padding: 4px 6px !important; /* <--- قللنا الـ padding جوه المستطيل الأبيض */
-    margin: 0 !important;
+    /* margin: 0 !important;
     margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin-left: 0 !important; */
     border: 1px solid #dee2e6 !important;
     border-radius: 4px !important;
     background-color: #fff !important;
     width: 100% !important;
+    flex: 0 0 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -1395,18 +1396,17 @@ display: inline-block;
     margin: 4px auto 0 auto !important;
     color: #212529 !important;
     font-size: 0.9rem !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     text-decoration: none !important;
     padding-top: 4px !important;
     border-top: 1px solid #e9ecef !important;
-   background-color: #fff;
   }
       .logout-box {
     display: flex !important;
     align-items: center !important;
     justify-content: flex-end !important;
     height: auto !important;
-    margin-top: 14px !important;
+    margin-top: 16px !important;
   }
   .logout-box .logout,
   #navbarToggleExternalContent .logout-box .logout,
@@ -1418,7 +1418,5 @@ display: inline-block;
     line-height: normal !important;
     display: inline-block !important;
   }
-    .cart {
-  background-color: #ffffff !important;
-}
+  
   }
