@@ -1181,6 +1181,7 @@ display: inline-block;
   .mySwiper .swiper-slide .card-body .card-text p {
     font-size: 11px !important;
     margin: 1px 0 !important;
+      line-height: 1.0 !important;
     color: #333 !important;
     white-space: nowrap !important;
   }
