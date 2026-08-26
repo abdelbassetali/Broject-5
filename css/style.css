@@ -1145,7 +1145,7 @@ display: inline-block;
     margin-bottom: 20px !important;
   }
 /* 1. حاوية السلة العامة */
-  .cart-box {
+  /* .cart-box {
     position: relative !important;
   }
 
@@ -1197,6 +1197,7 @@ display: inline-block;
     border-radius: 4px !important;
     background-color: #fff !important;
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
@@ -1226,6 +1227,135 @@ display: inline-block;
     justify-content: flex-end !important;
     gap: 4px !important;
     flex-shrink: 0 !important;
+  }
+
+  /* 6. ضبط شكل الرقم الداخلي والأزرار */
+  .cart ul li div.plus span,
+  .cart ul#favouriteItems li div span {
+    display: inline-block !important;
+    min-width: 15px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #212529 !important;
+  }
+
+  .cart ul#favouriteItems li a,
+  .cart ul#favouriteItems li i {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    padding: 2px 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cart ul#favouriteItems li .fa-plus {
+    color: #2e8e05 !important;
+  }
+
+  .cart ul#favouriteItems li .fa-minus {
+    color: #dc3545 !important;
+  }
+
+  /* 7. زر عرض الكل */
+  .cart #view {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 6px auto 0 auto !important;
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #e9ecef !important;
+  } */
+    .cart-box {
+    position: relative !important;
+  }
+
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    left: -20px !important;
+    right: auto !important;
+    width: 270px !important;
+    max-width: 90vw !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 999999 !important;
+    padding: 8px !important;
+    margin-top: 5px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. ترتيب القائمة عمودياً وبدون فراغات جانبية */
+  .cart ul,
+  .cart ul#favouriteItems {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. إجبار الـ li الأبيض على أخذ عرض السلة كاملاً وإلغاء مارجن الجافاسكريبت المزعج */
+  .cart ul li,
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+    padding: 6px 10px !important;
+    margin: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    background-color: #ffffff !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. اسم المنتج يأخذ مساحته بمرونة تامة لكي لا تختفي الحروف */
+  .cart ul li > span,
+  .cart ul#favouriteItems li > span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #212529 !important;
+    flex: 1 1 auto !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin: 0 !important;
+    margin-right: 8px !important;
+  }
+
+  /* 5. حاوية الأزرار والكمية ثابتة في أقصى اليمين داخل نفس المستطيل الأبيض */
+  .cart ul li div.plus,
+  .cart ul#favouriteItems li div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
   }
 
   /* 6. ضبط شكل الرقم الداخلي والأزرار */
