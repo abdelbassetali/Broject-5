@@ -1258,6 +1258,44 @@ display: inline-block;
     text-decoration: none !important;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
+  }   
+
+
+    
+    /* 4. تنسيق عناصر المنتجات وعرض الاسم كاملاً */
+  .cart ul li,
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+    padding: 6px 10px !important;
+    margin-bottom: 5px !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    width: 100% !important; /* خليه ياخد عرض القائمة كله عشان يكفي الكلام */
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    gap: 8px !important;
+  }
+
+  /* السماح للنص بالظهور كاملاً وعدم قصه */
+  .cart ul li span,
+  .cart ul#favouriteItems li span {
+    white-space: normal !important; /* يسمح للكلمة تظهر كاملة بوضوح */
+    word-break: break-word !important;
+    text-align: right !important;
+    flex-grow: 1 !important;
+  }
+
+  .cart ul li *,
+  .cart ul#favouriteItems li * {
+    color: #212529 !important;
+    font-size: 0.75rem !important;
   }
 }
+
 
