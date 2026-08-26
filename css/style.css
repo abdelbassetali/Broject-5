@@ -1129,7 +1129,7 @@ display: inline-block;
   /* 1. تثبيت مقاس كارت المفضلة ومنع أي تداخل */
   .mySwiper .swiper-slide,
   .swiper-wrapper .swiper-slide {
-    width: 220px !important;
+    width: 240px !important;
     height: 230px !important;
     display: flex !important;
     flex-direction: column !important;
