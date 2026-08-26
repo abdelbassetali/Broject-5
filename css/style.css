@@ -1188,8 +1188,8 @@ display: inline-block;
   /* 5. القلب هو لوحده اللي بننزله ونحطه في الزاوية السفلى براحته */
   .mySwiper .swiper-slide .card-body a {
     position: absolute !important;
-    bottom: -18px !important;
-    right: 0 !important;
+    bottom: -10px !important;
+    left: 2px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
