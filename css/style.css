@@ -1214,73 +1214,293 @@ display: inline-block;
   }
  
 }
+@media screen and (max-width: 768px) {
+  #navbarToggleExternalContent {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background-color: #f2f1f1 !important;
+    padding: 10px 15px !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+    z-index: 9999 !important;
+  }
+
+  #navbarToggleExternalContent .right-header {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    width: 100% !important;
+    height:40px;
+    margin-top: -20px;
+  }
+  #navbarToggleExternalContent .userName {
+    margin-left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    margin-bottom: 5px !important;
+  }
+
+  #navbarToggleExternalContent .login {
+    margin-bottom: 0 !important;
+  }
+
+  #navbarToggleExternalContent .login ul {
+    display: flex !important;
+    gap: 12px !important;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    list-style: none !important;
+  }
+
+  #navbarToggleExternalContent .logout-box {
+    margin-left: auto !important;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 240px !important;
+    background-color: #ffffff !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important;
+    z-index: 999999 !important;
+    padding: 10px !important;
+  }
+
+  .cart ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 8px !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+  }
+
+  .cart ul li {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #000000 !important;
+    font-size: 0.8rem !important;
+    padding: 5px 4px !important;
+    border-bottom: 1px solid #ddd !important;
+    background-color: transparent !important;
+  }
+
+  .cart ul li * {
+    color: #000000 !important;
+  }
+
+  .cart #view {
+    display: block !important;
+    text-align: center !important;
+    color: #000000 !important;
+    font-size: 0.85rem !important;
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart-box {
+    position: relative !important;
+  }
+
+  .cart {
+    position: absolute !important;
+    top: 100% !important;           
+    left: 0 !important;            
+    right: auto !important;
+    width: 100% !important;         
+    min-width: 220px !important;
+    background-color: #ffffff !important;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 999999 !important;
+    padding: 8px !important;
+    margin-top: 2px !important;    
+  }
+
+  .cart ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 5px !important;
+    max-height: 180px !important;
+    overflow-y: auto !important;
+  }
+
+  .cart ul li {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #000000 !important;
+    font-size: 0.8rem !important;
+    padding: 4px 6px !important;
+    border-bottom: 1px solid #eee !important;
+    background-color: transparent !important;
+  
+  }
+
+  .cart ul li * {
+    color: #000000 !important;
+  }
+
+  .cart #view {
+    display: block !important;
+    text-align: center !important;
+    color: #000000 !important;
+    font-size: 0.8rem !important;
+    font-weight: 600;
+    text-decoration: none;
+    padding-top: 2px;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
-  .navbar.navbar-expand-lg {
+  .cart-box {
+    position: relative !important;
+  }
+
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    min-width: 220px !important;
+    background-color: #ffffff !important;
+    border: 1px solid var(--bs-gray-300, #dee2e6) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+    z-index: 999999 !important;
+    padding: 10px !important;
+    margin-top: 2px !important;
+    box-sizing: border-box !important;
+  }
+
+  .cart ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 5px !important;
+    max-height: 180px !important;
+    overflow-y: auto !important;
+  }
+
+  .cart ul li {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 8px 12px !important;
-    flex-wrap: wrap !important;
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+    padding: 6px 8px !important;
+    margin-bottom: 6px !important;
+    border: 1px solid var(--bs-gray-200, #e9ecef) !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
   }
 
-  /* 2. إظهار زر التوجل بكل طبيعي ومن غير أي إخفاء */
-  .navbar-toggler {
+  .cart ul li * {
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+  }
+
+  .cart #view {
     display: block !important;
-    padding: 4px 8px !important;
-    font-size: 1.1rem !important;
-  }
-
-  /* 3. تنسيق القائمة المنسدلة لما تفتح بالضغط على التوجل */
-  .navbar-collapse,
-  #navbarToggleExternalContent {
-    width: 100% !important;
-    margin-top: 10px !important;
-    background-color: #f2f1f1 !important;
-    padding: 10px !important;
-    border-radius: 6px !important;
-  }
-
-  /* 4. ترتيب العناصر جوه القائمة المنسدلة (الاسم، السلة، واللوجين والخروج) تحت بعض بانتظام */
-  .right-header.ml-auto,
-  .right-header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  /* ضبط اسم المستخدم جوه القائمة */
-  .userName {
-    margin: 0 !important;
-    transform: none !important;
-    text-align: left !important;
-    font-size: 0.9rem !important;
-  }
-
-  /* تنسيق قوائم اللوجين والتسجيل */
-  .right-header .login ul {
-    display: flex !important;
-    gap: 12px !important;
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* زر السلة ووضعيته */
-  .cart-box .cart-btn {
-    display: flex !important;
-    align-items: center !important;
-    gap: 5px !important;
-    font-size: 0.9rem !important;
-  }
-
-  /* زر الـ Logout */
-  .logout-box .logout {
-    font-size: 0.9rem !important;
+    text-align: center !important;
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding-top: 4px !important;
+    border-top: 1px solid var(--bs-gray-200, #e9ecef) !important;
+    margin-top: 5px !important;
   }
 }
+@media screen and (max-width: 768px) {
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 0 8px 0 !important;
+    padding: 6px 8px !important;
+    box-sizing: border-box !important;
+    background: #fff !important;
+    border: 1px solid var(--bs-gray-300, #dee2e6) !important;
+    border-radius: 4px !important;
+  }
+  .cart ul#favouriteItems {
+    overflow-x: hidden !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+  }
+  .cart #view {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    color: #212529 !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding-top: 6px !important;
+    border-top: 1px solid #e9ecef !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart ul#favouriteItems li a,
+  .cart ul#favouriteItems li i {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+
+  .cart ul#favouriteItems li .fa-plus {
+    color: #2e8e05 !important; 
+  }
+
+  .cart ul#favouriteItems li .fa-minus {
+    color: #dc3545 !important; 
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-collapse,
+  .navbar-collapse.collapsing,
+  .navbar-collapse.collapse.show {
+    transition: none !important;
+    height: auto !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart-box {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;           
+    left: 0 !important;           
+    width: 100% !important;       
+    max-width: 100% !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 999999 !important;
+    padding: 10px !important;
+    margin-top: 5px !important;
+    box-sizing: border-box !important;
+  }
+}
+
