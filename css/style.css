@@ -1442,7 +1442,6 @@ display: inline-block;
     align-items: center !important;
     gap: 6px !important;
   }
-
   .cart ul#favouriteItems li a,
   .cart ul#favouriteItems li i {
     cursor: pointer !important;
