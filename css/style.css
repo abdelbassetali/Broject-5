@@ -1146,7 +1146,7 @@ display: inline-block;
   }
 
  /* 1. حاوية السلة العامة */
-  .cart-box {
+ .cart-box {
     position: relative !important;
   }
 
@@ -1167,22 +1167,23 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 2. إزالة الـ Scroll وترتيب الـ list */
+  /* 2. إزالة الـ Scroll وترتيب الـ list (تم إضافة flex-wrap لمنع الأعمدة) */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
     padding-left: 0 !important;
     margin: 0 !important;
     margin-bottom: 4px !important;
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important; /* <--- الزيادة هنا لمنع التفاف العناصر في أعمدة */
+    gap: 4px !important;
     max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
 
-  /* 3. تنسيق عناصر المنتجات */
+  /* 3. تنسيق عناصر المنتجات (تم تأكيد عرض 100% لصف مستقل) */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1197,6 +1198,8 @@ display: inline-block;
     border-radius: 4px !important;
     background-color: #fff !important;
     width: 100% !important;
+    flex: 0 0 100% !important; /* <--- ضمان أخذ سطر كامل مستقل */
+    max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
