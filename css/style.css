@@ -1144,7 +1144,6 @@ display: inline-block;
     margin-left: auto !important;
     margin-bottom: 20px !important;
   }
-
 /* 1. حاوية السلة العامة */
   .cart-box {
     position: relative !important;
@@ -1155,7 +1154,7 @@ display: inline-block;
     top: 100% !important;
     left: -20px !important;
     right: auto !important;
-    width: 260px !important;
+    width: 270px !important;
     max-width: 90vw !important;
     background-color: #ffffff !important;
     border: 1px solid #dee2e6 !important;
@@ -1167,7 +1166,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* 2. إزالة الـ Scroll وترتيب الـ list عمودياً */
+  /* 2. ترتيب القائمة عمودياً */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1177,13 +1176,13 @@ display: inline-block;
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: nowrap !important;
-    gap: 4px !important;
+    gap: 6px !important;
     max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
 
-  /* 3. تنسيق عناصر المنتجات */
+  /* 3. عناصر المنتجات في صفوف مستقلة */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1192,18 +1191,16 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 4px 8px !important;
-    margin: 0 0 6px 0 !important;
+    padding: 6px 8px !important;
+    margin: 0 !important;
     border: 1px solid #e9ecef !important;
     border-radius: 4px !important;
     background-color: #fff !important;
     width: 100% !important;
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* 4. تنسيق اسم المنتج فقط (بدون التأثير على الرقم) */
+  /* 4. اسم المنتج (محدد بوضوح وله مساحة ثابتة لتجنب الاختفاء) */
   .cart ul li > span,
   .cart ul#favouriteItems li > span {
     display: inline-block !important;
@@ -1211,15 +1208,16 @@ display: inline-block;
     opacity: 1 !important;
     font-size: 0.8rem !important;
     color: #212529 !important;
-    flex-grow: 1 !important;
+    width: 120px !important; /* تحديد عرض واضح لاسم المنتج */
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
     text-align: left !important;
     white-space: nowrap !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    margin-right: 8px !important;
+    text-overflow: ellipsis !important; /* لو الاسم طويل جداً يحط نقاط وفي نفس الوقت ما يختفيش */
   }
 
-  /* 5. حاوية الأزرار والكمية (مثبتة في أقصى اليمين ولا تتغير) */
+  /* 5. حاوية الأزرار والكمية (مثبتة في أقصى اليمين بجوار الاسم) */
   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
@@ -1239,10 +1237,8 @@ display: inline-block;
     margin: 0 !important;
     padding: 0 !important;
     color: #212529 !important;
-    flex-grow: 0 !important;
   }
 
-  /* 7. الأيقونات والروابط */
   .cart ul#favouriteItems li a,
   .cart ul#favouriteItems li i {
     cursor: pointer !important;
@@ -1259,12 +1255,12 @@ display: inline-block;
     color: #dc3545 !important;
   }
 
-  /* 8. زر عرض الكل */
+  /* 7. زر عرض الكل */
   .cart #view {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
-    margin: 4px auto 0 auto !important;
+    margin: 6px auto 0 auto !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
     font-weight: 600 !important;
