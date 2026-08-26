@@ -1191,8 +1191,8 @@ display: inline-block;
   .swiper-slide {
     position: relative !important;
     height: auto !important;
-    min-height: 210px !important; /* زودنا الارتفاع شوية عشان يكفي القلب والصورة والنصوص */
-    padding-bottom: 25px !important; /* مساحة تحتية عشان القلب يقعد براحته جوا الكارد */
+    min-height: 270px !important; /* زودنا الارتفاع شوية عشان يكفي القلب والصورة والنصوص */
+    padding-bottom: 15px !important; /* مساحة تحتية عشان القلب يقعد براحته جوا الكارد */
     background-color: rgb(230, 230, 230) !important;
     border-radius: 15px !important;
     margin-bottom: 15px !important;
