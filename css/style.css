@@ -1172,26 +1172,7 @@ display: inline-block;
   .swiper-slide .card-body .fa-heart {
     font-size: 1.3rem !important;
   }
-}
-@media screen and (max-width: 768px) {
-  /* 1. إظهار كاردات السلايدر والمحتوى بتاعها بدون قص أطراف */
-  .swiper-slide,
-  .swiper-slide .card-body,
-  .card-body {
-    overflow: visible !important;
-  }
-
-  /* 2. تنظيم الـ card-body بحيث الاسم والCategory فوق، والقلب في اليمين مظبوط */
-  .swiper-slide .card-body {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
-    gap: 10px !important;
-  }
-
-  /* 3. تثبيت أيقونة القلب ومنع إخفائها بأي شكل */
+      /* 3. تثبيت أيقونة القلب ومنع إخفائها بأي شكل */
   .swiper-slide .card-body a .fa-heart,
   .card-body .fa-heart,
   .fa-heart {
@@ -1203,7 +1184,6 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 }
-
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
   .navbar.navbar-expand-lg {
