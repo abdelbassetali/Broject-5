@@ -1132,8 +1132,7 @@ display: inline-block;
     text-align: left !important;
     width: 100% !important;
     box-sizing: border-box !important;
-      min-height: 260px !important;
-padding: 10px 10px 10px 10px !important;  }
+   padding: 10px 10px 10px 10px !important;  }
 
   /* 2. ضبط الحاوية الخاصة بالنصوص (Product و Category) عشان تزل تحت بعضها بانتظام */
   .swiper-slide .card-body .card-text {
@@ -1172,6 +1171,36 @@ padding: 10px 10px 10px 10px !important;  }
 
   .swiper-slide .card-body .fa-heart {
     font-size: 1.3rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* 1. إظهار كاردات السلايدر والمحتوى بتاعها بدون قص أطراف */
+  .swiper-slide,
+  .swiper-slide .card-body,
+  .card-body {
+    overflow: visible !important;
+  }
+
+  /* 2. تنظيم الـ card-body بحيث الاسم والCategory فوق، والقلب في اليمين مظبوط */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  /* 3. تثبيت أيقونة القلب ومنع إخفائها بأي شكل */
+  .swiper-slide .card-body a .fa-heart,
+  .card-body .fa-heart,
+  .fa-heart {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 1.8rem !important;
+    color: red !important;
+    flex-shrink: 0 !important;
   }
 }
 
