@@ -1186,7 +1186,7 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 } 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   /* 1. السلايدر نفسه نخليه يحضن كل اللي جواة ويفتح المساحة */
   .swiper-slide {
     position: relative !important;
@@ -1228,8 +1228,51 @@ display: inline-block;
     padding: 8px 12px !important;
     background: transparent !important;
   }
-}
+} */
 
+@media screen and (max-width: 768px) {
+  /* 1. ضبط الارتفاع ليكون قصير وملموم على المحتوى */
+  .swiper-slide {
+    position: relative !important;
+    height: auto !important;
+    min-height: unset !important;
+    padding-bottom: 35px !important; /* مساحة صغيرة للقلب من تحت */
+    background-color: rgb(230, 230, 230) !important;
+    border-radius: 15px !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+  }
+
+  /* 2. تثبيت القلب في مكانه الصح جوا الكارت من تحت على اليمين */
+  .swiper-slide .card-body a,
+  .swiper-slide a:has(.fa-heart) {
+    position: absolute !important;
+    bottom: 8px !important;
+    right: 12px !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+  }
+
+  /* 3. حجم أيقونة القلب */
+  .swiper-slide .fa-heart,
+  .card-body .fa-heart {
+    font-size: 1.4rem !important;
+    color: red !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 4. مساحة النصوص عشان تكون مترتبة صح */
+  .swiper-slide .card-body {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    padding: 6px 10px !important;
+    background: transparent !important;
+  }
+}
 
 @media screen and (max-width: 768px) {
   /* 1. ضبط الهيدر الرئيسي في سطرين مريحين (لوجو شمال، ووضعية التوجل يمين) */
