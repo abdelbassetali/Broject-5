@@ -1242,10 +1242,8 @@ display: inline-block;
     text-decoration: none !important;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
-  }
-}
-
- /* تنسيق وضبط كلمة وزر Logout بالكامل */
+  } 
+    /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
     display: flex !important;
     align-items: center !important;
@@ -1264,3 +1262,24 @@ display: inline-block;
     line-height: normal !important;
     display: inline-block !important;
   }
+    .cart ul li,
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+    padding: 8px 12px !important;
+    margin-bottom: 6px !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    width: 100% !important;        /* خليها 100% عشان تملى البوكس بالكامل */
+    box-sizing: border-box !important;
+    margin-left: 0 !important;     /* الغي أي هوامش جانبية كانت مزحلقاها */
+    margin-right: 0 !important;
+  }
+
+}
+
