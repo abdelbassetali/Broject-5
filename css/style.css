@@ -1257,10 +1257,10 @@ display: inline-block;
   .logout-box .logout,
   #navbarToggleExternalContent .logout-box .logout,
   .right-header .logout-box a.logout {
-    font-size: 20px !important; /* صغرها أو كبرها حسب ما تحب، 50px كبيرة جداً على الهيدر وهتكسره */
+    font-size: 16px !important; /* صغرها أو كبرها حسب ما تحب، 50px كبيرة جداً على الهيدر وهتكسره */
     color: #0d0101 !important;
     text-decoration: none !important;
-    font-weight: 600 !important;
+    font-weight: bold !important;
     line-height: normal !important;
     display: inline-block !important;
   }
