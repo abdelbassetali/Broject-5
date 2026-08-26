@@ -542,7 +542,7 @@ display: inline-block;
   text-decoration: none;
   color: black;
 }
-/* 
+
 /* --- تظبيط النافبار والهيدر للموبايل على سطر واحد وبشكل مثالي --- */
 @media (max-width: 768px) {
   /* إجبار النافبار على الترتيب السليم بجانب بعضه */
@@ -589,7 +589,7 @@ display: inline-block;
 
   .logout-box .logout, .right-header .login ul li {
     font-size: 0.9rem !important;
-  } */
+  }
     /* استهداف الزرار سواء كان كلاس أو تگ */
   .card button, 
   .product-item button, 
@@ -687,7 +687,7 @@ display: inline-block;
     width: 100% !important;
     margin-top: 4px !important;
   }
-    /* .navbar {
+    .navbar {
     display: flex !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
@@ -723,7 +723,7 @@ display: inline-block;
     font-size: 0.8rem !important;
     margin: 0 !important;
     padding: 0 !important;
-  } */
+  }
     /* إبعاد زرار الـ Remove عن أكونت القلب بمسافة مناسبة على الموبايل */
   .card .card-body, 
   .card .d-flex, 
@@ -778,14 +778,14 @@ display: inline-block;
     height: 110px !important;
     object-fit: contain !important;
   }
-/* 
+ 
   /* --- 3. كاردات السلة (Cart): تفضل تحت بعض بشكل طولي مريح --- */
   .cart-container, .cart-items, #cartProducts {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
     gap: 10px !important;
-  } */
+  } 
 
   .cart-item, .cart-card {
     display: flex !important;
