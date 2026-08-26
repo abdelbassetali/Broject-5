@@ -1268,6 +1268,22 @@ display: inline-block;
     padding-top: 6px !important;
     border-top: 1px solid #e9ecef !important;
   }
+    /* إظهار اسم المنتج بوضوح تام وبدون أي إخفاء أو تداخل بالألوان */
+  div.cart-box .cart ul li > span,
+  div.cart-box .cart ul#favouriteItems li > span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.85rem !important;
+    color: #212529 !important;        /* لون أسود واضح وداكن عشان يبان صح */
+    background-color: transparent !important;
+    flex-grow: 1 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin: 0 !important;
+  }
     /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
     display: flex !important;
