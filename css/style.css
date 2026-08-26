@@ -1213,12 +1213,6 @@ display: inline-block;
     text-align: right !important;
   }
 
-  .cart ul li *,
-  .cart ul#favouriteItems li * {
-    color: #212529 !important;
-    font-size: 0.8rem !important;
-  }
-
   .cart ul#favouriteItems li div {
     display: flex !important;
     align-items: center !important;
