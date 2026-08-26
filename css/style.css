@@ -1201,7 +1201,10 @@ display: inline-block;
   /* منع نزول الكلام لسطر تاني وتثبيته في سطر واحد */
   .cart ul li span,
   .cart ul#favouriteItems li span {
-    white-space: nowrap !important;
+   white-space: normal !important;
+    word-break: break-word !important;
+    flex-grow: 1 !important;
+    text-align: left !important;
   }
 
   .cart ul li *,
