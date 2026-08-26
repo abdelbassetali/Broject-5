@@ -315,6 +315,12 @@ function removeFavourite(id){
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
+    slidesPerView: "auto",
+    loop: false,               // بيمنع إن العناصر تكرر أو تشرد
+    freeMode: false,           // بيمنع السحب الحر اللي بيطير العناصر
+    resistanceRatio: 0,        // بيمنع مط السلايدر لما تجيبه لآخره على الفون
+    watchOverflow: true,       // بيوقف السلايدر لو العناصر محددة ومفيش داعي للسحب
+    touchReleaseOnEdges: true  // بيخلي السحب يقف فوراً عند أول/آخر كارت
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
