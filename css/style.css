@@ -1212,11 +1212,7 @@ display: inline-block;
     overflow: hidden !important;          /* بيمنع اختفاء العناصر برة الرؤية */
     touch-action: pan-y !important;      /* بيخلي السحب مريح وميتشالش برة */
   }
-    .mySwiper .swiper-wrapper,
-  .swiper .swiper-wrapper {
-    overflow: hidden !important;
-    box-sizing: border-box !important;
-  }
+ 
 }
 
 @media screen and (max-width: 768px) {
