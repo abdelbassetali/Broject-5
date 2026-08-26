@@ -1149,7 +1149,6 @@ display: inline-block;
   .cart-box {
     position: relative !important;
   }
-
   .cart {
     position: absolute !important;
     top: 100% !important;
@@ -1258,7 +1257,20 @@ display: inline-block;
     flex-grow: 1 !important;
     text-align: right !important;
   }
+    /* إجبار ظهور محتوى السلة بالكامل جوه الـ Dropdown ومنع اختفاء النصوص */
+.cart .ele, 
+.cart .ele-content,
+.cart p, 
+.cart span {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #212529 !important;
+}
 
+.cart p, .cart span {
+  font-size: 0.8rem !important;
+  margin: 0 4px !important;
 }
     /* تنسيق وضبط كلمة وزر Logout بالكامل */
   .logout-box {
@@ -1280,3 +1292,5 @@ display: inline-block;
     display: inline-block !important;
   }
 }
+
+
