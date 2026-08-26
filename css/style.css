@@ -1137,7 +1137,8 @@ display: inline-block;
     background-color: rgb(230, 230, 230) !important;
     border-radius: 15px !important;
     padding: 12px !important;
-    box-sizing: border-box !important;
+    box-sizing: border-box !important; 
+    margin-left: 10px !important;
     margin-right: 15px !important;
     position: relative !important;
   }
