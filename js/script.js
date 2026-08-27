@@ -60,7 +60,7 @@ for(let i =1;i<product.length;i++){
                     <div class="d-flex" style="justify-content: space-between; "> 
                         <button class="btn btn-primary" id="${product[i].id}" onclick='addItems(this.id)' >Add to cart</button>
                         <button class="btn btn-danger" id="${product[i].id}0000" onclick='removeItems(this.id)'>Remove from cart</button>
-                        <a href="#" style="margin-left: auto; display: inline-block;" ><i class="fas fa-heart" style="font-size: 1.5rem;" id="${product[i].id}00000" onclick='addFavourite(this.id)'></i></a>
+                        <a href="javascript:void(0);" style="margin-left: auto; display: inline-block;" ><i class="fas fa-heart" style="font-size: 1.5rem;" id="${product[i].id}00000" onclick='addFavourite(this.id)'></i></a>
                     </div> 
             </div>
     </div> <!-- End of card -->
