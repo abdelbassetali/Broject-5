@@ -875,8 +875,8 @@ display: inline-block;
   }
   /* تصغير عرض الكارت حاجة بسيطة لزيادة الفراغ من اليمين والشمال */
   #favouriteItems li, .favourite-item, .favorite-item {
-    width: 46.5% !important;
-    max-width: 46.5% !important;
+    width: 47.5% !important;
+    max-width: 47.5% !important;
     flex: 0 0 46.5% !important;
     margin-right: 4px !important;
     margin-left: 4px !important;
@@ -888,7 +888,7 @@ display: inline-block;
   #favouriteItems li h5,
   .favourite-item p, 
   .favourite-item h5 {
-    font-size: 0.7rem !important; /* تصغير حجم الخط */
+    font-size: 0.5rem !important; /* تصغير حجم الخط */
     line-height: 1.1 !important;
     white-space: nowrap !important; /* منع نزول الكلام تحت بعضه بشكل مزعج */
     overflow: hidden !important;
