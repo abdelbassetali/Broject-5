@@ -1399,7 +1399,7 @@ display: inline-block;
 .cart ul#favouriteItems li p,
 .cart ul li p {
   display: inline-block !important;
-  font-size: 0.8rem !important;
+  font-size: 0.6rem !important;
   color: #212529 !important;
   width: 120px !important; /* عرض ثابت ومناسب */
   white-space: nowrap !important; /* يمنع نزول النص لسطر جديد */
