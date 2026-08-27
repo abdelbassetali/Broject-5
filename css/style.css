@@ -1412,5 +1412,9 @@ display: inline-block;
     line-height: normal !important;
     display: inline-block !important;
   }
+    .card-img-top {
+    height: 250px !important;
+    object-fit: cover !important;
+}
   
   }
