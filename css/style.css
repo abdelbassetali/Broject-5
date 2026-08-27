@@ -1407,6 +1407,24 @@ display: inline-block;
   text-overflow: ellipsis !important; /* يضع نقاط (...) للنص الطويل */
   margin: 0 !important;
 }
+    /* أجبر عنصر الـ li الحاوي للمنتج في المفضلة على احتواء أي نص بداخله */
+.cart ul#favouriteItems li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  overflow: hidden !important; /* بيمنع أي حاجة تخرج بره حدود الكارت الأبيض */
+  width: 100% !important;
+}
+
+/* ضبط عنصر الـ p بالداخل ليأخذ المساحة المتاحة فقط بدون خروج */
+.cart ul#favouriteItems li p {
+  flex: 1 1 auto !important;
+  min-width: 0 !important; /* مهمة جداً عشان الـ Flexbox يخلي الـ p ينكمش وما يهربش بره */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin: 0 !important;
+}
 }
 
 
