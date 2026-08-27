@@ -643,19 +643,19 @@ display: inline-block;
 
   /* --- تظبيط وتصغير نصوص الكارد (ده الجديد اللي طلبته) --- */
   .favourite-item .card-text, .favorite-item .product-details, .favourite card p {
-    font-size: 0.8rem !important;  /* صغرنا الخط الأساسي للنص */
+    font-size: 0.6rem !important;  /* صغرنا الخط الأساسي للنص */
     margin: 2px 0 !important;
   }
 
   .favourite-item h3, .favorite-item h5, .favourite card h5 {
-    font-size: 0.9rem !important;  /* صغرنا العنوان لو فيه عنوان أكبر */
+    font-size: 0.7rem !important;  /* صغرنا العنوان لو فيه عنوان أكبر */
     margin: 4px 0 !important;
   }
 
   /* تصغير زر Remove لو لسه كبير في المفضلة */
   .favourite-item button, .favorite-item button {
     padding: 5px 10px !important;
-    font-size: 0.75rem !important;
+    font-size: 0.65rem !important;
     margin-top: 8px !important;
   }
     /* تحويل حاوية المنتجات/المفضلة إلى شبكة (Grid) بـ عمودين جنب بعض */
@@ -846,8 +846,8 @@ display: inline-block;
   #favouriteItems li p, 
   #favouriteItems li h5,
   .favourite-item p, .favourite-item h5 {
-    font-size: 0.75rem !important;
-    line-height: 1.2 !important;
+    font-size: 0.65rem !important;
+    line-height: 1.1 !important;
     margin: 2px 0 !important;
     color: #333 !important;
     text-align: center !important;
@@ -875,8 +875,8 @@ display: inline-block;
   }
   /* تصغير عرض الكارت حاجة بسيطة لزيادة الفراغ من اليمين والشمال */
   #favouriteItems li, .favourite-item, .favorite-item {
-    width: 47.5% !important;
-    max-width: 47.5% !important;
+    width: 49.5% !important;
+    max-width: 49.5% !important;
     flex: 0 0 46.5% !important;
     margin-right: 4px !important;
     margin-left: 4px !important;
@@ -962,7 +962,7 @@ display: inline-block;
     display: block !important;       /* إجبار كل عنصر إنه ياخد سطر لوحده عشان ميقعدوش جنب بعض غلط */
     text-align: left !important;
     width: 100% !important;
-    font-size: 12px !important;      /* تكبير الخط حاجة بسيطة عشان يبقى واضح وقابل للقراءة */
+    font-size: 10px !important;      /* تكبير الخط حاجة بسيطة عشان يبقى واضح وقابل للقراءة */
     margin: 3px 0 !important;
   }
   /* 3. الحاوية الخاصة بالزرار وأيقونة القلب (تخليهم في سطر واحد أفقياً) */
@@ -1002,7 +1002,7 @@ display: inline-block;
   /* 1. تثبيت مقاس كارت المفضلة ومنع أي تداخل */
   .mySwiper .swiper-slide,
   .swiper-wrapper .swiper-slide {
-    width: 240px !important;
+    width: 260px !important;
     height: 230px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1048,7 +1048,7 @@ display: inline-block;
     flex-grow: 1 !important;
   }
   .mySwiper .swiper-slide .card-body .card-text p {
-    font-size: 11px !important;
+    font-size: 10px !important;
     margin: 1px 0 !important;
       line-height: 1.0 !important;
     color: #333 !important;
