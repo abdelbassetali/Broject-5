@@ -36,15 +36,16 @@ class products{
     }
 }
 
-const product1 = new products('Samsung-Ultra', '808 $', 'Phone', 'images/product-1.jpg', 1);
-const product2 = new products('Watch', '199 $', 'Phone', 'images/product-2.jpg', 2);
-const product3 = new products('Earpods', '75 $', 'Phone', 'images/product-3.jpg', 3);
-const product4 = new products('Handyfree', '25 $', 'Phone', 'images/product-4.jpg', 4);
-const product5 = new products('Laptop', '650 $', 'Phone', 'images/product-5.jpg', 5);
-const product6 = new products('Tablet', '220 $', 'Phone', 'images/product-6.jpg', 6);
-const product7 = new products('Tv', '410 $', 'Appliances', 'images/product-7.jpg', 7);
-const product8 = new products('Playstation-5', '499 $', 'Gaming', 'images/product-8.jpg', 8);
-const product9 = new products('Controller', '45 $', 'Gaming', 'images/product-9.jpg', 9);
+const product1=new products('samsung','808 $','phone','images/product-1.jpg',1);
+const product2=new products('watch','150 $','Phone  ','images/product-2.jpg',2);
+const product3=new products('earpods','120 $','Phone  ','images/product-3.jpg',3);
+const product4=new products('handyfree ','50 $','Phone ','images/product-4.jpg',4);
+const product5=new products('laptop','350 $','Phone ','images/product-5.jpg',5);
+const product6=new products('taplet','150 $','Phone','images/product-6.jpg',6);
+const product7=new products('tv',' 410 $','Appliances','images/product-7.jpg',7);
+const product8=new products('playstaion-5','280 $','Gaming ','images/product-8.jpg',8);
+const product9=new products(' controller','20 $','Gaming ','images/product-9.jpg',9);
+
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // //////رسم المنتجات 
 
