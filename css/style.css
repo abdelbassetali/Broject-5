@@ -1046,13 +1046,15 @@ display: inline-block;
     align-items: flex-start !important;
     text-align: left !important;
     flex-grow: 1 !important;
+      overflow: hidden !important;
   }
   .mySwiper .swiper-slide .card-body .card-text p {
-    font-size: 10px !important;
+    font-size: 9px !important;
     margin: 1px 0 !important;
     line-height: 1.0 !important;
     color: #333 !important;
     white-space: nowrap !important;
+      max-width: 140px !important;
   }
   /* 5. القلب هو لوحده اللي بننزله ونحطه في الزاوية السفلى براحته */
   .mySwiper .swiper-slide .card-body a {
