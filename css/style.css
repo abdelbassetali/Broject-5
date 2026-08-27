@@ -1416,5 +1416,237 @@ display: inline-block;
     height: 250px !important;
     object-fit: cover !important;
 }
+   
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
+  .navbar-collapse,
+  .navbar-collapse.collapsing,
+  .navbar-collapse.collapse.show {
+    transition: none !important;
+    height: auto !important;
+  }
+
+  #navbarToggleExternalContent {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background-color: #f2f1f1 !important;
+    padding: 10px 15px !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+    z-index: 9999 !important;
+  }
+
+  #navbarToggleExternalContent .right-header {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    width: 100% !important;
+    height: 40px !important;
+    margin-top: -20px !important;
+  }
+
+  #navbarToggleExternalContent .userName {
+    margin-left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    margin-bottom: 5px !important;
+    font-size: 0.8rem !important;
+  }
+
+  #navbarToggleExternalContent .login {
+    margin-bottom: 0 !important;
+  }
+
+  #navbarToggleExternalContent .login ul {
+    display: flex !important;
+    gap: 12px !important;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    list-style: none !important;
+  }
+
+  #navbarToggleExternalContent .logout-box {
+    margin-left: auto !important;
+    margin-bottom: 20px !important;
+  }
+
+  .cart-box {
+    position: relative !important;
+  }
+
+  .cart {
+    position: absolute !important;
+    top: 100% !important;
+    left: -20px !important;
+    right: auto !important;
+    width: 270px !important;
+    max-width: 90vw !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    z-index: 999999 !important;
+    padding: 6px !important;
+    margin-top: 5px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. تقليل المسافات الرأسية بين العناصر لتكون متقاربة قدر الإمكان */
+  .cart ul,
+  .cart ul#favouriteItems {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 3px !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. ضغط الـ padding داخل الـ li عشان ما يبقاش فيه فراغات ملوش لازمة */
+  .cart ul li,
+  .cart ul#favouriteItems li {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: #212529 !important;
+    font-size: 0.8rem !important;
+    padding: 4px 6px !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. اسم المنتج ياخد مساحته بدون هوامش مبالغ فيها */
+  .cart ul li > span,
+  .cart ul#favouriteItems li > span {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 0.8rem !important;
+    color: #212529 !important;
+    flex: 1 1 auto !important;
+    text-align: left !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-clip: clip !important;
+    margin: 0 !important;
+    margin-right: 4px !important;
+  }
+
+  /* 5. حاوية الأزرار والكمية متقاربة ومنسقة */
+  .cart ul li div.plus,
+  .cart ul#favouriteItems li div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
+  }
+
+  /* 6. ضبط شكل الرقم الداخلي والأزرار */
+  .cart ul li div.plus span,
+  .cart ul#favouriteItems li div span {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 15px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #212529 !important;
+    flex-grow: 0 !important;
+  }
+
+  .cart ul#favouriteItems li a,
+  .cart ul#favouriteItems li i {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    padding: 1px 2px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cart ul#favouriteItems li .fa-plus {
+    color: #2e8e05 !important;
+  }
+
+  .cart ul#favouriteItems li .fa-minus {
+    color: #dc3545 !important;
+  }
+
+  /* 7. زر عرض الكل */
+  .cart #view {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 4px auto 0 auto !important;
+    color: #212529 !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+    padding-top: 4px !important;
+    border-top: 1px solid #e9ecef !important;
+  }
+
+  .logout-box {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    height: auto !important;
+    margin-top: 16px !important;
+  }
+
+  .logout-box .logout,
+  #navbarToggleExternalContent .logout-box .logout,
+  .right-header .logout-box a.logout {
+    font-size: 15px !important;
+    color: #0d0101 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    line-height: normal !important;
+    display: inline-block !important;
+  }
+
+  .card-img-top {
+    height: 250px !important;
+    object-fit: cover !important;
+  }
+
+  /* ========================================== */
+  /* التعديل الخاص بالشاشات المتوسطة والتابلت */
+  /* ========================================== */
+      .products-container, 
+    .row {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 15px !important;
+      align-items: stretch !important;
+    }
+
+    .product-card, 
+    .card {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      height: 100% !important;
+    }
+  }
   
   }
