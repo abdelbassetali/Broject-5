@@ -12,9 +12,7 @@ const logoutBox=document.querySelector('.logout-box')
 const logout=document.querySelector('.logout')
 const userNameBox=document.querySelector('.userName')
 // /\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if (localStorage.getItem('items')) {
-    userProducts = JSON.parse(localStorage.getItem('items'));
-} 
+
 console.log(userNameBox)
 let favourite=[];
 let product=[]
