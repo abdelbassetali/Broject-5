@@ -45,7 +45,6 @@ const product6 = new products('Tablet', '220 $', 'Phone', 'images/product-6.jpg'
 const product7 = new products('Tv', '410 $', 'Appliances', 'images/product-7.jpg', 7);
 const product8 = new products('Playstation-5', '499 $', 'Gaming', 'images/product-8.jpg', 8);
 const product9 = new products('Controller', '45 $', 'Gaming', 'images/product-9.jpg', 9);
-
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // //////رسم المنتجات 
 
