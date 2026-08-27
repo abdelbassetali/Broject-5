@@ -1138,27 +1138,6 @@ display: inline-block;
     margin-left: auto !important;
     margin-bottom: 20px !important;
   }
-/* 1. حاوية السلة العامة */
-  /* .cart-box {
-    position: relative !important;
-  }
-
-  .cart {
-    position: absolute !important;
-    top: 100% !important;
-    left: -20px !important;
-    right: auto !important;
-    width: 270px !important;
-    max-width: 90vw !important;
-    background-color: #ffffff !important;
-    border: 1px solid #dee2e6 !important;
-    border-radius: 6px !important;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
-    z-index: 999999 !important;
-    padding: 8px !important;
-    margin-top: 5px !important;
-    box-sizing: border-box !important;
-  }
 
   /* 2. ترتيب القائمة عمودياً */
   .cart ul,
@@ -1416,7 +1395,41 @@ display: inline-block;
     height: 250px !important;
     object-fit: cover !important;
 }
-   
+    /* تحديد عرض ونظام عنصر الـ p داخل الكارت لكي لا يخرج عن الحواف */
+.cart ul#favouriteItems li p,
+.cart ul li p {
+  display: inline-block !important;
+  font-size: 0.8rem !important;
+  color: #212529 !important;
+  width: 120px !important; /* عرض ثابت ومناسب */
+  white-space: nowrap !important; /* يمنع نزول النص لسطر جديد */
+  overflow: hidden !important; /* يخفي الزيادة */
+  text-overflow: ellipsis !important; /* يضع نقاط (...) للنص الطويل */
+  margin: 0 !important;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   @media (min-width: 768px) and (max-width: 1024px) {
     /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
   .navbar-collapse,
@@ -1649,4 +1662,4 @@ display: inline-block;
     }
   }
   
-  }
+  
