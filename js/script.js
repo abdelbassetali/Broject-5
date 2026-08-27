@@ -331,8 +331,3 @@ document.addEventListener('click', function(e) {
         e.preventDefault();
     }
 });
-document.addEventListener('click', function(e) {
-    if (e.target.closest('.fa-heart')) {
-        e.preventDefault();
-    }
-});
