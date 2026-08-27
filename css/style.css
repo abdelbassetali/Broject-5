@@ -1002,7 +1002,7 @@ display: inline-block;
   /* 1. تثبيت مقاس كارت المفضلة ومنع أي تداخل */
   .mySwiper .swiper-slide,
   .swiper-wrapper .swiper-slide {
-    width: 260px !important;
+    width: 280px !important;
     height: 230px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1050,7 +1050,7 @@ display: inline-block;
   .mySwiper .swiper-slide .card-body .card-text p {
     font-size: 10px !important;
     margin: 1px 0 !important;
-      line-height: 1.0 !important;
+    line-height: 1.0 !important;
     color: #333 !important;
     white-space: nowrap !important;
   }
