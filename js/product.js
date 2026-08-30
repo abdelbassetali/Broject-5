@@ -36,6 +36,7 @@ drawUserProduct()
 function getTotalPrice(){
     let sum = 0;
     for(let i in items){
+        // بنشيل أي حروف أو علامات دولار وناخد الأرقام بس
         let cleanPrice = parseInt(items[i].price.replace(/[^\d]/g, '')) || 0;
         sum += cleanPrice * parseInt(items[i].count);
     }
@@ -43,6 +44,7 @@ function getTotalPrice(){
 }
  getTotalPrice()
 
+// الازالة
  function removeItems(id){
    var index= items.findIndex((x)=>{
     return x.id==id
@@ -56,7 +58,7 @@ function getTotalPrice(){
 
 function plusBtn(id, e){
     if(e) e.preventDefault();
-    let currentScroll = window.scrollY;
+    let currentScroll = window.scrollY; // 1. احفظ مكان الصفحة الحالي
     
     let ele = items.find((x) => {
        return x.id==id
@@ -65,13 +67,15 @@ function plusBtn(id, e){
     localStorage.setItem('items',JSON.stringify(items))
     drawUserProduct()
     getTotalPrice()
-    window.scrollTo(0, currentScroll);
+    window.scrollTo(0, currentScroll); // 2. رجّع الصفحة لمكانها فوراً
 }
 
-// 
+// \\\\\\\\\\\\\\\\\
+//   بوتن الطرح
 function minusBtn(id, e){
     if(e) e.preventDefault();
-    let currentScroll = window.scrollY; 
+    let currentScroll = window.scrollY; // 1. احفظ مكان الصفحة الحالي
+    
     let ele = items.find((x) => {
        return x.id==id
     })
@@ -88,9 +92,10 @@ function minusBtn(id, e){
         drawUserProduct()
         getTotalPrice()
     }
-    window.scrollTo(0, currentScroll);
+    window.scrollTo(0, currentScroll); // 2. رجّع الصفحة لمكانها فوراً
 }
 
+// المنتج لما يظهر فى المفضلة
 function drawFav(){
     favBox.innerHTML='';
     for(let i in favItems){
@@ -129,11 +134,11 @@ function removeFavourite(id){
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     slidesPerView: "auto",
-    loop: false,                 
-    freeMode: false,                
-    resistanceRatio: 0,         
-    watchOverflow: true,          
-    touchReleaseOnEdges: true,  
+    loop: false,               // بيمنع إن العناصر تكرر أو تشرد
+    freeMode: false,           // بيمنع السحب الحر اللي بيطير العناصر
+    resistanceRatio: 0,        // بيمنع مط السلايدر لما تجيبه لآخره على الفون
+    watchOverflow: true,       // بيوقف السلايدر لو العناصر محددة ومفيش داعي للسحب
+    touchReleaseOnEdges: true,  // بيخلي السحب يقف فوراً عند أول/آخر كارت
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -165,4 +170,3 @@ plus.forEach(ele=>{
         e.preventDefault();
     })
 })
-
