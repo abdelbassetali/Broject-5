@@ -46,8 +46,6 @@ const product7=new products('tv',' 410 $','Appliances','images/product-7.jpg',7)
 const product8=new products('playstaion-5','280 $','Gaming ','images/product-8.jpg',8);
 const product9=new products(' controller','20 $','Gaming ','images/product-9.jpg',9);
 
-// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// //////رسم المنتجات 
 
 function draw(){
 for(let i =1;i<product.length;i++){
@@ -64,7 +62,7 @@ for(let i =1;i<product.length;i++){
                         <a href="#" style="margin-left: auto; display: inline-block;" ><i class="fas fa-heart" style="font-size: 1.5rem;" id="${product[i].id}00000" onclick='addFavourite(this.id)'></i></a>
                     </div> 
             </div>
-    </div> <!-- End of card -->
+    </div> 
     `
 }
 }
@@ -87,7 +85,6 @@ function addItems(id){
      
     }
 }
-// /////////////علشان اعمل ازالة للمنتج 
 
 function removeItems(id){
     let removeItem= document.getElementById(id)
