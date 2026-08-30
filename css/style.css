@@ -12,6 +12,7 @@ body{
 .swiper-pagination {
     display: none !important;
 }
+/* الحاوية العامة للهيدر عشان تضبط العناصر جنب بعضها بانتظام */
 header, .nav-bar, .header-container {
   display: flex !important;
   justify-content: space-between !important;
@@ -90,6 +91,7 @@ margin-top: 15px;
     font-size: 1.6rem;
 }
 
+/* حاوية السلة المنسدلة (عرض أصغر) */
 .right-header .user .cart-box .cart {
   display: none;
   position: absolute;
@@ -97,19 +99,21 @@ margin-top: 15px;
   margin-top: 20px;
   background-color: rgb(243, 243, 243) !important;
   border-radius: 0 0 15px 15px !important;
-  width: 240px !important; 
+  width: 240px !important; /* صغرنا العرض عشان تبقي مظلمة ولمة على قد المنتجات */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
   z-index: 100 !important;
   padding: 10px !important;
   box-sizing: border-box !important;
 }
 
+/* القائمة جوه السلة */
 .right-header .user .cart-box .cart ul {
   margin: 0 !important;
   padding: 0 !important;
   list-style: none !important;
 }
 
+/* عناصر المنتجات جوه القائمة */
 .right-header .user .cart-box .cart ul li {
   display: flex !important;
   justify-content: space-between !important;
@@ -122,30 +126,33 @@ margin-top: 15px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
 }
 
+/* اسم المنتج والأيقونات */
 .right-header .user .cart-box .cart ul li span,
 .right-header .user .cart-box .cart ul li a {
   text-decoration: none !important;
   color: #333 !important;
 }
 
+/* أزرار الكمية (+ و -) والرقّم */
 .right-header .user .cart-box .cart ul li .plus {
   display: flex !important;
   align-items: center !important;
   gap: 6px !important;
 }
 
+/* زرار عرض الكل (View All Product) - لون أسود وبدون خط تحت الـ Hover */
 .right-header .user .cart-box .cart #view {
   display: block !important;
   text-align: center !important;
   margin: 10px auto 4px auto !important;
   font-size: 1rem !important;
-  color: #000000 !important; 
+  color: #000000 !important; /* لون أسود */
   font-weight: 700 !important;
   text-decoration: none !important;
 }
 
 .right-header .user .cart-box .cart #view:hover {
-  text-decoration: none !important;
+  text-decoration: none !important; /* شلنا الخط اللي بيظهر تحتها عند الـ hover */
   color: #000000 !important;
 }
 
@@ -196,13 +203,14 @@ margin-top: 15px;
             justify-content: center;
             align-items: center;
   }
+  /* تثبيت توازن اليمين واليسار في الهيدر */
 .left-header, .right-header {
   display: flex !important;
   align-items: center !important;
 }
 
 .right-header {
-  gap: 20px !important; 
+  gap: 20px !important; /* مسافات متساوية ومنظمة بين عناصر اليمين */
 }
   @media screen and (max-width: 960px) {
     .userName {
@@ -329,6 +337,7 @@ display: inline-block;
 }
 
 @media screen and (max-width: 768px) {
+  /* 1. صف المنتجات: كارتين جنب بعض */
   .row {
     display: flex !important;
     flex-direction: row !important;
@@ -338,6 +347,7 @@ display: inline-block;
     margin: 0 !important;
   }
 
+  /* 2. عرض الكارت على الموبايل (48% لكل كارت) */
   .row .card {
     display: flex !important;
     flex-direction: column !important;
@@ -350,6 +360,7 @@ display: inline-block;
     margin-right: 0 !important;
   }
 
+  /* 3. تصظيب الصور وتناسبها */
   .row .card img, 
   .row .card .card-img-top {
     width: 100% !important;
@@ -357,6 +368,7 @@ display: inline-block;
     object-fit: contain;
   }
 
+  /* 4. جسم الكارت وتوزيع العناصر ليكون الزرار في البوتوم تماماً */
   .row .card .card-body {
     display: flex !important;
     flex-direction: column !important;
@@ -365,6 +377,7 @@ display: inline-block;
     padding: 10px !important;
   }
 
+  /* 5. تثبيت الأزرار وأيقونة القلب في أسفل الكارت على خط واحد */
   .row .card .card-body .btn, 
   .row .card .btn-primary,
   .row .card .fa-heart,
@@ -378,12 +391,14 @@ display: inline-block;
     width: 100% !important;
   }
 
+  /* 6. تصغير الخطوط شوية عشان تتناسب مع شاشة الفون */
   .row .card h5, 
   .row .card p {
     font-size: 0.85rem !important;
   }
 }
 @media screen and (max-width: 768px) {
+  /* 1. ضبط صفحة التسجيل (Register Form) على الموبايل لتكون في نص الشاشة وبشكل مرتب */
   .zz {
     position: relative !important;
     top: auto !important;
@@ -393,16 +408,18 @@ display: inline-block;
     max-width: 400px !important;
     margin: 20px auto !important;
     padding: 15px !important;
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa; /* أو خلفية فاتحة تناسب التصميم */
     border-radius: 8px;
   }
 
+  /* جعل حقول الإدخال تاخد عرض الفورم بالكامل بدلاً من المقاس الثابت القديم */
   .form-control {
     width: 100% !important;
     margin: 8px 0 !important;
     height: 40px !important;
   }
 
+  /* زرار الإرسال (Submit) يأخذ عرض الفورم بالكامل وسهل الضغط عليه */
   .gg {
     width: 100% !important;
     height: 40px !important;
@@ -410,6 +427,7 @@ display: inline-block;
     margin-left: 0 !important;
   }
 
+  /* 2. ضبط كروت المنتجات على الموبايل: كارتين جنب بعض وزرايرهم في البوتوم */
   .row {
     display: flex !important;
     flex-direction: row !important;
@@ -466,6 +484,7 @@ display: inline-block;
 }
 
 
+/* كود نهائي لتنظيم الهيدر وارتفاعه بدون مسح القديم */
 .navbar {
   display: flex !important;
   justify-content: space-between !important;
@@ -475,12 +494,13 @@ display: inline-block;
   background-color: #f2f1f1 !important;
 }
 
+/* تدمير أي قيود على الجانب الأيسر وجعل الكلمة والصورة على خط واحد دايماً */
 .left-header {
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
-  width: max-content !important;  
-  min-width: unset !important;     
+  width: max-content !important;    /* دي بتخليه ياخد عرضه الحقيقي بالظبط من غير ما يتزنق */
+  min-width: unset !important;      /* إلغاء أي حدود قديمة كانت معمولة */
   flex-shrink: 0 !important;       
 }
 
@@ -536,7 +556,11 @@ display: inline-block;
   color: black;
 }
 
+ 
+/* --- تظبيط النافبار والهيدر للموبايل على سطر واحد وبشكل مثالي --- */
+
    @media (max-width: 768px) {
+  /* إجبار النافبار على الترتيب السليم بجانب بعضه */
   .navbar {
     display: flex !important;
     flex-direction: row !important;
@@ -546,6 +570,7 @@ display: inline-block;
     flex-wrap: nowrap !important;
   }
 
+  /* اللوجو وصورته في الشمال */
   .left-header {
     display: flex !important;
     align-items: center !important;
@@ -563,12 +588,14 @@ display: inline-block;
     margin-left: 4px !important;
   }
 
+  /* اسم المستخدم يظهر بخط مناسب من غير ما يكسر الهيدر */
   .userName {
     font-size: 0.75rem !important;
     margin: 0 5px !important;
     white-space: nowrap !important;
   }
 
+  /* الجانب الأيمن (السلة والـ Logout أو الأزرار) متجمعين جنب بعض */
   .right-header {
     display: flex !important;
     align-items: center !important;
@@ -578,15 +605,17 @@ display: inline-block;
   .logout-box .logout, .right-header .login ul li {
     font-size: 0.9rem !important;
   }
+    /* استهداف الزرار سواء كان كلاس أو تگ */
   .card button, 
   .product-item button, 
   .remove-btn, 
   button[class*="remove"] {
-    padding: 6px 12px !important;  
-    font-size: 0.85rem !important;   
-    white-space: nowrap !important;  
+    padding: 6px 12px !important;    /* تقليل الـ padding عشان يخس ويبقى رفيع */
+    font-size: 0.85rem !important;   /* تصغير حجم خط الكتابة جوا الزرار */
+    white-space: nowrap !important;  /* منع الكلام إنه ينزل تحت بعضه */
     width: auto !important;
   }
+    /* تصغير الحاوية الرئيسية وعرضها بشكل عمودي */
   .favourite-container, .favourite-section, .favorite-box {
     display: flex !important;
     flex-direction: column !important;
@@ -594,54 +623,61 @@ display: inline-block;
     padding: 10px !important;
   }
 
+  /* تصغير حجم الكارد نفسه */
   .favourite-item, .favorite-item, .favourite card {
     width: 100% !important;
-    max-width: 260px !important; 
+    max-width: 260px !important; /* صغرنا العرض شوية */
     padding: 10px !important;
     margin-bottom: 15px !important;
     border: 1px solid #ddd !important;
     border-radius: 8px !important;
   }
 
+  /* تصغير صور المنتجات جوا المفضلة */
   .favourite img, .favorite-item img, .favourite-item img {
-    width: 80px !important;   
+    width: 80px !important;    /* صغرنا الصورة */
     height: 80px !important;
     object-fit: contain !important;
     margin-bottom: 8px !important;
   }
 
+  /* --- تظبيط وتصغير نصوص الكارد (ده الجديد اللي طلبته) --- */
   .favourite-item .card-text, .favorite-item .product-details, .favourite card p {
-    font-size: 0.8rem !important; 
+    font-size: 0.8rem !important;  /* صغرنا الخط الأساسي للنص */
     margin: 2px 0 !important;
   }
 
   .favourite-item h3, .favorite-item h5, .favourite card h5 {
-    font-size: 0.9rem !important;  
+    font-size: 0.9rem !important;  /* صغرنا العنوان لو فيه عنوان أكبر */
     margin: 4px 0 !important;
   }
 
+  /* تصغير زر Remove لو لسه كبير في المفضلة */
   .favourite-item button, .favorite-item button {
     padding: 5px 10px !important;
     font-size: 0.75rem !important;
     margin-top: 8px !important;
   }
+    /* تحويل حاوية المنتجات/المفضلة إلى شبكة (Grid) بـ عمودين جنب بعض */
   .cart-container, .favourite-container, .products-container, .favorite-box, .cart-items {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; 
+    grid-template-columns: repeat(2, 1fr) !important; /* اتنين جنب بعض بالظبط */
     gap: 8px !important;
     padding: 8px !important;
   }
 
+  /* تصغير الكارد نفسه وتقليل الـ border-radius وجعل المحتوى محبوس داخله */
   .card, .product-item, .favourite-item, .favorite-item, .cart-item {
     width: 100% !important;
     max-width: 100% !important;
     padding: 8px !important;
     margin: 0 !important;
-    border-radius: 6px !important;        
-    overflow: hidden !important;        
+    border-radius: 6px !important;         /* تقليل الانحناء (بوردر رديس) خفيف */
+    overflow: hidden !important;          /* إخفاء أي حاجة تطلع بره حدود الكارد */
     box-sizing: border-box !important;
   }
 
+  /* تصغير الصور جوا الكاردات عشان تتناسب مع العمودين */
   .card img, .product-item img, .favourite img, .favorite-item img, .cart-item img {
     width: 60px !important;
     height: 60px !important;
@@ -649,14 +685,16 @@ display: inline-block;
     margin: 0 auto 5px auto !important;
     display: block !important;
   }
+  /* تصغير الخطوط والنصوص جوا الكاردات */
   .card h5, .card p, .product-item h5, .product-item p, 
   .favourite-item p, .cart-item p, .card span {
-    font-size: 0.75rem !important;       
+    font-size: 0.75rem !important;        /* تصغير النصوص عشان ما تزنقش */
     line-height: 1.2 !important;
     margin: 2px 0 !important;
     text-align: center !important;
   }
 
+  /* تصغير الأزرار (زي Remove أو Add) جوا الكاردات الصغيرة */
   .card button, .product-item button, .favourite-item button, .cart-item button {
     padding: 4px 6px !important;
     font-size: 0.7rem !important;
@@ -677,6 +715,7 @@ display: inline-block;
     gap: 4px !important;
     order: 1 !important;
   }
+    /* إبعاد زرار الـ Remove عن أكونت القلب بمسافة مناسبة على الموبايل */
   .card .card-body, 
   .card .d-flex, 
   .product-item .d-flex, 
@@ -684,9 +723,10 @@ display: inline-block;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    gap: 10px !important; 
+    gap: 10px !important; /* دي بتعمل مسافة محترمة بين الزرار والقلب */
   }
 
+  /* لو الزرار والقلب محتاجين مسافة إضافية من فوق أو تحت */
   .card button, 
   .product-item button, 
   .remove-btn {
@@ -696,12 +736,14 @@ display: inline-block;
   .fa-heart {
     margin-left: 5px !important;
   }
+    /* --- 1. تقليل البوردر رديس لكل الكاردات وتصفير أي تداخل --- */
   .card, .product-item, .favourite-item, .favorite-item, .cart-item, .cart-card {
-    border-radius: 4px !important;
+    border-radius: 4px !important; /* بوردر رديس قليل وبسيط */
     overflow: hidden !important;
     box-sizing: border-box !important;
   }
 
+  /* --- 2. كاردات المنتجات والمفضلة: تظهر كارتين جنب بعض بالظبط --- */
   .row, .favourite-container, .favorite-box {
     display: flex !important;
     flex-direction: row !important;
@@ -721,12 +763,14 @@ display: inline-block;
     padding: 6px !important;
   }
 
+  /* تصغير صور الكاردات وتوسيطها عشان تاخد مساحة مظبوطة */
   .row .card img, .favourite img, .favorite-item img {
     width: 100% !important;
     height: 110px !important;
     object-fit: contain !important;
   }
 
+  /* --- 3. كاردات السلة (Cart): تفضل تحت بعض بشكل طولي مريح --- */
   .cart-container, .cart-items, #cartProducts {
     display: flex !important;
     flex-direction: column !important;
@@ -750,6 +794,7 @@ display: inline-block;
     object-fit: contain !important;
   }
 
+  /* --- 4. إبعاد زرار Remove عن أيقونة القلب مسافة مناسبة --- */
   .card .card-body, .card .d-flex, .product-item .d-flex {
     display: flex !important;
     align-items: center !important;
@@ -762,6 +807,7 @@ display: inline-block;
   .fa-heart {
     margin-left: 6px !important;
   }
+  /* الحاوية العامة للمفضلة تبقى دايماً Flex ومنظمة */
   #favouriteItems, .favourite-container, .favorite-box, div[id*="favourite"] {
     display: flex !important;
     flex-direction: row !important;
@@ -772,6 +818,7 @@ display: inline-block;
     padding: 0 !important;
     margin: 0 !important;
   }
+  /* الكارد الواحد جوه المفضلة ياخد تقريباً نص الشاشة (عشان يبقوا اتنين جنب بعض) */
   #favouriteItems li, .favourite-item, .favorite-item {
     display: flex !important;
     flex-direction: column !important;
@@ -782,17 +829,19 @@ display: inline-block;
     background: #fff !important;
     padding: 8px !important;
     margin-bottom: 10px !important;
-    border-radius: 4px !important; 
+    border-radius: 4px !important; /* بوردر رديس صغير وهادئ زي ما طلبت */
     box-sizing: border-box !important;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important;
   }
 
+  /* تصغير صور المنتجات جوه المفضلة لتناسب الحجم الجديد */
   #favouriteItems li img, .favourite-item img, .favorite-item img {
     width: 100% !important;
     height: 90px !important;
     object-fit: contain !important;
     margin: 0 auto 6px auto !important;
   }
+  /* تصغير النصوص والعناوين جوه كاردات المفضلة عشان متبقاش كبيرة ومأفورة */
   #favouriteItems li span, 
   #favouriteItems li p, 
   #favouriteItems li h5,
@@ -803,6 +852,7 @@ display: inline-block;
     color: #333 !important;
     text-align: center !important;
   }
+  /* تنسيق أزرار وأيقونة القلب داخل المفضلة */
   #favouriteItems li .plus, 
   .favourite-item .d-flex {
     display: flex !important;
@@ -816,11 +866,14 @@ display: inline-block;
     margin: 0 auto !important;
   }
 }
+/* --- تعديل مسافة الأمان من اليمين وتصغير خط كاردات المفضلة --- */
 @media screen and (max-width: 768px) {
+  /* الحاوية الأب لتقليل الزحمة وضبط المسافات على الجانبين */
   #favouriteItems, .favourite-container, .favorite-box {
     padding: 0 8px !important;
     box-sizing: border-box !important;
   }
+  /* تصغير عرض الكارت حاجة بسيطة لزيادة الفراغ من اليمين والشمال */
   #favouriteItems li, .favourite-item, .favorite-item {
     width: 46.5% !important;
     max-width: 46.5% !important;
@@ -829,29 +882,33 @@ display: inline-block;
     margin-left: 4px !important;
     padding: 6px !important;
   }
+  /* تصغير النصوص والعناوين جوه كاردات المفضلة عشان تبقى في سطر واحد ومظبوطة */
   #favouriteItems li span, 
   #favouriteItems li p, 
   #favouriteItems li h5,
   .favourite-item p, 
   .favourite-item h5 {
-    font-size: 0.7rem !important;
+    font-size: 0.7rem !important; /* تصغير حجم الخط */
     line-height: 1.1 !important;
-    white-space: nowrap !important; 
+    white-space: nowrap !important; /* منع نزول الكلام تحت بعضه بشكل مزعج */
     overflow: hidden !important;
-    text-overflow: ellipsis !important; 
+    text-overflow: ellipsis !important; /* إظهار نقاط لو النص طويل زيادة عن اللزوم */
   }
+  /* تصغير حجم أيقونة القلب عشان تتناسب مع التصميم الجديد */
   #favouriteItems li .fa-heart, .favourite-item .fa-heart {
     font-size: 0.9rem !important;
   }
 }
+/* --- إظهار كلمة Remove كاملة بدون قص وضبط مساحة الزرار --- */
 @media screen and (max-width: 768px) {
     .btn-danger {
     white-space: nowrap !important;
-    padding: 5px 10px !important;
-    width: max-content !important; 
+    padding: 5px 10px !important; /* تصغير الهوامش الداخلية عشان يفرد */
+    width: max-content !important; /* يخلي العرض على قد الكلمة بالظبط */
 }
 }
 @media screen and (max-width: 768px) {
+  /* إجبار الكارت على استخدام Flexbox عمودي يضمن ترتيب العناصر بالتدريج */
   .swiper-slide, 
   .card, 
   .card-body {
@@ -861,6 +918,7 @@ display: inline-block;
     align-items: stretch !important;
     width: 100% !important;
   }
+  /* ترتيب النصوص داخل الكارت: الاسم ثم القسم ثم السعر */
   .card-body h5, 
   .card-body .product-title {
     order: 1 !important;
@@ -877,6 +935,7 @@ display: inline-block;
   }
 }
 @media screen and (max-width: 768px) {
+  /* 1. ضبط الكارت بالكامل ليكون عمودي ويبدأ من الشمال */
   .swiper-slide, 
   .card, 
   .card-body,
@@ -890,6 +949,7 @@ display: inline-block;
     box-sizing: border-box !important;
     padding: 10px !important;
   }
+  /* 2. ضبط النصوص والأسعار لتكون تحت بعضها ومنسقة */
   .card-body h5, 
   .card-body .product-title,
   .card-body p.price, 
@@ -899,23 +959,25 @@ display: inline-block;
   .card-body p,
   #favouriteItems p,
   #favouriteItems span {
-    display: block !important;    
+    display: block !important;       /* إجبار كل عنصر إنه ياخد سطر لوحده عشان ميقعدوش جنب بعض غلط */
     text-align: left !important;
     width: 100% !important;
-    font-size: 12px !important;     
+    font-size: 12px !important;      /* تكبير الخط حاجة بسيطة عشان يبقى واضح وقابل للقراءة */
     margin: 3px 0 !important;
   }
+  /* 3. الحاوية الخاصة بالزرار وأيقونة القلب (تخليهم في سطر واحد أفقياً) */
   .card-body .d-flex,
   .card-body form,
   .card-body > div:last-of-type {
     display: flex !important;
-    flex-direction: row !important;        
-    align-items: center !important;       
+    flex-direction: row !important;         /* جنب بعض أفقياً */
+    align-items: center !important;         /* محاذاة في المنتصف */
     justify-content: flex-start !important;
     width: 100% !important;
     margin-bottom: auto !important;
     gap: 10px !important;
   }
+  /* 4. الزرار ياخد مساحته على الشمال */
   .card-body .btn, 
   .card-body .btn-danger,
   .card-body .btn-primary {
@@ -925,17 +987,19 @@ display: inline-block;
     padding: 5px 8px !important;
     font-size: 11px !important;
   }
+  /* 5. أيقونة القلب تروح أقصى اليمين في نفس سطر الزرار بشياكة */
   .card-body .fa-heart,
   .fa-heart {
     position: static !important;
     display: inline-block !important;
-    margin-left: auto !important;          
+    margin-left: auto !important;           /* تدز القلب لأقصى اليمين فوراً */
     margin-right: 0 !important;
     font-size: 1.2rem !important;
     flex-shrink: 0 !important;
   }
 }
 @media screen and (max-width: 768px) {
+  /* 1. تثبيت مقاس كارت المفضلة ومنع أي تداخل */
   .mySwiper .swiper-slide,
   .swiper-wrapper .swiper-slide {
     width: 240px !important;
@@ -951,6 +1015,7 @@ display: inline-block;
     margin-right: 15px !important;
     position: relative !important;
   }
+  /* 2. الصورة في مكانها فوق */
   .mySwiper .swiper-slide .swiper-img {
     width: 100% !important;
     height: 110px !important;
@@ -963,6 +1028,7 @@ display: inline-block;
     max-width: 100% !important;
     object-fit: contain !important;
   }
+  /* 3. صندوق المحتوى مرتب */
   .mySwiper .swiper-slide .card-body {
     display: flex !important;
     flex-direction: row !important;
@@ -973,6 +1039,7 @@ display: inline-block;
     margin-top: auto !important;
     position: relative !important;
   }
+  /* 4. النصوص في مكانها الطبيعي من غير ما تنزل تحت */
   .mySwiper .swiper-slide .card-body .card-text {
     display: flex !important;
     flex-direction: column !important;
@@ -987,6 +1054,7 @@ display: inline-block;
     color: #333 !important;
     white-space: nowrap !important;
   }
+  /* 5. القلب هو لوحده اللي بننزله ونحطه في الزاوية السفلى براحته */
   .mySwiper .swiper-slide .card-body a {
     position: absolute !important;
     bottom: -6px !important;
@@ -1007,13 +1075,14 @@ display: inline-block;
   .swiper {
     width: 100% !important;
     max-width: 100vw !important;
-    overflow: hidden !important;        
-    touch-action: pan-y !important;    
+    overflow: hidden !important;          /* بيمنع اختفاء العناصر برة الرؤية */
+    touch-action: pan-y !important;      /* بيخلي السحب مريح وميتشالش برة */
   }
 } 
  
 @media screen and (max-width: 768px) {
 
+  /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
   .navbar-collapse,
   .navbar-collapse.collapsing,
   .navbar-collapse.collapse.show {
@@ -1071,6 +1140,7 @@ display: inline-block;
   }
 
 
+  /* 2. ترتيب القائمة عمودياً */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1086,6 +1156,7 @@ display: inline-block;
     overflow-x: hidden !important;
   }
 
+  /* 3. عناصر المنتجات في صفوف مستقلة */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1104,6 +1175,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
+  /* 4. اسم المنتج (محدد بوضوح وله مساحة ثابتة لتجنب الاختفاء) */
   .cart ul li > span,
   .cart ul#favouriteItems li > span {
     display: inline-block !important;
@@ -1111,15 +1183,16 @@ display: inline-block;
     opacity: 1 !important;
     font-size: 0.8rem !important;
     color: #212529 !important;
-    width: 120px !important; 
+    width: 120px !important; /* تحديد عرض واضح لاسم المنتج */
     flex-grow: 0 !important;
     flex-shrink: 0 !important;
     text-align: left !important;
     white-space: nowrap !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important; 
+    text-overflow: ellipsis !important; /* لو الاسم طويل جداً يحط نقاط وفي نفس الوقت ما يختفيش */
   }
 
+  /* 5. حاوية الأزرار والكمية (مثبتة في أقصى اليمين بجوار الاسم) */
   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
@@ -1130,6 +1203,7 @@ display: inline-block;
     flex-shrink: 0 !important;
   }
 
+  /* 6. ضبط شكل الرقم الداخلي والأزرار */
   .cart ul li div.plus span,
   .cart ul#favouriteItems li div span {
     display: inline-block !important;
@@ -1156,6 +1230,7 @@ display: inline-block;
     color: #dc3545 !important;
   }
 
+  /* 7. زر عرض الكل */
   .cart #view {
     display: block !important;
     width: 100% !important;
@@ -1189,6 +1264,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
+  /* 2. تقليل المسافات الرأسية بين العناصر لتكون متقاربة قدر الإمكان */
   .cart ul,
   .cart ul#favouriteItems {
     list-style: none !important;
@@ -1198,7 +1274,7 @@ display: inline-block;
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: nowrap !important;
-    gap: 3px !important; /* 
+    gap: 3px !important; /* <--- قللنا المسافة بين كل منتج والتاني لأقصى حد */
     max-height: none !important;
     overflow-y: visible !important;
     overflow-x: hidden !important;
@@ -1206,7 +1282,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
-  /* */
+  /* 3. ضغط الـ padding داخل الـ li عشان ما يبقاش فيه فراغات ملوش لازمة */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1215,8 +1291,10 @@ display: inline-block;
     align-items: center !important;
     color: #212529 !important;
     font-size: 0.8rem !important;
-    padding: 4px 6px !important;
-
+    padding: 4px 6px !important; /* <--- قللنا الـ padding جوه المستطيل الأبيض */
+    /* margin: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important; */
     border: 1px solid #dee2e6 !important;
     border-radius: 4px !important;
     background-color: #fff !important;
@@ -1226,6 +1304,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
+  /* 4. اسم المنتج ياخد مساحته بدون هوامش مبالغ فيها */
   .cart ul li > span,
   .cart ul#favouriteItems li > span {
     display: inline-block !important;
@@ -1239,9 +1318,10 @@ display: inline-block;
     overflow: visible !important;
     text-clip: clip !important;
     margin: 0 !important;
-    margin-right: 4px !important; 
+    margin-right: 4px !important; /* <--- ضيقنا المسافة بين الاسم والأزرار جداً */
   }
 
+  /* 5. حاوية الأزرار والكمية متقاربة ومنسقة */
    .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
@@ -1252,6 +1332,7 @@ display: inline-block;
     flex-shrink: 0 !important;
     width: auto !important;  }
 
+  /* 6. ضبط شكل الرقم الداخلي والأزرار */
 .cart ul li div.plus span,
   .cart ul#favouriteItems li div span {
     display: inline-block !important;
@@ -1281,6 +1362,7 @@ display: inline-block;
     color: #dc3545 !important;
   }
 
+  /* 7. زر عرض الكل */
   .cart #view {
     display: block !important;
     width: 100% !important;
@@ -1312,6 +1394,7 @@ display: inline-block;
   }
   }
 @media (min-width: 768px) and (max-width: 992px) {
+  /* 1. ضبط قائمة التوجل (Navbar Collapse) والقائمة المنسدلة */
   .navbar-collapse,
   .navbar-collapse.collapsing,
   .navbar-collapse.collapse.show {
@@ -1368,6 +1451,7 @@ display: inline-block;
     margin-bottom: 20px !important;
   }
 
+  /* 2. ترتيب القائمة عمودياً (مع توسيع العرض شوية للشاشات المتوسطة) */
   .cart-box {
     position: relative !important;
   }
@@ -1377,14 +1461,14 @@ display: inline-block;
     top: 100% !important;
     left: -20px !important;
     right: auto !important;
-    width: 310px !important; 
+    width: 310px !important; /* <--- زودنا العرض هنا شوية عشان يناسب الشاشات المتوسطة */
     max-width: 95vw !important;
     background-color: #ffffff !important;
     border: 1px solid #dee2e6 !important;
     border-radius: 6px !important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
     z-index: 999999 !important;
-    padding: 8px !important; 
+    padding: 8px !important; /* <--- ظبطنا الطول والمسافات الداخلية */
     margin-top: 5px !important;
     box-sizing: border-box !important;
   }
@@ -1406,6 +1490,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
+  /* 3. عناصر المنتجات في صفوف مستقلة */
   .cart ul li,
   .cart ul#favouriteItems li {
     display: flex !important;
@@ -1413,8 +1498,8 @@ display: inline-block;
     justify-content: space-between !important;
     align-items: center !important;
     color: #212529 !important;
-    font-size: 0.85rem !important;
-    padding: 6px 8px !important; 
+    font-size: 0.85rem !important; /* <--- رفعنا الخط حاجة بسيطة لوضوح الشاشات المتوسطة */
+    padding: 6px 8px !important; /* <--- زودنا الطول الداخلي للعنصر */
     border: 1px solid #dee2e6 !important;
     border-radius: 4px !important;
     background-color: #fff !important;
@@ -1424,6 +1509,7 @@ display: inline-block;
     box-sizing: border-box !important;
   }
 
+  /* 4. اسم المنتج */
   .cart ul li > span,
   .cart ul#favouriteItems li > span {
     display: inline-block !important;
@@ -1440,6 +1526,7 @@ display: inline-block;
     margin-right: 6px !important;
   }
 
+  /* 5. حاوية الأزرار والكمية */
   .cart ul li div.plus,
   .cart ul#favouriteItems li div {
     display: flex !important;
@@ -1451,6 +1538,7 @@ display: inline-block;
     width: auto !important;
   }
 
+  /* 6. ضبط شكل الرقم الداخلي والأزرار */
   .cart ul li div.plus span,
   .cart ul#favouriteItems li div span {
     display: inline-block !important;
@@ -1479,6 +1567,7 @@ display: inline-block;
     color: #dc3545 !important;
   }
 
+  /* 7. زر عرض الكل */
   .cart #view {
     display: block !important;
     width: 100% !important;
