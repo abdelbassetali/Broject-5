@@ -132,9 +132,7 @@ padding: 12px 15px;
  margin-left: auto;
 }
 
-/*    responsef  جزء الريسبونسيف */ 
 
-/* /////شاشة كبيرة ومتوسطة */
 @media screen and (max-width: 990px) and (min-width: 551px) {
     .container-box {
       grid-template-columns: repeat(1, 1fr);
@@ -160,7 +158,6 @@ padding: 12px 15px;
   }
 
 
-  /* //////شاشة صغيرة/// */
   @media screen and (max-width: 550px) {
     .logo {
       font-size: 1.3rem !important;
@@ -214,8 +211,6 @@ padding: 12px 15px;
       font-size: 1.2rem !important;
     }
   }
-  /* /////////// */
-
 
   
 #total {
@@ -368,20 +363,16 @@ padding: 12px 15px;
       font-size: 1.6rem !important;
     }
   }
-/* ==========================================
-   التعديل الشامل والنهائي لتنسيق الموبايل
-   ========================================== */
+
 
 @media screen and (max-width: 768px) {
   
-  /* 1. تقليل البوردر رديس لكل الكاردات والسلايدر عشان تبقى هادئة وصغيرة */
   .swiper .swiper-slide,
   .container-box .ele,
   .swiper .swiper-slide .swiper-img img {
     border-radius: 6px !important;
   }
 
-  /* 2. كاردات السلة (Container-box) تظهر كارتين جنب بعض بالظبط */
   .container-box {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -404,7 +395,6 @@ padding: 12px 15px;
     font-size: 0.75rem !important;
   }
 
-  /* تصغير صور الكاردات داخل السلة لتناسب المساحة الجديدة */
   .container-box .ele img {
     width: 70px !important;
     height: 70px !important;
@@ -413,7 +403,6 @@ padding: 12px 15px;
     margin: 0 auto !important;
   }
 
-  /* تنظيم أزرار الكمية وزر الحذف جوه كاردات السلة */
   .container-box .ele .plus {
     display: flex !important;
     justify-content: center !important;
@@ -441,7 +430,6 @@ padding: 12px 15px;
     display: block !important;
   }
 
-  /* 3. تظبيط السلايدر (Swiper) على الموبايل */
   .swiper {
     width: 100% !important;
     height: auto !important;
