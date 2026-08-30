@@ -3,7 +3,6 @@ const last =document.getElementById("last-name")
 const submit =document.getElementById("submit")
 const email =document.getElementById("email")
 const password =document.getElementById("password")
-// ////////////بعرف الاول
 
 
 submit.addEventListener("click" , (e)=>{
@@ -20,5 +19,4 @@ submit.addEventListener("click" , (e)=>{
         },800)
     }
 })
-/////////////  هعمل ادخال للقيمة من خلال سيت فى الوكال ستورج بعدين هديله وقت ويحولنى لصفحة الا 
-// html 
+
